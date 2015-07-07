@@ -1,18 +1,47 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
-| Module Routes
+| Kantoku
 |--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for the module.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
 */
 
-Route::group(['prefix' => 'core'], function() {
-	Route::get('/', function() {
-		dd('This is the Core module index page.');
-	});
+
+// Resources
+// Controllers
+
+Route::get('welcome/kantoku', array(
+	'uses'=>'KantokuController@welcome'
+	));
+
+// API DATA
+
+
+/*
+|--------------------------------------------------------------------------
+| Admin
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'admin'], function() {
+
+// Resources
+// Controllers
+
+	Route::get('modules/', array(
+//		'as'=>'modules.edit',
+		'uses'=>'ModulesController@index'
+		));
+	Route::get('modules/{slug}', array(
+//		'as'=>'modules/{slug}',
+		'uses'=>'ModulesController@edit'
+		));
+	Route::post('modules/{slug}', array(
+		'as'=>'modules.update',
+		'uses'=>'ModulesController@update'
+		));
+
+// API DATA
+
 });
+// --------------------------------------------------------------------------
