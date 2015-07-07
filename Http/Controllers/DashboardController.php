@@ -2,7 +2,8 @@
 
 namespace App\Modules\Core\Http\Controllers;
 
-use App\Modules\Kagi\Http\Models\User;
+//use App\Modules\Kagi\Http\Models\User;
+use App\Http\Models\User;
 
 use Auth;
 use Theme;
