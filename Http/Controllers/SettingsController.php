@@ -1,13 +1,13 @@
 <?php
-namespace App\Modules\General\Http\Controllers;
+namespace App\Modules\Core\Http\Controllers;
 
-use App\Modules\General\Http\Domain\Models\Setting as Model;
-use App\Modules\General\Http\Domain\Repositories\SettingRepository;
+use App\Modules\Core\Http\Models\Setting as Model;
+use App\Modules\Core\Http\Repositories\SettingRepository;
 
 use Illuminate\Http\Request;
-use App\Modules\General\Http\Requests\DeleteRequest;
-use App\Modules\General\Http\Requests\SettingCreateRequest;
-use App\Modules\General\Http\Requests\SettingUpdateRequest;
+use App\Modules\Core\Http\Requests\DeleteRequest;
+use App\Modules\Core\Http\Requests\SettingCreateRequest;
+use App\Modules\Core\Http\Requests\SettingUpdateRequest;
 
 use Datatables;
 use Flash;
@@ -15,7 +15,7 @@ use Flash;
 use Setting;
 use Theme;
 
-class SettingsController extends GeneralController {
+class SettingsController extends CoreController {
 
 	/**
 	 * Setting Repository

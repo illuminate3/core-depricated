@@ -1,13 +1,13 @@
 <?php
-namespace App\Modules\General\Http\Controllers;
+namespace App\Modules\Core\Http\Controllers;
 
-use App\Modules\General\Http\Domain\Models\Locale;
-use App\Modules\General\Http\Domain\Repositories\LocaleRepository;
+use App\Modules\Core\Http\Models\Locale;
+use App\Modules\Core\Http\Repositories\LocaleRepository;
 
 use Illuminate\Http\Request;
-use App\Modules\General\Http\Requests\DeleteRequest;
-use App\Modules\General\Http\Requests\LocaleCreateRequest;
-use App\Modules\General\Http\Requests\LocaleUpdateRequest;
+use App\Modules\Core\Http\Requests\DeleteRequest;
+use App\Modules\Core\Http\Requests\LocaleCreateRequest;
+use App\Modules\Core\Http\Requests\LocaleUpdateRequest;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Input;
@@ -17,7 +17,7 @@ use Flash;
 use Theme;
 
 
-class LocalesController extends GeneralController {
+class LocalesController extends CoreController {
 
 	/**
 	 * Locale Repository

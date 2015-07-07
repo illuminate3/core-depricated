@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\General\Database\Seeds;
+namespace App\Modules\Core\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 
@@ -13,10 +13,10 @@ class ModuleSeeder extends Seeder {
 
 // Module Information
 // 		$module = array(
-// 			'name'					=> 'General',
+// 			'name'					=> 'Core',
 // 			'slug'					=> 'general',
 // 			'version'				=> '1.0',
-// 			'description'			=> 'General functionality for Rakko',
+// 			'description'			=> 'Core functionality for Rakko',
 // 			'enabled'				=> 1,
 // 			'order'					=> 3
 // 		);
@@ -32,9 +32,9 @@ class ModuleSeeder extends Seeder {
 // Permission Information
 		$permissions = array(
 			[
-				'name'				=> 'Manage General',
+				'name'				=> 'Manage Core',
 				'slug'				=> 'manage_general',
-				'description'		=> 'Give permission to user to manage General Items'
+				'description'		=> 'Give permission to user to manage Core Items'
 			],
 		 );
 

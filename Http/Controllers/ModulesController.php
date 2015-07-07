@@ -22,7 +22,7 @@ Module::view('modules.yourmodule.your.view')
 	/**
 	 * Create a new UserController instance.
 	 *
-	 * @param  App\Modules\Kagi\Http\Domain\Repositories\ModuleRepository $module
+	 * @param  App\Modules\Kagi\Http\Repositories\ModuleRepository $module
 	 * @return void
 	 */
 	public function __construct()

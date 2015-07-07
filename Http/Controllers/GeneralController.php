@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\General\Http\Controllers;
+namespace App\Modules\Core\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Bus\DispatchesCommands;
@@ -9,7 +9,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Theme;
 
 //abstract class KagiController extends BaseController {
-class GeneralController extends Controller
+class CoreController extends Controller
 {
 
 	use DispatchesCommands, ValidatesRequests;
@@ -17,7 +17,7 @@ class GeneralController extends Controller
 	/**
 	 * Initializer.
 	 *
-	 * @return \GeneralController
+	 * @return \CoreController
 	 */
 	public function __construct()
 	{

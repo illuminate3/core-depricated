@@ -1,19 +1,19 @@
 <?php
-namespace App\Modules\General\Http\Controllers;
+namespace App\Modules\Core\Http\Controllers;
 
-use App\Modules\Kagi\Http\Domain\Models\User;
-// use App\Modules\General\Http\Domain\Models\Status;
-// use App\Modules\General\Http\Domain\Repositories\StatusRepository;
+use App\Modules\Kagi\Http\Models\User;
+// use App\Modules\Core\Http\Models\Status;
+// use App\Modules\Core\Http\Repositories\StatusRepository;
 
 // use Illuminate\Http\Request;
-// use App\Modules\General\Http\Requests\DeleteRequest;
-// use App\Modules\General\Http\Requests\StatusCreateRequest;
-// use App\Modules\General\Http\Requests\StatusUpdateRequest;
+// use App\Modules\Core\Http\Requests\DeleteRequest;
+// use App\Modules\Core\Http\Requests\StatusCreateRequest;
+// use App\Modules\Core\Http\Requests\StatusUpdateRequest;
 
 use Auth;
 use Theme;
 
-class DashboardController extends GeneralController {
+class DashboardController extends CoreController {
 
 
 	public function __construct(

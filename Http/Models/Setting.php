@@ -1,8 +1,10 @@
 <?php
-namespace App\Modules\General\Http\Domain\Models;
+
+namespace App\Modules\Core\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Laracasts\Presenter\PresentableTrait;
+
 
 class Setting extends Model {
 
@@ -15,7 +17,7 @@ class Setting extends Model {
 	 */
 	protected $table = 'settings';
 
-	protected $presenter = 'App\Modules\General\Http\Presenters\General';
+	protected $presenter = 'App\Modules\Core\Http\Presenters\Core';
 
 	/**
 	 * The attributes excluded from the model's JSON form.

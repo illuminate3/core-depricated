@@ -20,7 +20,7 @@
 
 	<div class="container">
 		<div class="content">
-			<div class="title">General</div>
+			<div class="title">Core</div>
 			<div class="quote">
 				A basic collection of functions for Rakko
 			</div>

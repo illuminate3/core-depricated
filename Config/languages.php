@@ -1,8 +1,8 @@
 <?php
 
 
-// php artisan vendor:publish --provider="App\Modules\General\Providers\GeneralServiceProvider" --tag="config"
-// php artisan vendor:publish --provider="App\Modules\General\Providers\GeneralServiceProvider" --tag="views"
+// php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider" --tag="config"
+// php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider" --tag="views"
 
 
 // <link rel="alternate' hreflang="en' href="" />

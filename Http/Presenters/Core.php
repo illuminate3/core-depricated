@@ -1,5 +1,6 @@
 <?php
-namespace App\Modules\General\Http\Presenters;
+
+namespace App\Modules\Core\Http\Presenters;
 
 use Laracasts\Presenter\Presenter;
 
@@ -7,7 +8,8 @@ use Config;
 use DB;
 use Session;
 
-class General extends Presenter {
+
+class Core extends Presenter {
 
 
 	/**

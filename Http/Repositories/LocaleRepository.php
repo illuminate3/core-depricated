@@ -1,7 +1,8 @@
 <?php
-namespace App\Modules\General\Http\Domain\Repositories;
 
-use App\Modules\General\Http\Domain\Models\Locale;
+namespace App\Modules\Core\Http\Repositories;
+
+use App\Modules\Core\Http\Models\Locale;
 use Illuminate\Support\Collection;
 
 use App;
@@ -16,14 +17,14 @@ class LocaleRepository extends BaseRepository {
 	/**
 	 * The Module instance.
 	 *
-	 * @var App\Modules\ModuleManager\Http\Domain\Models\Module
+	 * @var App\Modules\ModuleManager\Http\Models\Module
 	 */
 	protected $locale;
 
 	/**
 	 * Create a new ModuleRepository instance.
 	 *
-   	 * @param  App\Modules\ModuleManager\Http\Domain\Models\Module $module
+   	 * @param  App\Modules\ModuleManager\Http\Models\Module $module
 	 * @return void
 	 */
 	public function __construct(

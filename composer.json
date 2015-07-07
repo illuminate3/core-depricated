@@ -1,6 +1,6 @@
 {
-	"name": "rakko/general",
-	"description": "General Functionality for Rakko",
+	"name": "rakko/core",
+	"description": "Core Functionality for Rakko",
 	"keywords": ["Functions", "CMS", "Rakko"],
 	"require": {
 		"vespakoen/menu": "3.*",
