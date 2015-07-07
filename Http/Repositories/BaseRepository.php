@@ -52,9 +52,18 @@ abstract class BaseRepository {
 	{
 
 /*
+$value = Cache::get('key');
+
+
 $value = Cache::rememberForever('users', function() {
     return DB::table('users')->get();
 });
+
+
+$value = Cache::get('key', function() {
+    return DB::table(...)->get();
+});
+
 */
 		$locales = Locale::all();
 //dd($locales);
