@@ -27,10 +27,10 @@ class CreateLocalesTable extends Migration {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
 
-			$table->string('locale', 2);
-			$table->string('name', 20);
-			$table->string('script', 20);
-			$table->string('native', 20);
+			$table->string('locale', 7);
+			$table->string('name', 30);
+			$table->string('script', 30);
+			$table->string('native', 30);
 			$table->boolean('active')->default(0);
 			$table->boolean('default')->default(0);
 

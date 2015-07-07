@@ -51,13 +51,13 @@ class StatusesSeeder extends Seeder {
 //		DB::table('statuses')->insert($seeds);
 
 
-// Create Menus
+// statuses
 		DB::table('statuses')->delete();
 			$statement = "ALTER TABLE statuses AUTO_INCREMENT = 1;";
 			DB::unprepared($statement);
 		DB::table('statuses')->insert( $statuses );
 
-// Create Menu Translations
+// status_translations
 		DB::table('status_translations')->delete();
 			$statement = "ALTER TABLE status_translations AUTO_INCREMENT = 1;";
 			DB::unprepared($statement);

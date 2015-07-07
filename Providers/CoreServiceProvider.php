@@ -2,6 +2,7 @@
 
 namespace App\Modules\Core\Providers;
 
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
 use App;
@@ -27,6 +28,7 @@ class CoreServiceProvider extends ServiceProvider
 		App::register('App\Modules\Core\Providers\RouteServiceProvider');
 
 		$this->registerNamespaces();
+//		$this->registerProviders();
 	}
 
 	/**
@@ -36,9 +38,58 @@ class CoreServiceProvider extends ServiceProvider
 	 */
 	protected function registerNamespaces()
 	{
-		Lang::addNamespace('core', realpath(__DIR__.'/../Resources/Lang'));
-
+//		Lang::addNamespace('core', realpath(__DIR__.'/../Resources/Lang'));
 		View::addNamespace('core', realpath(__DIR__.'/../Resources/Views'));
+	}
+
+
+	/**
+	 * Boot the service provider.
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{
+		$this->publishes([
+			__DIR__.'/../Config/core.php' => config_path('core.php'),
+			__DIR__.'/../Config/translator.php' => config_path('translator.php'),
+// 			__DIR__ . '/../Publish/assets/vendors' => base_path('public/assets/vendors/'),
+// 			__DIR__ . '/../Publish/Plugins' => base_path('app/Plugins/'),
+// 			__DIR__ . '/../Publish/views/plugins/' => base_path('resources/views/plugins/'),
+		]);
+/*
+		$this->publishes([
+			__DIR__ . '/../Publish/assets/vendors' => base_path('public/assets/vendors/'),
+		], 'js');
+
+		$this->publishes([
+			__DIR__ . '/../Publish/Plugins' => base_path('app/Plugins/'),
+		], 'plugins');
+
+		$this->publishes([
+			__DIR__ . '/../Publish/views/plugins/' => base_path('resources/views/plugins/'),
+		], 'views');
+*/
+
+		AliasLoader::getInstance()->alias(
+			'Setting',
+			'anlutro\LaravelSettings\Facade'
+		);
+
+
+	}
+
+
+	/**
+	* add Prvoiders
+	*
+	* @return void
+	*/
+	private function registerProviders()
+	{
+		$app = $this->app;
+
+		$app->register('anlutro\LaravelSettings\ServiceProvider');
 	}
 
 
