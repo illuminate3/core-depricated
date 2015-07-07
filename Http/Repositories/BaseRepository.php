@@ -1,5 +1,9 @@
 <?php
+
 namespace App\Modules\Core\Http\Repositories;
+
+use App\Modules\Core\Http\Models\Locale;
+
 
 abstract class BaseRepository {
 

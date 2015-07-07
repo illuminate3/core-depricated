@@ -54,7 +54,7 @@ class SettingsController extends CoreController {
 	 */
 	public function create()
 	{
-		return Theme::View('modules.general.settings.create',  $this->setting_repo->create());
+		return Theme::View('modules.core.settings.create',  $this->setting_repo->create());
 	}
 
 	/**

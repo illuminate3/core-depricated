@@ -1,8 +1,8 @@
 <?php
+
 namespace App\Modules\Core\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Config;
 
 
 class SettingCreateRequest extends FormRequest {
@@ -27,8 +27,8 @@ class SettingCreateRequest extends FormRequest {
 	public function rules()
 	{
 		return [
-			'key'						=> 'required',
-			'value'				=> 'required'
+			'key'					=> 'required',
+			'value'					=> 'required'
 		];
 	}
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Modules\Core\Http\Domain\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -22,7 +23,8 @@ class Status extends Model implements TranslatableContract {
 	 */
 	protected $table = 'statuses';
 
-// Presenter -------------------------------------------------------
+
+// Presenter ---------------------------------------------------------------
 	protected $presenter = 'App\Modules\Core\Http\Presenters\Core';
 
 
@@ -30,14 +32,18 @@ class Status extends Model implements TranslatableContract {
 	protected $translator = 'App\Modules\Core\Http\Domain\Models\StatusTranslation';
 
 
-// DEFINE Hidden -------------------------------------------------------
+// Hidden ------------------------------------------------------------------
 	protected $hidden = [
 		'created_at',
 		'updated_at'
 		];
 
 
-// DEFINE Fillable -------------------------------------------------------
+// Fillable ----------------------------------------------------------------
+/*
+			$table->string('name')->nullable();
+			$table->string('description')->nullable();
+*/
 	protected $fillable = [
 		// Translatable columns
 		'name',
@@ -45,14 +51,15 @@ class Status extends Model implements TranslatableContract {
 		];
 
 
-// Translated Columns -------------------------------------------------------
+// Translated Columns ------------------------------------------------------
 	protected $translatedAttributes = [
 		'name',
 		'description'
 		];
 
 
-// DEFINE Functions --------------------------------------------------
+// Relationships -----------------------------------------------------------
+// Functions ---------------------------------------------------------------
 
 	public function getNameAttribute()
 	{
@@ -63,9 +70,6 @@ class Status extends Model implements TranslatableContract {
 	{
 		return $this->description;
 	}
-
-
-// DEFINE Relationships --------------------------------------------------
 
 
 }

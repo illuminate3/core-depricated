@@ -8,11 +8,10 @@ use Illuminate\Support\Collection;
 use App;
 use DB;
 use Session;
-//use Hash, DB, Auth;
-//use DateTime;
-//use File, Auth;
+
 
 class LocaleRepository extends BaseRepository {
+
 
 	/**
 	 * The Module instance.

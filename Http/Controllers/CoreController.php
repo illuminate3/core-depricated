@@ -8,7 +8,6 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 
 use Theme;
 
-//abstract class KagiController extends BaseController {
 class CoreController extends Controller
 {
 
@@ -39,7 +38,7 @@ class CoreController extends Controller
 	 */
 	public function welcome()
 	{
-		return Theme::View('modules.general.general');
+		return Theme::View('modules.core.general');
 	}
 
 
@@ -50,7 +49,7 @@ class CoreController extends Controller
 	 */
 	public function index()
 	{
-		return Theme::View('modules.general.landing');
+		return Theme::View('modules.core.landing');
 	}
 
 

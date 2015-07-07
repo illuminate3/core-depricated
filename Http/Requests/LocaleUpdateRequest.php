@@ -1,10 +1,12 @@
 <?php
+
 namespace App\Modules\Core\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Config;
+
 
 class LocaleUpdateRequest extends FormRequest {
+
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -24,8 +26,8 @@ class LocaleUpdateRequest extends FormRequest {
 	public function rules()
 	{
 		return [
-// 			'name'						=> 'required',
-// 			'description'				=> 'required'
+			'locale'				=> 'required',
+			'name'					=> 'required'
 		];
 	}
 

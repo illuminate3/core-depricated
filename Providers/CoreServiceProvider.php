@@ -1,14 +1,19 @@
 <?php
+
 namespace App\Modules\Core\Providers;
+
+use Illuminate\Support\ServiceProvider;
 
 use App;
 use Config;
 use Lang;
 use View;
-use Illuminate\Support\ServiceProvider;
+
 
 class CoreServiceProvider extends ServiceProvider
 {
+
+
 	/**
 	 * Register the Core module service provider.
 	 *
@@ -35,4 +40,6 @@ class CoreServiceProvider extends ServiceProvider
 
 		View::addNamespace('core', realpath(__DIR__.'/../Resources/Views'));
 	}
+
+
 }

@@ -1,10 +1,12 @@
 <?php
+
 namespace App\Modules\Core\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Config;
+
 
 class StatusUpdateRequest extends FormRequest {
+
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -24,9 +26,10 @@ class StatusUpdateRequest extends FormRequest {
 	public function rules()
 	{
 		return [
-			'name'						=> 'required',
-			'description'				=> 'required'
+			'name'					=> 'required',
+			'description'			=> 'required'
 		];
 	}
+
 
 }

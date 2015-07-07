@@ -46,20 +46,5 @@ class Core extends Presenter {
 		return $return;
 	}
 
-	public function menuName($id)
-	{
-		$locale = Session::get('locale', Config::get('app.locale'));
-		$locale_id = DB::table('locales')
-			->where('locale', '=', $locale)
-			->pluck('id');
-//dd($locale_id);
-
-		$name = DB::table('menu_translations')
-			->where('id', '=', $id)
-			->where('locale_id', '=', $locale_id, 'AND')
-			->pluck('title');
-		return $name;
-
-	}
 
 }
