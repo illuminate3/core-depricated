@@ -25,10 +25,10 @@ class CoreServiceProvider extends ServiceProvider
 		// This service provider is a convenient place to register your modules
 		// services in the IoC container. If you wish, you may make additional
 		// methods or service providers to keep the code more focused and granular.
-		App::register('App\Modules\Core\Providers\RouteServiceProvider');
+//		App::register('App\Modules\Core\Providers\RouteServiceProvider');
 
 		$this->registerNamespaces();
-//		$this->registerProviders();
+		$this->registerProviders();
 	}
 
 	/**
@@ -89,6 +89,8 @@ class CoreServiceProvider extends ServiceProvider
 	{
 		$app = $this->app;
 
+		$app->register('App\Modules\Core\Providers\RouteServiceProvider');
+		$app->register('App\Modules\Core\Providers\ViewComposerServiceProvider');
 		$app->register('anlutro\LaravelSettings\ServiceProvider');
 	}
 
