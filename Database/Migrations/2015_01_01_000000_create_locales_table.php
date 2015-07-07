@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Database\Schema\Blue;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+
+//use Config;
 
 
 class CreateLocalesTable extends Migration {
@@ -20,7 +22,7 @@ class CreateLocalesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create($this->prefix . 'locales', function(Blue $table) {
+		Schema::create($this->prefix . 'locales', function(Blueprint $table) {
 
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();

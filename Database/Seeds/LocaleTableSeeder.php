@@ -15,10 +15,9 @@ class LocaleTableSeeder extends Seeder {
 	{
 // Uncomment the below to wipe the table clean before populating
 
-		DB::table('locales')->truncate();
 		DB::table('locales')->delete();
 
-		$csv = dirname(__FILE__) . '../Data/' . 'languages.csv';
+		$csv = dirname(__FILE__) . '/Data/' . 'languages.csv';
 		$file_handle = fopen($csv, "r");
 
 		while (!feof($file_handle)) {

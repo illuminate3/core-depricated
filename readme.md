@@ -28,3 +28,15 @@ anlutro\LaravelSettings\ServiceProvider::class,
 ```
 vendor:publish --provider="anlutro\LaravelSettings\ServiceProvider"
 ```
+
+
+## Thanks
+
+
+*
+
+
+## Partial Code or Ideas
+
+
+* https://github.com/mcamara/laravel-localization/blob/master/src/config/config.php

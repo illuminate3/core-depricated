@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blue;
+use Illuminate\Database\Schema\Blueprint;
+
+//use Config;
 
 
 class CreateStatusesTable extends Migration
@@ -22,7 +24,7 @@ class CreateStatusesTable extends Migration
 	public function up()
 	{
 
-		Schema::create($this->prefix . 'statuses', function(Blue $table) {
+		Schema::create($this->prefix . 'statuses', function(Blueprint $table) {
 
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
@@ -33,7 +35,7 @@ class CreateStatusesTable extends Migration
 		});
 
 
-		Schema::create($this->prefix . 'status_translations', function(Blue $table) {
+		Schema::create($this->prefix . 'status_translations', function(Blueprint $table) {
 
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();

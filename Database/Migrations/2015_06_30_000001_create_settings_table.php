@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blue;
+use Illuminate\Database\Schema\Blueprint;
 
+//use Config;
 
 class CreateSettingsTable extends Migration
 {
@@ -21,7 +22,7 @@ class CreateSettingsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create($this->prefix . 'settings', function(Blue $table) {
+		Schema::create($this->prefix . 'settings', function(Blueprint $table) {
 
 			$table->engine = 'InnoDB';
 
