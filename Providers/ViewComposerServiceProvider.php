@@ -27,7 +27,6 @@ class ViewComposerServiceProvider extends ServiceProvider
 	{
 
 		$locales = $this->getLocales();
-//		$locales = Config::get('languages.supportedLocales');
 //dd($locales);
 
 		View::share('locales', $locales);
@@ -42,14 +41,12 @@ class ViewComposerServiceProvider extends ServiceProvider
 	public function getLocales()
 	{
 
-// 			$locales = Config::get('app.locales');
-// if ( Schema::hasTable('locales') ) {
 		$locales = Locale::all();
 		if ( empty($locales) ) {
 			throw new LocalesNotDefinedException('Please make sure you have run "php artisan config:publish dimsav/laravel-translatable" ' . ' and that the locales configuration is defined.');
 		}
-//}
 //dd($locales);
+
 	return $locales;
 
 	}

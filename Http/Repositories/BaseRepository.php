@@ -50,7 +50,13 @@ abstract class BaseRepository {
 
 	public function getLocales()
 	{
- 		$locales = Locale::all();
+
+/*
+$value = Cache::rememberForever('users', function() {
+    return DB::table('users')->get();
+});
+*/
+		$locales = Locale::all();
 //dd($locales);
 
 	if ( empty($locales) ) {
