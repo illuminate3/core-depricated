@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Modules\Core\Database\Seeds;
 
 use Illuminate\Database\Seeder;
@@ -6,32 +7,43 @@ use Illuminate\Database\Seeder;
 use DB;
 use Schema;
 
+
 class LocaleTableSeeder extends Seeder {
+
 
 	public function run()
 	{
-		// Uncomment the below to wipe the table clean before populating
+// Uncomment the below to wipe the table clean before populating
+
+		DB::table('locales')->truncate();
 		DB::table('locales')->delete();
 
-		$seeds = array(
-			array(
-				'locale'				=> 'en',
-				'name'					=> 'English',
-				'script'				=> 'Latn',
-				'native'				=> 'English',
-				'default'				=> 1
-			),
-			array(
-				'locale'				=> 'es',
-				'name'					=> 'Spanish',
-				'script'				=> 'Latn',
-				'native'				=> 'español',
-				'default'				=> 0
-			)
-		);
+		$csv = dirname(__FILE__) . '../Data/' . 'languages.csv';
+		$file_handle = fopen($csv, "r");
 
-		// Uncomment the below to run the seeder
-		DB::table('locales')->insert($seeds);
+		while (!feof($file_handle)) {
+
+			$line = fgetcsv($file_handle);
+			if (empty($line)) {
+				continue; // skip blank lines
+			}
+
+			$c = array();
+			$c['locale']		= $line[0];
+			$c['name']			= $line[1];
+			$c['script']		= $line[2];
+			$c['native']		= $line[3];
+			$c['active']		= $line[4];
+			$c['default']		= $line[5];
+
+			DB::table('locales')->insert($c);
+		}
+
+		fclose($file_handle);
+
+// Uncomment the below to run the seeder
+//		DB::table('locales')->insert($seeds);
 	}
+
 
 }

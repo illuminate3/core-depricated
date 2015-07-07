@@ -1,8 +1,8 @@
 <?php
 namespace App\Modules\Core\Http\Controllers;
 
-use App\Modules\Core\Http\Models\Status;
-use App\Modules\Core\Http\Repositories\StatusRepository;
+use App\Modules\Core\Http\Domain\Models\Status;
+use App\Modules\Core\Http\Domain\Repositories\StatusRepository;
 
 use Illuminate\Http\Request;
 use App\Modules\Core\Http\Requests\DeleteRequest;
@@ -11,9 +11,12 @@ use App\Modules\Core\Http\Requests\StatusUpdateRequest;
 
 use Datatables;
 use Flash;
+use Session;
 use Theme;
 
+
 class StatusesController extends CoreController {
+
 
 	/**
 	 * Status Repository
@@ -23,11 +26,12 @@ class StatusesController extends CoreController {
 	protected $status;
 
 	public function __construct(
-			StatusRepository $status
+			StatusRepository $status_repo
 		)
 	{
-		$this->status = $status;
+		$this->status_repo = $status_repo;
 // middleware
+		$this->middleware('auth');
 		$this->middleware('admin');
 	}
 
@@ -38,7 +42,17 @@ class StatusesController extends CoreController {
 	 */
 	public function index()
 	{
-		return Theme::View('modules.general.statuses.index');
+		$lang = Session::get('locale');
+//		$locales = $this->status_repo->getLocales();
+		$statuses = $this->status_repo->all();
+//dd($lang);
+
+		return Theme::View('Core::statuses.index',
+			compact(
+				'lang',
+//				'locales',
+				'statuses'
+				));
 	}
 
 	/**
@@ -48,7 +62,7 @@ class StatusesController extends CoreController {
 	 */
 	public function create()
 	{
-		return Theme::View('modules.general.statuses.create',  $this->status->create());
+		return view('Core::statuses.create',  $this->status->create());
 	}
 
 	/**
@@ -62,7 +76,7 @@ class StatusesController extends CoreController {
 	{
 		$this->status->store($request->all());
 
-		Flash::success( trans('kotoba::hr.success.status_create') );
+		Flash::success( trans('kotoba::general.success.status_create') );
 		return redirect('admin/statuses');
 	}
 
@@ -92,9 +106,8 @@ class StatusesController extends CoreController {
 		$modal_route = 'admin.statuses.destroy';
 		$modal_id = $id;
 		$model = '$status';
-//dd($modal_body);
 
-		return View('general::statuses.edit',
+		return View('Core::statuses.edit',
 			$this->status->edit($id),
 				compact(
 					'modal_title',
@@ -103,6 +116,7 @@ class StatusesController extends CoreController {
 					'modal_id',
 					'model'
 			));
+//		return View('Core::statuses.edit',  $this->status->edit($id));
 	}
 
 	/**
@@ -119,7 +133,7 @@ class StatusesController extends CoreController {
 //dd("update");
 		$this->status->update($request->all(), $id);
 
-		Flash::success( trans('kotoba::hr.success.status_update') );
+		Flash::success( trans('kotoba::general.success.status_update') );
 		return redirect('admin/statuses');
 	}
 

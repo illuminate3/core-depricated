@@ -1,14 +1,19 @@
 <?php
-
-namespace App\Modules\Core\Http\Models;
+namespace App\Modules\Core\Http\Domain\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Laracasts\Presenter\PresentableTrait;
 
+use Vinkla\Translator\Translatable;
+use Vinkla\Translator\Contracts\Translatable as TranslatableContract;
 
-class Status extends Model {
+
+class Status extends Model implements TranslatableContract {
+
 
 	use PresentableTrait;
+	use Translatable;
+
 
 	/**
 	 * The database table used by the model.
@@ -17,25 +22,48 @@ class Status extends Model {
 	 */
 	protected $table = 'statuses';
 
+// Presenter -------------------------------------------------------
 	protected $presenter = 'App\Modules\Core\Http\Presenters\Core';
 
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-//	protected $hidden = ['password', 'remember_token'];
+
+// Translation Model -------------------------------------------------------
+	protected $translator = 'App\Modules\Core\Http\Domain\Models\StatusTranslation';
+
+
+// DEFINE Hidden -------------------------------------------------------
+	protected $hidden = [
+		'created_at',
+		'updated_at'
+		];
+
 
 // DEFINE Fillable -------------------------------------------------------
-/*
-			$table->string('name',100)->index();
-			$table->string('description')->nullable();
-*/
 	protected $fillable = [
-		'id',
+		// Translatable columns
 		'name',
 		'description'
 		];
+
+
+// Translated Columns -------------------------------------------------------
+	protected $translatedAttributes = [
+		'name',
+		'description'
+		];
+
+
+// DEFINE Functions --------------------------------------------------
+
+	public function getNameAttribute()
+	{
+		return $this->name;
+	}
+
+	public function getDescriptionAttribute()
+	{
+		return $this->description;
+	}
+
 
 // DEFINE Relationships --------------------------------------------------
 

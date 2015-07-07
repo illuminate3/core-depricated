@@ -1,15 +1,17 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Schema\Blue;
+
 
 class CreateSettingsTable extends Migration
 {
 
+
 	public function __construct()
 	{
 		// Get the prefix
-		$this->prefix = Config::get('general.general_db.prefix', '');
+		$this->prefix = Config::get('core.core_db.prefix', '');
 	}
 
 	/**
@@ -19,7 +21,7 @@ class CreateSettingsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create($this->prefix . 'settings', function(Blueprint $table) {
+		Schema::create($this->prefix . 'settings', function(Blue $table) {
 
 			$table->engine = 'InnoDB';
 

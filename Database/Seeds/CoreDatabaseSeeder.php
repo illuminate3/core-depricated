@@ -1,11 +1,15 @@
 <?php
+
 namespace App\Modules\Core\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
+
 class CoreDatabaseSeeder extends Seeder
 {
+
+
 	/**
 	 * Run the database seeds.
 	 *
@@ -15,7 +19,9 @@ class CoreDatabaseSeeder extends Seeder
 	{
 		Model::unguard();
 
-		// $this->call('App\Modules\Core\Database\Seeds\FoobarTableSeeder');
+		$this->call('App\Modules\Core\Database\Seeds\LocaleTableSeeder');
+		$this->call('App\Modules\Core\Database\Seeds\StatusesSeeder');
 	}
+
 
 }

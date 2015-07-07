@@ -1,14 +1,16 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Schema\Blue;
 use Illuminate\Database\Migrations\Migration;
 
+
 class CreateLocalesTable extends Migration {
+
 
 	public function __construct()
 	{
 		// Get the prefix
-		$this->prefix = Config::get('general.general_db.prefix', '');
+		$this->prefix = Config::get('core.core_db.prefix', '');
 	}
 
 	/**
@@ -18,7 +20,7 @@ class CreateLocalesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create($this->prefix . 'locales', function(Blueprint $table) {
+		Schema::create($this->prefix . 'locales', function(Blue $table) {
 
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
@@ -27,7 +29,8 @@ class CreateLocalesTable extends Migration {
 			$table->string('name', 20);
 			$table->string('script', 20);
 			$table->string('native', 20);
-			$table->boolean('default')->default(0)->nullable();
+			$table->boolean('active')->default(0);
+			$table->boolean('default')->default(0);
 
 			$table->softDeletes();
 			$table->timestamps();
@@ -44,5 +47,6 @@ class CreateLocalesTable extends Migration {
 	{
 		Schema::drop('locales');
 	}
+
 
 }

@@ -1,33 +1,33 @@
 <?php
+namespace App\Modules\Core\Http\Domain\Repositories;
 
-namespace App\Modules\Core\Http\Repositories;
-
-use App\Modules\Core\Http\Models\Status;
+use App\Modules\Core\Http\Domain\Models\Status;
 
 use DB;
-
+//use Hash, DB, Auth;
+//use DateTime;
+//use File, Auth;
 
 class StatusRepository extends BaseRepository {
-
 
 	/**
 	 * The Module instance.
 	 *
-	 * @var App\Modules\ModuleManager\Http\Models\Module
+	 * @var App\Modules\ModuleManager\Http\Domain\Models\Module
 	 */
-	protected $status;
+	protected $_status;
 
 	/**
 	 * Create a new ModuleRepository instance.
 	 *
-   	 * @param  App\Modules\ModuleManager\Http\Models\Module $module
+   	 * @param  App\Modules\ModuleManager\Http\Domain\Models\Module $module
 	 * @return void
 	 */
 	public function __construct(
-		Status $status
+		Status $_status
 		)
 	{
-		$this->model = $status;
+		$this->model = $_status;
 	}
 
 	/**
