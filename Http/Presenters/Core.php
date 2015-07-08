@@ -22,17 +22,6 @@ class Core extends Presenter {
 		return ucwords($this->entity->name);
 	}
 
-	public function checked()
-	{
-//dd("loaded");
-		$return = '';
-		$activated = $this->entity->activated;
-		if ( $activated == 1 ) {
-			$return = "checked";
-		}
-
-		return $return;
-	}
 
 	public function status($status)
 	{
@@ -41,6 +30,33 @@ class Core extends Presenter {
 		$return = trans('kotoba::general.enabled');
 		if ( $status == 0 ) {
 			$return = trans('kotoba::general.disabled');
+		}
+
+		return $return;
+	}
+
+
+	public function active($active)
+	{
+//dd($active);
+
+		$return = trans('kotoba::general.yes');
+		if ( $active == 0 ) {
+			$return = trans('kotoba::general.no');
+		}
+
+		return $return;
+	}
+
+
+	public function checked($value)
+	{
+//dd($value);
+
+		$return = '';
+
+		if ( $value == 1 ) {
+			$return = "checked";
 		}
 
 		return $return;

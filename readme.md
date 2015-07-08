@@ -29,6 +29,11 @@ anlutro\LaravelSettings\ServiceProvider::class,
 vendor:publish --provider="anlutro\LaravelSettings\ServiceProvider"
 ```
 
+* https://github.com/laracasts/Presenter
+```
+"laracasts/presenter": "dev-master"
+```
+
 
 ## Thanks
 

@@ -45,7 +45,7 @@ class LocalesController extends CoreController {
 		$locales = $this->locale->all();
 //dd($locales);
 
-		return Theme::View('general::locales.index', compact('locales'));
+		return Theme::View('core::locales.index', compact('locales'));
 	}
 
 	/**
@@ -55,7 +55,7 @@ class LocalesController extends CoreController {
 	 */
 	public function create()
 	{
-		return Theme::View('general::locales.create',  $this->locale->create());
+		return Theme::View('core::locales.create',  $this->locale->create());
 	}
 
 	/**
@@ -69,7 +69,7 @@ class LocalesController extends CoreController {
 	{
 		$this->locale->store($request->all());
 
-		Flash::success( trans('kotoba::hr.success.locale_create') );
+		Flash::success( trans('kotoba::cms.success.locale_create') );
 		return redirect('admin/locales');
 	}
 
@@ -101,8 +101,8 @@ class LocalesController extends CoreController {
 		$model = '$locale';
 //dd($modal_body);
 
-		return View('general::locales.edit',
-//		return Theme::View('general::locales.edit',
+		return View('core::locales.edit',
+//		return Theme::View('core::locales.edit',
 			$this->locale->edit($id),
 				compact(
 					'modal_title',
@@ -127,7 +127,7 @@ class LocalesController extends CoreController {
 //dd("update");
 		$this->locale->update($request->all(), $id);
 
-		Flash::success( trans('kotoba::hr.success.locale_update') );
+		Flash::success( trans('kotoba::cms.success.locale_update') );
 		return redirect('admin/locales');
 	}
 

@@ -48,32 +48,4 @@ abstract class BaseRepository {
 	}
 
 
-	public function getLocales()
-	{
-
-/*
-$value = Cache::get('key');
-
-
-$value = Cache::rememberForever('users', function() {
-    return DB::table('users')->get();
-});
-
-
-$value = Cache::get('key', function() {
-    return DB::table(...)->get();
-});
-
-*/
-		$locales = Locale::all();
-//dd($locales);
-
-	if ( empty($locales) ) {
-		throw new LocalesNotDefinedException('Please make sure you have run "php artisan config:publish dimsav/laravel-translatable" ' . ' and that the locales configuration is defined.');
-	}
-
-	return $locales;
-	}
-
-
 }

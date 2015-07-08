@@ -44,7 +44,7 @@ class SettingsController extends CoreController {
 	{
 		$settings = $this->setting_repo->all();
 
-		return Theme::View('general::settings.index', compact('settings'));
+		return Theme::View('core::settings.index', compact('settings'));
 	}
 
 	/**
@@ -103,7 +103,7 @@ class SettingsController extends CoreController {
 		$model = '$setting';
 //dd($modal_body);
 
-		return View('general::settings.edit',
+		return View('core::settings.edit',
 			$this->setting_repo->edit($key),
 				compact(
 					'modal_title',

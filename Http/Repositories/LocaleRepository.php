@@ -82,6 +82,14 @@ class LocaleRepository extends BaseRepository {
 	public function store($input)
 	{
 //dd($input);
+
+		if ( !isset($input['active']) ) {
+			$input['active'] = 0;
+		}
+		if ( !isset($input['default']) ) {
+			$input['default'] = 0;
+		}
+
 		$this->model = new Locale;
 		$this->model->create($input);
 	}
@@ -95,7 +103,15 @@ class LocaleRepository extends BaseRepository {
 	 */
 	public function update($input, $id)
 	{
-//dd($input['enabled']);
+//dd($input);
+
+		if ( !isset($input['active']) ) {
+			$input['active'] = 0;
+		}
+		if ( !isset($input['default']) ) {
+			$input['default'] = 0;
+		}
+
 		$locale = Locale::find($id);
 		$locale->update($input);
 	}

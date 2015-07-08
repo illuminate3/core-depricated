@@ -3,9 +3,13 @@
 namespace App\Modules\Core\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Laracasts\Presenter\PresentableTrait;
 
 
 class Locale extends Model {
+
+
+	use PresentableTrait;
 
 
 /**
@@ -17,6 +21,9 @@ class Locale extends Model {
 
 
 // Presenter ---------------------------------------------------------------
+	protected $presenter = 'App\Modules\Core\Http\Presenters\Core';
+
+
 // Translation Model -------------------------------------------------------
 // Hidden ------------------------------------------------------------------
 

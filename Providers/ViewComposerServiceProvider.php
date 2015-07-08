@@ -3,14 +3,11 @@
 namespace App\Modules\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\MySqlConnection;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 
 use App\Modules\Core\Http\Models\Locale;
 
-use Config;
-use Schema;
+use DB;
+use Cache;
 use View;
 
 
@@ -25,10 +22,7 @@ class ViewComposerServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
-
 		$locales = $this->getLocales();
-//dd($locales);
-
 		View::share('locales', $locales);
 	}
 
@@ -40,8 +34,33 @@ class ViewComposerServiceProvider extends ServiceProvider
 
 	public function getLocales()
 	{
+/*
+$value = Cache::get('key');
 
-		$locales = Locale::all();
+
+$value = Cache::rememberForever('users', function() {
+    return DB::table('users')->get();
+});
+
+
+$value = Cache::get('key', function() {
+    return DB::table(...)->get();
+});
+
+*/
+//		$locales = Locale::all();
+		$locales = Cache::get('locales');
+//dd($locales);
+
+		if ($locales == null) {
+			$locales = Cache::rememberForever('locales', function() {
+				return DB::table('locales')
+					->where('active', '=', 1)
+					->get();
+			});
+		}
+//dd($locales);
+
 		if ( empty($locales) ) {
 			throw new LocalesNotDefinedException('Please make sure you have run "php artisan config:publish dimsav/laravel-translatable" ' . ' and that the locales configuration is defined.');
 		}

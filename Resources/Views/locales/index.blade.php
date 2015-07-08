@@ -1,4 +1,4 @@
-@extends('app')
+@extends('_layouts.app')
 
 {{-- Web site Title --}}
 @section('title')
@@ -46,10 +46,11 @@ oTable =
 <table id="table" class="table table-striped table-hover">
 	<thead>
 		<tr>
-			<th>{{ trans('kotoba::table.locale') }}</th>
+			<th>{{ Lang::choice('kotoba::table.locale', 1) }}</th>
 			<th>{{ trans('kotoba::table.name') }}</th>
 			<th>{{ trans('kotoba::table.script') }}</th>
 			<th>{{ trans('kotoba::table.native') }}</th>
+			<th>{{ trans('kotoba::table.active') }}</th>
 			<th>{{ trans('kotoba::table.default') }}</th>
 
 			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
@@ -62,7 +63,8 @@ oTable =
 				<td>{{ $locale->name }}</td>
 				<td>{{ $locale->script }}</td>
 				<td>{{ $locale->native }}</td>
-				<td>{{ $locale->default }}</td>
+				<td>{{ $locale->present()->status($locale->active) }}</td>
+				<td>{{ $locale->present()->active($locale->default) }}</td>
 				<td>
 					<a href="/admin/locales/{{ $locale->id }}/edit" class="btn btn-success" title="{{ trans('kotoba::button.edit') }}">
 						<i class="fa fa-pencil fa-fw"></i>
