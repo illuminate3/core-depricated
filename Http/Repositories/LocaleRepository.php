@@ -3,9 +3,9 @@
 namespace App\Modules\Core\Http\Repositories;
 
 use App\Modules\Core\Http\Models\Locale;
-use Illuminate\Support\Collection;
+//use Illuminate\Support\Collection;
 
-use App;
+//use App;
 use DB;
 use Session;
 

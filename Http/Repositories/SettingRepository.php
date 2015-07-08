@@ -3,9 +3,9 @@
 namespace App\Modules\Core\Http\Repositories;
 
 use App\Modules\Core\Http\Models\Setting;
-use Illuminate\Support\Collection;
+//use Illuminate\Support\Collection;
 
-use App;
+//use App;
 use DB;
 use Session;
 
@@ -75,10 +75,13 @@ class SettingRepository extends BaseRepository {
 	{
 //dd($key);
 //		$setting = $this->model->find($key);
+		$lang = Session::get('locale');
+//dd($lang);
+
 		$setting = $this->getKeyValues($key);
 //dd($setting);
 
-		return compact('setting');
+		return compact('lang', 'setting');
 	}
 
 	/**

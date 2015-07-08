@@ -1,7 +1,7 @@
 <?php
 namespace App\Modules\Core\Http\Controllers;
 
-use App\Modules\Core\Http\Models\Locale;
+//use App\Modules\Core\Http\Models\Locale;
 use App\Modules\Core\Http\Repositories\LocaleRepository;
 
 use Illuminate\Http\Request;

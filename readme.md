@@ -3,15 +3,19 @@
 
 ## Functionality
 
-### locales
+
+### Locales
 Supplements the main Rakko app's locale functionality.
 Ability to control Locales through the database.
+
+
+### Settings
 
 
 ## Routes
 
 * /admin/locales
-* /admin/statuses
+* /admin/settings
 
 
 ## Packages

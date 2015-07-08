@@ -60,15 +60,43 @@
 </div>
 
 
+	<div class="tab-content">
+	@if (count($languages))
+
+	<ul class="nav nav-tabs">
+		@foreach( $languages as $language)
+			<li class="@if ($language->locale == $lang)active @endif">
+				<a href="#{{ $language->id }}" data-target="#lang_{{ $language->id }}" data-toggle="tab">{{{ $language->name }}}</a>
+			</li>
+		@endforeach
+	</ul>
+
+	@foreach( $languages as $language)
+	<div role="tabpanel" class="tab-pane padding fade @if ($language->locale == $lang)in active @endif" id="lang_{{{ $language->id }}}">
+
+		<div class="form-group">
+			<label for="title">{{ Lang::choice('kotoba::cms.value', 1) }}</label>
+			<input type="text" class="form-control" name="{{ $language->locale }}" id="{{ $language->locale }}" value="{{ $setting->value }}">
+		</div>
+
+	</div><!-- ./ $lang panel -->
+	@endforeach
+
+	@endif
+	</div><!-- tabcontent -->
+
+
+
 <hr>
 
 
-<div class="form-group">
+<div class="row">
 <div class="col-sm-12">
 	<input class="btn btn-success btn-block" type="submit" value="{{ trans('kotoba::button.save') }}">
 </div>
 </div>
 
+<br>
 
 <div class="row">
 <div class="col-sm-4">

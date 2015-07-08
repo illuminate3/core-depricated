@@ -1,7 +1,7 @@
 <?php
 namespace App\Modules\Core\Http\Controllers;
 
-use App\Modules\Core\Http\Models\Setting;
+//use App\Modules\Core\Http\Models\Setting;
 use App\Modules\Core\Http\Repositories\SettingRepository;
 
 use Illuminate\Http\Request;
@@ -14,6 +14,7 @@ use App\Modules\Core\Http\Requests\SettingUpdateRequest;
 
 use Cache;
 use Flash;
+use Setting;
 use Theme;
 
 
@@ -28,14 +29,12 @@ class SettingsController extends CoreController {
 	protected $setting_repo;
 
 	public function __construct(
-			Model $model,
 			SettingRepository $setting_repo
 		)
 	{
-		$this->model = $model;
 		$this->setting_repo = $setting_repo;
 // middleware
-		$this->middleware('admin');
+//		$this->middleware('admin');
 	}
 
 	/**
@@ -46,6 +45,7 @@ class SettingsController extends CoreController {
 	public function index()
 	{
 		$settings = $this->setting_repo->all();
+//		$settings = Setting::all();
 
 		return Theme::View('core::settings.index', compact('settings'));
 	}
@@ -73,6 +73,7 @@ class SettingsController extends CoreController {
 
 //		$this->setting_repo->store($request);
 		Setting::set( $request->key, $request->value );
+		Setting::save();
 
 		Flash::success( trans('kotoba::cms.success.setting_create') );
 		return redirect('admin/settings');
@@ -128,9 +129,10 @@ class SettingsController extends CoreController {
 		$id
 		)
 	{
-//dd($request);
+dd($request);
 //		$this->setting_repo->update($request->all(), $id);
 		Setting::set( $request->key, $request->value );
+		Setting::save();
 
 		Flash::success( trans('kotoba::cms.success.setting_update') );
 		return redirect('admin/settings');
