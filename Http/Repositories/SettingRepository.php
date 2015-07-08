@@ -3,12 +3,19 @@
 namespace App\Modules\Core\Http\Repositories;
 
 use App\Modules\Core\Http\Models\Setting;
+use Illuminate\Support\Collection;
 
+use App;
 use DB;
-use Registry;
+use Session;
 
 
 class SettingRepository extends BaseRepository {
+// use DB;
+// use Registry;
+//
+//
+// class SettingRepository extends BaseRepository {
 
 
 	/**

@@ -22,8 +22,8 @@ class ViewComposerServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
-		$locales = $this->getLocales();
-		View::share('locales', $locales);
+		$languages = $this->getLocales();
+		View::share('languages', $languages);
 	}
 
 	public function register()
@@ -34,39 +34,25 @@ class ViewComposerServiceProvider extends ServiceProvider
 
 	public function getLocales()
 	{
-/*
-$value = Cache::get('key');
+		$languages = Cache::get('locales');
+//dd($languages);
 
-
-$value = Cache::rememberForever('users', function() {
-    return DB::table('users')->get();
-});
-
-
-$value = Cache::get('key', function() {
-    return DB::table(...)->get();
-});
-
-*/
-//		$locales = Locale::all();
-		$locales = Cache::get('locales');
-//dd($locales);
-
-		if ($locales == null) {
-			$locales = Cache::rememberForever('locales', function() {
+		if ($languages == null) {
+//			$languages = Locale::all();
+			$languages = Cache::rememberForever('languages', function() {
 				return DB::table('locales')
 					->where('active', '=', 1)
 					->get();
 			});
 		}
-//dd($locales);
+//dd($languages);
 
-		if ( empty($locales) ) {
+		if ( empty($languages) ) {
 			throw new LocalesNotDefinedException('Please make sure you have run "php artisan config:publish dimsav/laravel-translatable" ' . ' and that the locales configuration is defined.');
 		}
-//dd($locales);
+//dd($languages);
 
-	return $locales;
+	return $languages;
 
 	}
 

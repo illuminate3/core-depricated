@@ -37,16 +37,16 @@ Route::group(['prefix' => 'admin'], function() {
 
 	Route::resource('locales', 'LocalesController');
 	Route::resource('settings', 'SettingsController');
-	Route::resource('statuses', 'StatusesController');
+//	Route::resource('statuses', 'StatusesController');
 
 
 // Controllers
 // API DATA
-
+/*
 	Route::get('api/statuses', array(
 		'uses'=>'StatusesController@data'
 		));
-
+*/
 });
 // --------------------------------------------------------------------------
 

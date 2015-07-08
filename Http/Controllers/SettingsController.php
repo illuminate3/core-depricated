@@ -1,7 +1,7 @@
 <?php
 namespace App\Modules\Core\Http\Controllers;
 
-use App\Modules\Core\Http\Models\Setting as Model;
+use App\Modules\Core\Http\Models\Setting;
 use App\Modules\Core\Http\Repositories\SettingRepository;
 
 use Illuminate\Http\Request;
@@ -9,13 +9,16 @@ use App\Modules\Core\Http\Requests\DeleteRequest;
 use App\Modules\Core\Http\Requests\SettingCreateRequest;
 use App\Modules\Core\Http\Requests\SettingUpdateRequest;
 
-use Datatables;
+// use Illuminate\Support\Facades\App;
+// use Illuminate\Support\Facades\Input;
+
+use Cache;
 use Flash;
-// use Form;
-use Setting;
 use Theme;
 
+
 class SettingsController extends CoreController {
+
 
 	/**
 	 * Setting Repository

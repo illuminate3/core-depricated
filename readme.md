@@ -1,6 +1,19 @@
 # Core II : Laravel 5.1.x Beta Development
 
 
+## Functionality
+
+### locales
+Supplements the main Rakko app's locale functionality.
+Ability to control Locales through the database.
+
+
+## Routes
+
+* /admin/locales
+* /admin/statuses
+
+
 ## Packages
 
 

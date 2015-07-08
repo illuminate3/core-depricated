@@ -9,15 +9,16 @@ use App\Modules\Core\Http\Requests\DeleteRequest;
 use App\Modules\Core\Http\Requests\LocaleCreateRequest;
 use App\Modules\Core\Http\Requests\LocaleUpdateRequest;
 
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Input;
+// use Illuminate\Support\Facades\App;
+// use Illuminate\Support\Facades\Input;
 
-//use Datatables;
+use Cache;
 use Flash;
 use Theme;
 
 
 class LocalesController extends CoreController {
+
 
 	/**
 	 * Locale Repository
@@ -27,10 +28,10 @@ class LocalesController extends CoreController {
 	protected $locale;
 
 	public function __construct(
-			LocaleRepository $locale
+			LocaleRepository $locale_repo
 		)
 	{
-		$this->locale = $locale;
+		$this->locale_repo = $locale_repo;
 // middleware
 //		$this->middleware('admin');
 	}
@@ -42,7 +43,7 @@ class LocalesController extends CoreController {
 	 */
 	public function index()
 	{
-		$locales = $this->locale->all();
+		$locales = $this->locale_repo->all();
 //dd($locales);
 
 		return Theme::View('core::locales.index', compact('locales'));
@@ -55,7 +56,7 @@ class LocalesController extends CoreController {
 	 */
 	public function create()
 	{
-		return Theme::View('core::locales.create',  $this->locale->create());
+		return Theme::View('core::locales.create',  $this->locale_repo->create());
 	}
 
 	/**
@@ -67,7 +68,8 @@ class LocalesController extends CoreController {
 		LocaleCreateRequest $request
 		)
 	{
-		$this->locale->store($request->all());
+		$this->locale_repo->store($request->all());
+		Cache::forget('languages');
 
 		Flash::success( trans('kotoba::cms.success.locale_create') );
 		return redirect('admin/locales');
@@ -81,7 +83,7 @@ class LocalesController extends CoreController {
 	 */
 	public function show($id)
 	{
-// 		$locale = $this->locale->findOrFail($id);
+// 		$locale = $this->locale_repo->findOrFail($id);
 //
 // 		return View::make('HR::locales.show', compact('locale'));
 	}
@@ -103,7 +105,7 @@ class LocalesController extends CoreController {
 
 		return View('core::locales.edit',
 //		return Theme::View('core::locales.edit',
-			$this->locale->edit($id),
+			$this->locale_repo->edit($id),
 				compact(
 					'modal_title',
 					'modal_body',
@@ -125,7 +127,8 @@ class LocalesController extends CoreController {
 		)
 	{
 //dd("update");
-		$this->locale->update($request->all(), $id);
+		$this->locale_repo->update($request->all(), $id);
+		Cache::forget('languages');
 
 		Flash::success( trans('kotoba::cms.success.locale_update') );
 		return redirect('admin/locales');
@@ -139,7 +142,7 @@ class LocalesController extends CoreController {
 	 */
 	public function destroy($id)
 	{
-		$this->locale->find($id)->delete();
+		$this->locale_repo->find($id)->delete();
 
 		return Redirect::route('admin.locales.index');
 	}
