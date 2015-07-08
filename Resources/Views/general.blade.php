@@ -1,4 +1,4 @@
-@extends('module_info')
+@extends($theme_back)
 
 {{-- Web site Title --}}
 @section('title')

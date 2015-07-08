@@ -12,28 +12,19 @@ class ModuleSeeder extends Seeder {
 	{
 
 // Module Information
-// 		$module = array(
-// 			'name'					=> 'Core',
-// 			'slug'					=> 'general',
-// 			'version'				=> '1.0',
-// 			'description'			=> 'Core functionality for Rakko',
-// 			'enabled'				=> 1,
-// 			'order'					=> 3
-// 		);
-
-// Insert Module Information
-// 		if (Schema::hasTable('modules'))
-// 		{
-
-// 			DB::table('modules')->insert( $module );
-
-// 		}
+/*
+	"name": "Core",
+	"slug": "core",
+	"version": "1.0",
+	"description": "Functionality: Locales, Settings, Statuses",
+	"enabled": true
+*/
 
 // Permission Information
 		$permissions = array(
 			[
 				'name'				=> 'Manage Core',
-				'slug'				=> 'manage_general',
+				'slug'				=> 'manage_core',
 				'description'		=> 'Give permission to user to manage Core Items'
 			],
 		 );

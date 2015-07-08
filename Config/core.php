@@ -1,6 +1,7 @@
 <?php
 
 // php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider" --tag="config"
+// php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider" --tag="config"
 // php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider" --tag="views"
 
 

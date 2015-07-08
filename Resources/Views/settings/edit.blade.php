@@ -1,4 +1,4 @@
-@extends('_layouts.app')
+@extends($theme_back)
 
 {{-- Web site Title --}}
 @section('title')

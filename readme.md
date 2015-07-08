@@ -10,6 +10,7 @@ Ability to control Locales through the database.
 
 
 ### Settings
+Settings allow you to set key/values to the database or to a .json file
 
 
 ## Routes
