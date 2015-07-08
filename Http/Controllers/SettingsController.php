@@ -129,7 +129,10 @@ class SettingsController extends CoreController {
 		$id
 		)
 	{
-dd($request);
+//dd($request);
+
+//Setting::set('foo.bar', $value)
+
 //		$this->setting_repo->update($request->all(), $id);
 		Setting::set( $request->key, $request->value );
 		Setting::save();

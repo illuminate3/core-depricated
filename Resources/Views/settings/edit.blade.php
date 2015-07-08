@@ -59,7 +59,7 @@
 </div>
 </div>
 
-
+{{--
 	<div class="tab-content">
 	@if (count($languages))
 
@@ -84,7 +84,7 @@
 
 	@endif
 	</div><!-- tabcontent -->
-
+--}}
 
 
 <hr>
