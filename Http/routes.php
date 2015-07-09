@@ -38,7 +38,11 @@ Route::group(['prefix' => 'admin'], function() {
 	Route::resource('locales', 'LocalesController');
 	Route::resource('settings', 'SettingsController');
 //	Route::resource('statuses', 'StatusesController');
-
+/*
+	Route::get('settings/{key}', array(
+		'uses'=>'SettingsController@edit'
+		));
+*/
 
 // Controllers
 // API DATA

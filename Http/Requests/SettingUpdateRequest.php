@@ -3,7 +3,6 @@
 namespace App\Modules\Core\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Config;
 
 
 class SettingUpdateRequest extends FormRequest {
