@@ -10,9 +10,13 @@
 // Resources
 // Controllers
 
-Route::get('welcome/general', array(
-	'uses'=>'CoreController@welcome'
-	));
+
+Route::group(['prefix' => 'core'], function() {
+	Route::get('welcome', [
+		'uses'=>'CoreController@welcome'
+	]);
+});
+
 
 Route::get('home', array(
 	'uses'=>'CoreController@index'
@@ -37,7 +41,6 @@ Route::group(['prefix' => 'admin'], function() {
 
 	Route::resource('locales', 'LocalesController');
 	Route::resource('settings', 'SettingsController');
-//	Route::resource('statuses', 'StatusesController');
 /*
 	Route::get('settings/{key}', array(
 		'uses'=>'SettingsController@edit'
@@ -46,16 +49,6 @@ Route::group(['prefix' => 'admin'], function() {
 
 // Controllers
 // API DATA
-/*
-	Route::get('api/statuses', array(
-		'uses'=>'StatusesController@data'
-		));
-*/
+
 });
 // --------------------------------------------------------------------------
-
-Route::group(['prefix' => 'core'], function() {
-	Route::get('/', function() {
-		dd('This is the Core module index page.');
-	});
-});

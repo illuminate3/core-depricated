@@ -30,6 +30,31 @@ Settings allow you to set key/values to the database or to a .json file
 * /admin/settings
 
 
+## Install
+
+### migration commands
+
+```
+php artisan module:migrate Origmami
+php artisan module:seed Origmami
+```
+
+
+### publish commands
+
+General Publish "ALL" method
+```
+php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider"
+```
+
+Specific Publish tags
+```
+php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider" --tag="configs"
+php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider" --tag="images"
+php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider" --tag="views"
+```
+
+
 ## Packages
 
 Intended to be used with:

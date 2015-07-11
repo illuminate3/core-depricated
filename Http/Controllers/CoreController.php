@@ -29,8 +29,8 @@ class CoreController extends Controller
 		$this->middleware('auth');
 */
 // middleware
-		$this->middleware('auth');
-		$this->middleware('admin');
+// 		$this->middleware('auth');
+// 		$this->middleware('admin');
 	}
 
 
@@ -41,7 +41,7 @@ class CoreController extends Controller
 	 */
 	public function welcome()
 	{
-		return Theme::View('modules.core.general');
+		return Theme::View('modules.core.welcome.core');
 	}
 
 

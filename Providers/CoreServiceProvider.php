@@ -39,7 +39,6 @@ class CoreServiceProvider extends ServiceProvider
 	 */
 	protected function registerNamespaces()
 	{
-//		Lang::addNamespace('core', realpath(__DIR__.'/../Resources/Lang'));
 		View::addNamespace('core', realpath(__DIR__.'/../Resources/Views'));
 	}
 
@@ -51,26 +50,28 @@ class CoreServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
+
 		$this->publishes([
 			__DIR__.'/../Config/core.php' => config_path('core.php'),
 			__DIR__.'/../Config/translator.php' => config_path('translator.php'),
-// 			__DIR__ . '/../Publish/assets/vendors' => base_path('public/assets/vendors/'),
-// 			__DIR__ . '/../Publish/Plugins' => base_path('app/Plugins/'),
-// 			__DIR__ . '/../Publish/views/plugins/' => base_path('resources/views/plugins/'),
+			__DIR__ . '/../Resources/Assets/Images' => base_path('public/assets/images/'),
+			__DIR__ . '/../Resources/Views/' => public_path('themes/') . Theme::getActive() . '/views/modules/core/',
 		]);
-/*
-		$this->publishes([
-			__DIR__ . '/../Publish/assets/vendors' => base_path('public/assets/vendors/'),
-		], 'js');
+
 
 		$this->publishes([
-			__DIR__ . '/../Publish/Plugins' => base_path('app/Plugins/'),
-		], 'plugins');
-*/
+			__DIR__.'/../Config/core.php' => config_path('core.php'),
+			__DIR__.'/../Config/translator.php' => config_path('translator.php'),
+		], 'configs');
+
+		$this->publishes([
+			__DIR__ . '/../Resources/Assets/Images' => base_path('public/assets/images/'),
+		], 'images');
 
 		$this->publishes([
 			__DIR__ . '/../Resources/Views/' => public_path('themes/') . Theme::getActive() . '/views/modules/core/',
 		], 'views');
+
 
 		AliasLoader::getInstance()->alias(
 			'Setting',

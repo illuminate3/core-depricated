@@ -1,8 +1,8 @@
-@extends($theme_back)
+@extends('module_info')
 
 {{-- Web site Title --}}
 @section('title')
-{{ Config::get('core.title') }} :: @parent
+{{ Config::get('general.title') }} :: @parent
 @stop
 
 @section('styles')
@@ -20,7 +20,14 @@
 
 	<div class="container">
 		<div class="content">
-			<div class="title">Core</div>
+			<a href="/">
+				<img src="/assets/images/rakko.png">
+			</a>
+			<div class="title">
+				<a href="/">
+					Core
+				</a>
+			</div>
 			<div class="quote">
 				A basic collection of functions for Rakko
 			</div>
