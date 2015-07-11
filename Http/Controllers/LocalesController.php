@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Modules\Core\Http\Controllers;
 
 //use App\Modules\Core\Http\Models\Locale;
@@ -8,9 +9,6 @@ use Illuminate\Http\Request;
 use App\Modules\Core\Http\Requests\DeleteRequest;
 use App\Modules\Core\Http\Requests\LocaleCreateRequest;
 use App\Modules\Core\Http\Requests\LocaleUpdateRequest;
-
-// use Illuminate\Support\Facades\App;
-// use Illuminate\Support\Facades\Input;
 
 use Cache;
 use Flash;
@@ -36,6 +34,7 @@ class LocalesController extends CoreController {
 //		$this->middleware('admin');
 	}
 
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -49,6 +48,7 @@ class LocalesController extends CoreController {
 		return Theme::View('core::locales.index', compact('locales'));
 	}
 
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -58,6 +58,7 @@ class LocalesController extends CoreController {
 	{
 		return Theme::View('core::locales.create',  $this->locale_repo->create());
 	}
+
 
 	/**
 	 * Store a newly created resource in storage.
@@ -75,6 +76,7 @@ class LocalesController extends CoreController {
 		return redirect('admin/locales');
 	}
 
+
 	/**
 	 * Display the specified resource.
 	 *
@@ -83,10 +85,9 @@ class LocalesController extends CoreController {
 	 */
 	public function show($id)
 	{
-// 		$locale = $this->locale_repo->findOrFail($id);
-//
-// 		return View::make('HR::locales.show', compact('locale'));
+		//
 	}
+
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -103,8 +104,7 @@ class LocalesController extends CoreController {
 		$model = '$locale';
 //dd($modal_body);
 
-		return View('core::locales.edit',
-//		return Theme::View('core::locales.edit',
+		return Theme::View('core::locales.edit',
 			$this->locale_repo->edit($id),
 				compact(
 					'modal_title',
@@ -114,6 +114,7 @@ class LocalesController extends CoreController {
 					'model'
 			));
 	}
+
 
 	/**
 	 * Update the specified resource in storage.
@@ -134,6 +135,7 @@ class LocalesController extends CoreController {
 		return redirect('admin/locales');
 	}
 
+
 	/**
 	 * Remove the specified resource from storage.
 	 *
@@ -145,35 +147,6 @@ class LocalesController extends CoreController {
 		$this->locale_repo->find($id)->delete();
 
 		return Redirect::route('admin.locales.index');
-	}
-
-	/**
-	* Datatables data
-	*
-	* @return Datatables JSON
-	*/
-	public function data()
-	{
-//		$query = Locale::select(array('general::locales.id','general::locales.name','general::locales.description'))
-//			->orderBy('general::locales.name', 'ASC');
-//		$query = Locale::select('id', 'name' 'description', 'updated_at');
-//			->orderBy('name', 'ASC');
-		$query = Locale::select('id', 'name', 'description', 'updated_at');
-//dd($query);
-
-		return Datatables::of($query)
-//			->remove_column('id')
-
-			->addColumn(
-				'actions',
-				'
-					<a href="{{ URL::to(\'admin/locales/\' . $id . \'/edit\' ) }}" class="btn btn-success btn-sm" >
-						<span class="glyphicon glyphicon-pencil"></span>  {{ trans("kotoba::button.edit") }}
-					</a>
-				'
-				)
-
-			->make(true);
 	}
 
 

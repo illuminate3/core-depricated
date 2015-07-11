@@ -5,17 +5,11 @@ namespace App\Modules\Core\Http\Repositories;
 use App\Modules\Core\Http\Models\Setting;
 //use Illuminate\Support\Collection;
 
-//use App;
 use DB;
 use Session;
 
 
 class SettingRepository extends BaseRepository {
-// use DB;
-// use Registry;
-//
-//
-// class SettingRepository extends BaseRepository {
 
 
 	/**
@@ -24,6 +18,7 @@ class SettingRepository extends BaseRepository {
 	 * @var App\Modules\ModuleManager\Http\Models\Module
 	 */
 	protected $setting;
+
 
 	/**
 	 * Create a new ModuleRepository instance.
@@ -38,6 +33,7 @@ class SettingRepository extends BaseRepository {
 		$this->model = $setting;
 	}
 
+
 	/**
 	 * Get role collection.
 	 *
@@ -50,6 +46,7 @@ class SettingRepository extends BaseRepository {
 
 		return compact('');
 	}
+
 
 	/**
 	 * Get user collection.
@@ -64,6 +61,7 @@ class SettingRepository extends BaseRepository {
 
 		return compact('setting');
 	}
+
 
 	/**
 	 * Get user collection.
@@ -84,6 +82,7 @@ class SettingRepository extends BaseRepository {
 		return compact('lang', 'setting');
 	}
 
+
 	/**
 	 * Get all models.
 	 *
@@ -94,6 +93,7 @@ class SettingRepository extends BaseRepository {
 // 		$this->model = new Setting;
 // 		$this->model->create($input);
 	}
+
 
 	/**
 	 * Update a role.

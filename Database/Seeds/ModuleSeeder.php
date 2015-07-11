@@ -1,27 +1,20 @@
 <?php
 
-namespace App\Modules\Core\Database\Seeds;
+namespace App\Modules\Origami\Database\Seeds;
 
 use Illuminate\Database\Seeder;
-
-use DB;
+Use DB;
 use Schema;
 
+
 class ModuleSeeder extends Seeder {
+
 
 	public function run()
 	{
 
-// Module Information
-/*
-	"name": "Core",
-	"slug": "core",
-	"version": "1.0",
-	"description": "Functionality: Locales, Settings, Statuses",
-	"enabled": true
-*/
 
-// Permission Information
+// Permissions -------------------------------------------------------------
 		$permissions = array(
 			[
 				'name'				=> 'Manage Core',
@@ -30,9 +23,74 @@ class ModuleSeeder extends Seeder {
 			],
 		 );
 
-// Insert Permissions
-		DB::table('permissions')->insert( $permissions );
+		if (Schema::hasTable('permissions'))
+		{
+			DB::table('permissions')->insert( $permissions );
+		}
 
+
+// Links -------------------------------------------------------------------
+// Locales
+
+		$link_names = array([
+			'menu_id'				=> 1, // admin menu
+			'position'				=> 7,
+		]);
+
+		if (Schema::hasTable('menulinks'))
+		{
+			DB::table('menulinks')->insert( $link_names );
+		}
+
+		$last_insert_id = DB::getPdo()->lastInsertId();
+		$locale_id = DB::table('locales')
+			->where('name', '=', 'English')
+			->where('locale', '=', 'en', 'AND')
+			->pluck('id');
+
+		$ink_name_trans = array([
+			'status'				=> 1,
+			'title'					=> 'Locales',
+			'url'					=> '/admin/locales',
+			'menulink_id'			=> $last_insert_id,
+			'locale_id'				=> $locale_id // English ID
+		]);
+
+		if (Schema::hasTable('menulinks'))
+		{
+			DB::table('menulink_translations')->insert( $ink_name_trans );
+		}
+
+
+// Settings
+		$link_names = array([
+			'menu_id'				=> 1, // admin menu
+			'position'				=> 7,
+		]);
+
+		if (Schema::hasTable('menulinks'))
+		{
+			DB::table('menulinks')->insert( $link_names );
+		}
+
+		$last_insert_id = DB::getPdo()->lastInsertId();
+		$locale_id = DB::table('locales')
+			->where('name', '=', 'English')
+			->where('locale', '=', 'en', 'AND')
+			->pluck('id');
+
+		$ink_name_trans = array([
+			'status'				=> 1,
+			'title'					=> 'Settings',
+			'url'					=> '/admin/settings',
+			'menulink_id'			=> $last_insert_id,
+			'locale_id'				=> $locale_id // English ID
+		]);
+
+		if (Schema::hasTable('menulinks'))
+		{
+			DB::table('menulink_translations')->insert( $ink_name_trans );
+		}
 
 	} // run
 

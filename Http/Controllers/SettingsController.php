@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Modules\Core\Http\Controllers;
 
 //use App\Modules\Core\Http\Models\Setting;
@@ -8,9 +9,6 @@ use Illuminate\Http\Request;
 use App\Modules\Core\Http\Requests\DeleteRequest;
 use App\Modules\Core\Http\Requests\SettingCreateRequest;
 use App\Modules\Core\Http\Requests\SettingUpdateRequest;
-
-// use Illuminate\Support\Facades\App;
-// use Illuminate\Support\Facades\Input;
 
 use Cache;
 use Flash;
@@ -28,6 +26,7 @@ class SettingsController extends CoreController {
 	 */
 	protected $setting_repo;
 
+
 	public function __construct(
 			SettingRepository $setting_repo
 		)
@@ -36,6 +35,7 @@ class SettingsController extends CoreController {
 // middleware
 //		$this->middleware('admin');
 	}
+
 
 	/**
 	 * Display a listing of the resource.
@@ -50,6 +50,7 @@ class SettingsController extends CoreController {
 		return Theme::View('core::settings.index', compact('settings'));
 	}
 
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -59,6 +60,7 @@ class SettingsController extends CoreController {
 	{
 		return Theme::View('modules.core.settings.create',  $this->setting_repo->create());
 	}
+
 
 	/**
 	 * Store a newly created resource in storage.
@@ -79,6 +81,7 @@ class SettingsController extends CoreController {
 		return redirect('admin/settings');
 	}
 
+
 	/**
 	 * Display the specified resource.
 	 *
@@ -87,10 +90,9 @@ class SettingsController extends CoreController {
 	 */
 	public function show($id)
 	{
-// 		$setting = $this->setting->findOrFail($id);
-//
-// 		return View::make('HR::settings.show', compact('setting'));
+		//
 	}
+
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -107,7 +109,7 @@ class SettingsController extends CoreController {
 		$model = '$setting';
 //dd($modal_body);
 
-		return View('core::settings.edit',
+		return Theme::View('core::settings.edit',
 			$this->setting_repo->edit($key),
 				compact(
 					'modal_title',
@@ -117,6 +119,7 @@ class SettingsController extends CoreController {
 					'model'
 			));
 	}
+
 
 	/**
 	 * Update the specified resource in storage.
@@ -141,6 +144,7 @@ class SettingsController extends CoreController {
 		return redirect('admin/settings');
 	}
 
+
 	/**
 	 * Remove the specified resource from storage.
 	 *
@@ -152,35 +156,6 @@ class SettingsController extends CoreController {
 		$this->setting_repo->find($id)->delete();
 
 		return Redirect::route('admin.settings.index');
-	}
-
-	/**
-	* Datatables data
-	*
-	* @return Datatables JSON
-	*/
-	public function data()
-	{
-//		$query = Setting::select(array('settings.id','settings.name','settings.description'))
-//			->orderBy('settings.name', 'ASC');
-//		$query = Setting::select('id', 'name' 'description', 'updated_at');
-//			->orderBy('name', 'ASC');
-		$query = Setting::select('id', 'name', 'description', 'updated_at');
-//dd($query);
-
-		return Datatables::of($query)
-//			->remove_column('id')
-
-			->addColumn(
-				'actions',
-				'
-					<a href="{{ URL::to(\'admin/settings/\' . $id . \'/edit\' ) }}" class="btn btn-success btn-sm" >
-						<span class="glyphicon glyphicon-pencil"></span>  {{ trans("kotoba::button.edit") }}
-					</a>
-				'
-				)
-
-			->make(true);
 	}
 
 
