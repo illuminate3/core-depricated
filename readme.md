@@ -1,4 +1,15 @@
-# Core II : Laravel 5.1.x Beta Development
+# Core : Laravel 5.1.x
+
+
+## Status / Version
+
+Beta Development
+
+
+## Description
+
+Core is a module that provides basic and overall functionality to the Rakko platform system.
+The code in this module could be placed directly within the Rakko main package but makes more sense to be put into a consolidated package.
 
 
 ## Functionality
@@ -21,45 +32,18 @@ Settings allow you to set key/values to the database or to a .json file
 
 ## Packages
 
+Intended to be used with:
+https://github.com/illuminate3/rakkoII
 
-* https://github.com/illuminate3/kotoba
-```
-"illuminate3/kotoba": "dev-master",
-Illuminate3\Kotoba\KotobaServiceProvider::class,
-```
-
-
-* https://github.com/vinkla/translator
-```
-'Vinkla\Translator\TranslatorServiceProvider'
-vendor:publish --provider="Vinkla\Translator\TranslatorServiceProvider"
-```
-
+The Following are packages that are specific to this module:
 
 * https://github.com/anlutro/laravel-settings
-```
-composer require anlutro/l4-settings
-anlutro\LaravelSettings\ServiceProvider::class,
-'Setting' => 'anlutro\LaravelSettings\Facade'
-```
-
-```
-vendor:publish --provider="anlutro\LaravelSettings\ServiceProvider"
-```
-
-* https://github.com/laracasts/Presenter
-```
-"laracasts/presenter": "dev-master"
-```
 
 
+## Screen Shots
 ## Thanks
 
-
-*
-
-
-## Partial Code or Ideas
-
-
+I used the config file for the seeds.
 * https://github.com/mcamara/laravel-localization/blob/master/src/config/config.php
+
+Originally, I intended to use the mcamara/laravel-localization package but ended up with going with my own solution.
