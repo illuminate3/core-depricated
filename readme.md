@@ -35,8 +35,8 @@ Settings allow you to set key/values to the database or to a .json file
 ### migration commands
 
 ```
-php artisan module:migrate Origmami
-php artisan module:seed Origmami
+php artisan module:migrate Core
+php artisan module:seed Core
 ```
 
 
