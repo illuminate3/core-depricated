@@ -78,7 +78,6 @@ class CoreServiceProvider extends ServiceProvider
 			'anlutro\LaravelSettings\Facade'
 		);
 
-
 	}
 
 
