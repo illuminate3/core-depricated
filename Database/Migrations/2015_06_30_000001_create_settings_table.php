@@ -15,6 +15,7 @@ class CreateSettingsTable extends Migration
 		$this->prefix = Config::get('core.core_db.prefix', '');
 	}
 
+
 	/**
 	 * Run the migrations.
 	 *
@@ -33,6 +34,7 @@ class CreateSettingsTable extends Migration
 
 		});
 	}
+
 
 	/**
 	 * Reverse the migrations.

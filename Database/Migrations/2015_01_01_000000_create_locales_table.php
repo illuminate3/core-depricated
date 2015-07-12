@@ -15,6 +15,7 @@ class CreateLocalesTable extends Migration {
 		$this->prefix = Config::get('core.core_db.prefix', '');
 	}
 
+
 	/**
 	 * Run the migrations.
 	 *
@@ -39,6 +40,7 @@ class CreateLocalesTable extends Migration {
 
 		});
 	}
+
 
 	/**
 	 * Reverse the migrations.
