@@ -19,12 +19,12 @@ Route::group(['prefix' => 'core'], function() {
 
 
 Route::get('home', array(
-	'uses'=>'CoreController@index'
+	'uses'=>'DashboardController@index'
 	));
 
 
 Route::get('/', array(
-	'uses'=>'DashboardController@index'
+	'uses'=>'CoreController@index'
 	));
 
 // API DATA
