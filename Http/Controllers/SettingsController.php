@@ -33,6 +33,7 @@ class SettingsController extends CoreController {
 	{
 		$this->setting_repo = $setting_repo;
 // middleware
+		$this->middleware('auth');
 //		$this->middleware('admin');
 	}
 

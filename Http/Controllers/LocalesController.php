@@ -2,7 +2,7 @@
 
 namespace App\Modules\Core\Http\Controllers;
 
-//use App\Modules\Core\Http\Models\Locale;
+use App\Modules\Core\Http\Models\Locale;
 use App\Modules\Core\Http\Repositories\LocaleRepository;
 
 use Illuminate\Http\Request;
@@ -26,11 +26,14 @@ class LocalesController extends CoreController {
 	protected $locale;
 
 	public function __construct(
+			Locale $locale,
 			LocaleRepository $locale_repo
 		)
 	{
+		$this->locale = $locale;
 		$this->locale_repo = $locale_repo;
 // middleware
+		$this->middleware('auth');
 //		$this->middleware('admin');
 	}
 
@@ -97,6 +100,8 @@ class LocalesController extends CoreController {
 	 */
 	public function edit($id)
 	{
+		$locale = $this->locale->find($id);
+
 		$modal_title = trans('kotoba::general.command.delete');
 		$modal_body = trans('kotoba::general.ask.delete');
 		$modal_route = 'admin.locales.destroy';
@@ -105,14 +110,14 @@ class LocalesController extends CoreController {
 //dd($modal_body);
 
 		return Theme::View('core::locales.edit',
-			$this->locale_repo->edit($id),
-				compact(
-					'modal_title',
-					'modal_body',
-					'modal_route',
-					'modal_id',
-					'model'
-			));
+			compact(
+				'locale',
+				'modal_title',
+				'modal_body',
+				'modal_route',
+				'modal_id',
+				'model'
+		));
 	}
 
 

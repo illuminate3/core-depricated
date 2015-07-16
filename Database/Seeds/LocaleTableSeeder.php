@@ -20,6 +20,7 @@ class LocaleTableSeeder extends Seeder {
 		$csv = dirname(__FILE__) . '/Data/' . 'languages.csv';
 		$file_handle = fopen($csv, "r");
 
+$id = 1;
 		while (!feof($file_handle)) {
 
 			$line = fgetcsv($file_handle);
@@ -28,6 +29,7 @@ class LocaleTableSeeder extends Seeder {
 			}
 
 			$c = array();
+			$c['id']			= $id;
 			$c['locale']		= $line[0];
 			$c['name']			= $line[1];
 			$c['script']		= $line[2];
@@ -36,6 +38,9 @@ class LocaleTableSeeder extends Seeder {
 			$c['default']		= $line[5];
 
 			DB::table('locales')->insert($c);
+
+$id = $id + 1;
+
 		}
 
 		fclose($file_handle);
