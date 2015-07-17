@@ -33,8 +33,10 @@ class LocalesController extends CoreController {
 		$this->locale = $locale;
 		$this->locale_repo = $locale_repo;
 // middleware
-		$this->middleware('auth');
-//		$this->middleware('admin');
+		parent::__construct();
+// middleware
+// 		$this->middleware('auth');
+// 		$this->middleware('admin');
 	}
 
 

@@ -19,9 +19,11 @@ class DashboardController extends CoreController {
 	{
 		$this->user = $user;
 // 		$this->role = $role;
-
 // middleware
-//		$this->middleware('guest');
+// 		parent::__construct();
+// middleware
+		$this->middleware('auth');
+// 		$this->middleware('admin');
 	}
 
 
