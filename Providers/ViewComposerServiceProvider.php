@@ -34,7 +34,7 @@ class ViewComposerServiceProvider extends ServiceProvider
 
 	public function getLocales()
 	{
-		$languages = Cache::get('locales');
+		$languages = Cache::get('languages');
 //dd($languages);
 
 		if ($languages == null) {
