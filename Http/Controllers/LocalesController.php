@@ -135,8 +135,8 @@ class LocalesController extends CoreController {
 		)
 	{
 //dd("update");
-		$this->locale_repo->update($request->all(), $id);
 		Cache::forget('languages');
+		$this->locale_repo->update($request->all(), $id);
 
 		Flash::success( trans('kotoba::cms.success.locale_update') );
 		return redirect('admin/locales');
