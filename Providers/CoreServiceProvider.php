@@ -91,7 +91,7 @@ class CoreServiceProvider extends ServiceProvider
 		$app = $this->app;
 
 		$app->register('App\Modules\Core\Providers\RouteServiceProvider');
-		$app->register('App\Modules\Core\Providers\ViewComposerServiceProvider');
+//		$app->register('App\Modules\Core\Providers\ViewComposerServiceProvider');
 		$app->register('anlutro\LaravelSettings\ServiceProvider');
 	}
 
