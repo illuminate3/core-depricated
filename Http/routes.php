@@ -18,7 +18,7 @@ Route::group(['prefix' => 'core'], function() {
 });
 
 
-Route::get('home', array(
+Route::get('dashboard', array(
 	'uses'=>'DashboardController@index'
 	));
 
