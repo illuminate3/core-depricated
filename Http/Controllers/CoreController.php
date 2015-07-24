@@ -36,7 +36,7 @@ class CoreController extends Controller
 	 */
 	public function welcome()
 	{
-		return Theme::View('core::welcome.core');
+		return Theme::View('modules.core.welcome.core');
 	}
 
 
@@ -47,7 +47,7 @@ class CoreController extends Controller
 	 */
 	public function index()
 	{
-		return Theme::View('core::landing');
+		return Theme::View('modules.core.landing');
 	}
 
 
