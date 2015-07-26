@@ -18,13 +18,16 @@ Route::group(['prefix' => 'core'], function() {
 });
 
 
-Route::get('dashboard', array(
-	'uses'=>'DashboardController@index'
+Route::get('/', array(
+	'uses'=>'CoreController@index'
 	));
 
 
-Route::get('/', array(
-	'uses'=>'CoreController@index'
+Route::get('dashboard', array(
+	'uses'=>'DashboardController@index'
+	));
+Route::get('home', array(
+	'uses'=>'DashboardController@index'
 	));
 
 // API DATA
