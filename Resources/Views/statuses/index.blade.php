@@ -1,8 +1,8 @@
-@extends('_layouts.app')
+@extends($theme_back)
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::cms._status', 2) }} :: @parent
+{{ Lang::choice('kotoba::general.status', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -35,7 +35,7 @@ oTable =
 	</a>
 	</p>
 	<i class="fa fa-paperclip fa-lg"></i>
-		{{ Lang::choice('kotoba::cms._status', 2) }}
+		{{ Lang::choice('kotoba::general.status', 2) }}
 	<hr>
 </h1>
 </div>

@@ -1,8 +1,8 @@
-@extends('_layouts.app')
+@extends($theme_back)
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::cms._status', 2) }} :: @parent
+{{ Lang::choice('kotoba::general.status', 2) }} :: @parent
 @stop
 
 @section('styles')

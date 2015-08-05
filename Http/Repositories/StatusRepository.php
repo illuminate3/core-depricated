@@ -15,14 +15,14 @@ class StatusRepository extends BaseRepository {
 	/**
 	 * The Module instance.
 	 *
-	 * @var App\Modules\ModuleManager\Http\Domain\Models\Module
+	 * @var App\Modules\ModuleManager\Http\Models\Module
 	 */
 	protected $status;
 
 	/**
 	 * Create a new ModuleRepository instance.
 	 *
-   	 * @param  App\Modules\ModuleManager\Http\Domain\Models\Module $module
+   	 * @param  App\Modules\ModuleManager\Http\Models\Module $module
 	 * @return void
 	 */
 	public function __construct(

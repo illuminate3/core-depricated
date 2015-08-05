@@ -25,7 +25,7 @@ class Status extends Model implements TranslatableContract {
 	protected $presenter = 'App\Modules\Core\Http\Presenters\Core';
 
 // Translation Model -------------------------------------------------------
-	protected $translator = 'App\Modules\Core\Http\Domain\Models\StatusTranslation';
+	protected $translator = 'App\Modules\Core\Http\Models\StatusTranslation';
 
 // Hidden ------------------------------------------------------------------
 	protected $hidden = [
