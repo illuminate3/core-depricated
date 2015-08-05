@@ -11,14 +11,12 @@ use Session;
 
 class SettingRepository extends BaseRepository {
 
-
 	/**
 	 * The Module instance.
 	 *
 	 * @var App\Modules\ModuleManager\Http\Models\Module
 	 */
 	protected $setting;
-
 
 	/**
 	 * Create a new ModuleRepository instance.
@@ -109,7 +107,6 @@ class SettingRepository extends BaseRepository {
 		$setting->update($input);
 	}
 
-
 	public function getKeyValues($key)
 	{
 
@@ -119,6 +116,5 @@ class SettingRepository extends BaseRepository {
 
 		return $values;
 	}
-
 
 }

@@ -1,8 +1,8 @@
-@extends($theme_back)
+@extends('_layouts.app')
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::cms.setting', 2) }} :: @parent
+{{ Lang::choice('kotoba::cms._status', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -20,7 +20,7 @@
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/admin/settings" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
+	<a href="/admin/statuses" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
 		<i class="fa fa-chevron-left fa-fw"></i>
 		{{ trans('kotoba::button.back') }}
 	</a>
@@ -33,7 +33,7 @@
 
 <div class="row">
 {!! Form::open([
-	'url' => 'admin/settings',
+	'url' => 'admin/statuses',
 	'method' => 'POST',
 	'class' => 'form'
 ]) !!}
@@ -41,30 +41,30 @@
 <div class="form-group">
 <div class="input-group">
 	<span class="input-group-addon"><i class="fa fa-tag fa-fw"></i></span>
-		<input type="text" id="key" name="key" placeholder="{{ trans('kotoba::cms.key') }}" class="form-control" autofocus="autofocus">
+		<input type="text" id="name" name="name" placeholder="{{ trans('kotoba::account.name') }}" class="form-control" autofocus="autofocus">
 </div>
 </div>
 
 <div class="form-group">
 <div class="input-group">
 	<span class="input-group-addon"><i class="fa fa-info fa-fw"></i></span>
-		<input type="text" id="value" name="value" placeholder="{{ trans('kotoba::cms.value') }}" class="form-control">
+		<input type="text" id="description" name="description" placeholder="{{ trans('kotoba::general.description') }}" class="form-control">
 </div>
 </div>
 
 <hr>
 
-<div class="row">
+<div class="form-group">
 <div class="col-sm-12">
 	<input class="btn btn-success btn-block" type="submit" value="{{ trans('kotoba::button.save') }}">
 </div>
 </div>
 
-<br>
+{!! Form::close() !!}
 
 <div class="row">
 <div class="col-sm-6">
-	<a href="/admin/settings" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
+	<a href="/admin/statuses" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
 		<i class="fa fa-times fa-fw"></i>
 		{{ trans('kotoba::button.cancel') }}
 	</a>
@@ -74,8 +74,6 @@
 	<input class="btn btn-default btn-block" type="reset" value="{{ trans('kotoba::button.reset') }}">
 </div>
 </div>
-
-{!! Form::close() !!}
 
 </div> <!-- ./ row -->
 @stop

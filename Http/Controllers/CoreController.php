@@ -13,7 +13,6 @@ use Theme;
 class CoreController extends Controller
 {
 
-
 // 	use DispatchesJobs, ValidatesRequests;
 
 	/**
@@ -49,6 +48,5 @@ class CoreController extends Controller
 	{
 		return Theme::View('modules.core.landing');
 	}
-
 
 }

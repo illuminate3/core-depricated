@@ -8,9 +8,7 @@ use Laracasts\Presenter\PresentableTrait;
 
 class Locale extends Model {
 
-
 	use PresentableTrait;
-
 
 /**
  * The database table used by the model.
@@ -19,14 +17,11 @@ class Locale extends Model {
  */
 	protected $table = 'locales';
 
-
 // Presenter ---------------------------------------------------------------
 	protected $presenter = 'App\Modules\Core\Http\Presenters\Core';
 
-
 // Translation Model -------------------------------------------------------
 // Hidden ------------------------------------------------------------------
-
 
 // Fillable ----------------------------------------------------------------
 /*
@@ -46,8 +41,12 @@ class Locale extends Model {
 		'default'
 		];
 
-
 // Relationships -----------------------------------------------------------
+
+// hasMany
+// BelongsTo
+// BelongsToMany
+
 // Functions ---------------------------------------------------------------
 
 

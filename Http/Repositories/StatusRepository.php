@@ -2,34 +2,34 @@
 
 namespace App\Modules\Core\Http\Repositories;
 
-use App\Modules\Core\Http\Models\Locale;
-//use Illuminate\Support\Collection;
+use App\Modules\Core\Http\Models\Status;
+use Illuminate\Support\Collection;
 
-//use App;
+use App;
 use DB;
 use Session;
 
 
-class LocaleRepository extends BaseRepository {
+class StatusRepository extends BaseRepository {
 
 	/**
 	 * The Module instance.
 	 *
-	 * @var App\Modules\ModuleManager\Http\Models\Module
+	 * @var App\Modules\ModuleManager\Http\Domain\Models\Module
 	 */
-	protected $locale;
+	protected $status;
 
 	/**
 	 * Create a new ModuleRepository instance.
 	 *
-   	 * @param  App\Modules\ModuleManager\Http\Models\Module $module
+   	 * @param  App\Modules\ModuleManager\Http\Domain\Models\Module $module
 	 * @return void
 	 */
 	public function __construct(
-		Locale $locale
+		Status $status
 		)
 	{
-		$this->model = $locale;
+		$this->model = $status;
 	}
 
 
@@ -55,10 +55,10 @@ class LocaleRepository extends BaseRepository {
 	 */
 	public function show($id)
 	{
-		$locale = $this->model->find($id);
+		$status = $this->model->find($id);
 //dd($module);
 
-		return compact('locale');
+		return compact('status');
 	}
 
 
@@ -70,10 +70,10 @@ class LocaleRepository extends BaseRepository {
 	 */
 	public function edit($id)
 	{
-		$locale = $this->model->find($id);
-//dd($locale);
+		$status = $this->model->find($id);
+//dd($module);
 
-		return compact('locale');
+		return compact('status');
 	}
 
 
@@ -85,15 +85,7 @@ class LocaleRepository extends BaseRepository {
 	public function store($input)
 	{
 //dd($input);
-
-		if ( !isset($input['active']) ) {
-			$input['active'] = 0;
-		}
-		if ( !isset($input['default']) ) {
-			$input['default'] = 0;
-		}
-
-		$this->model = new Locale;
+		$this->model = new Status;
 		$this->model->create($input);
 	}
 
@@ -107,17 +99,9 @@ class LocaleRepository extends BaseRepository {
 	 */
 	public function update($input, $id)
 	{
-//dd($input);
-
-		if ( !isset($input['active']) ) {
-			$input['active'] = 0;
-		}
-		if ( !isset($input['default']) ) {
-			$input['default'] = 0;
-		}
-
-		$locale = Locale::find($id);
-		$locale->update($input);
+//dd($input['enabled']);
+		$status = Status::find($id);
+		$status->update($input);
 	}
 
 }

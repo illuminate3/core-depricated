@@ -1,8 +1,8 @@
-@extends($theme_back)
+@extends('_layouts.app')
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::cms.locale', 2) }} :: @parent
+{{ Lang::choice('kotoba::cms._status', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -22,48 +22,46 @@ oTable =
 });
 @stop
 
+
 {{-- Content --}}
 @section('content')
 
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/admin/locales/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
+	<a href="/admin/statuses/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
 		<i class="fa fa-plus fa-fw"></i>
 		{{ trans('kotoba::button.new') }}
 	</a>
 	</p>
-	<i class="fa fa-angle-double-right fa-lg"></i>
-		{{ Lang::choice('kotoba::cms.locale', 2) }}
+	<i class="fa fa-paperclip fa-lg"></i>
+		{{ Lang::choice('kotoba::cms._status', 2) }}
 	<hr>
 </h1>
 </div>
+
+@if (count($statuses))
 
 <div class="row">
 <table id="table" class="table table-striped table-hover">
 	<thead>
 		<tr>
-			<th>{{ Lang::choice('kotoba::table.locale', 1) }}</th>
 			<th>{{ trans('kotoba::table.name') }}</th>
-			<th>{{ trans('kotoba::table.script') }}</th>
-			<th>{{ trans('kotoba::table.native') }}</th>
-			<th>{{ trans('kotoba::table.active') }}</th>
-			<th>{{ trans('kotoba::table.default') }}</th>
-
+			<th>{{ trans('kotoba::table.description') }}</th>
 			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
 		</tr>
 	</thead>
 	<tbody>
-		@foreach ($locales as $locale)
+		@foreach ($statuses as $_status)
 			<tr>
-				<td>{{ $locale->locale }}</td>
-				<td>{{ $locale->name }}</td>
-				<td>{{ $locale->script }}</td>
-				<td>{{ $locale->native }}</td>
-				<td>{{ $locale->present()->status($locale->active) }}</td>
-				<td>{{ $locale->present()->active($locale->default) }}</td>
 				<td>
-					<a href="/admin/locales/{{ $locale->id }}/edit" class="btn btn-success" title="{{ trans('kotoba::button.edit') }}">
+					{{ $_status->translate($lang)->name }}
+				</td>
+				<td>
+					{{ $_status->translate($lang)->description }}
+				</td>
+				<td>
+					<a href="/admin/statuses/{{ $_status->id }}/edit" class="btn btn-success" title="{{ trans('kotoba::button.edit') }}">
 						<i class="fa fa-pencil fa-fw"></i>
 						{{ trans('kotoba::button.edit') }}
 					</a>
@@ -74,4 +72,11 @@ oTable =
 </table>
 </div>
 
+@else
+<div class="alert alert-info">
+	{{ trans('kotoba::general.error.not_found') }}
+</div>
+@endif
+
+</div>
 @stop

@@ -4,7 +4,6 @@
 // php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider" --tag="config"
 // php artisan vendor:publish --provider="App\Modules\Core\Providers\CoreServiceProvider" --tag="views"
 
-
 return [
 
 /*
@@ -29,7 +28,6 @@ return [
 	'footer'						=> 'Rakko © 2015 - github.com/illuminate3',
 	'separator'						=> ':',
 
-
 /*
 |--------------------------------------------------------------------------
 | Image Paths
@@ -45,7 +43,6 @@ return [
 		'resize_width'					=> '220',
 		'resize_height'					=> '350',
 	],
-
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +60,6 @@ return [
 			return $image->fit(480, 360);
 		}
 	),
-
 
 /*
 |--------------------------------------------------------------------------

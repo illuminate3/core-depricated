@@ -2,9 +2,7 @@
 
 namespace App\Modules\Core\Http\Repositories;
 
-
 abstract class BaseRepository {
-
 
 	/**
 	 * The Model instance.
@@ -23,6 +21,7 @@ abstract class BaseRepository {
 		return $this->model->all();
 	}
 
+
 	/**
 	 * Destroy a model.
 	 *
@@ -34,6 +33,7 @@ abstract class BaseRepository {
 		$this->getById($id)->delete();
 	}
 
+
 	/**
 	 * Get Model by id.
 	 *
@@ -44,6 +44,5 @@ abstract class BaseRepository {
 	{
 		return $this->model->findOrFail($id);
 	}
-
 
 }

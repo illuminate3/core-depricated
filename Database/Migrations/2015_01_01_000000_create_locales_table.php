@@ -8,7 +8,6 @@ use Illuminate\Database\Schema\Blueprint;
 
 class CreateLocalesTable extends Migration {
 
-
 	public function __construct()
 	{
 		// Get the prefix
@@ -51,6 +50,5 @@ class CreateLocalesTable extends Migration {
 	{
 		Schema::drop('locales');
 	}
-
 
 }

@@ -15,7 +15,6 @@ use View;
 class CoreServiceProvider extends ServiceProvider
 {
 
-
 	/**
 	 * Register the Core module service provider.
 	 *
@@ -31,6 +30,7 @@ class CoreServiceProvider extends ServiceProvider
 		$this->registerNamespaces();
 		$this->registerProviders();
 	}
+
 
 	/**
 	 * Register the Core module resource namespaces.
@@ -58,7 +58,6 @@ class CoreServiceProvider extends ServiceProvider
 			__DIR__ . '/../Resources/Views/' => public_path('themes/') . Theme::getActive() . '/views/modules/core/',
 		]);
 
-
 		$this->publishes([
 			__DIR__.'/../Config/core.php' => config_path('core.php'),
 			__DIR__.'/../Config/translator.php' => config_path('translator.php'),
@@ -71,7 +70,6 @@ class CoreServiceProvider extends ServiceProvider
 		$this->publishes([
 			__DIR__ . '/../Resources/Views/' => public_path('themes/') . Theme::getActive() . '/views/modules/core/',
 		], 'views');
-
 
 		AliasLoader::getInstance()->alias(
 			'Setting',
@@ -94,6 +92,5 @@ class CoreServiceProvider extends ServiceProvider
 		$app->register('App\Modules\Core\Providers\ViewComposerServiceProvider');
 		$app->register('anlutro\LaravelSettings\ServiceProvider');
 	}
-
 
 }

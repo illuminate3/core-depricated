@@ -14,7 +14,6 @@ use View;
 class ViewComposerServiceProvider extends ServiceProvider
 {
 
-
 	/**
 	 * Register the service provider.
 	 *
@@ -30,7 +29,6 @@ class ViewComposerServiceProvider extends ServiceProvider
 	{
 		//
 	}
-
 
 	public function getLocales()
 	{
@@ -50,6 +48,5 @@ class ViewComposerServiceProvider extends ServiceProvider
 	return $languages;
 
 	}
-
 
 }

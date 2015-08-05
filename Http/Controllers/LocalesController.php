@@ -17,7 +17,6 @@ use Theme;
 
 class LocalesController extends CoreController {
 
-
 	/**
 	 * Locale Repository
 	 *
@@ -155,6 +154,5 @@ class LocalesController extends CoreController {
 
 		return Redirect::route('admin.locales.index');
 	}
-
 
 }

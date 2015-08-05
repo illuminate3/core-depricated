@@ -11,7 +11,6 @@ use Theme;
 
 class DashboardController extends CoreController {
 
-
 	public function __construct(
 			User $user
 // 			RoleRepository $role
@@ -45,6 +44,5 @@ class DashboardController extends CoreController {
 		return Theme::View('modules.core.landing');
 
 	}
-
 
 }

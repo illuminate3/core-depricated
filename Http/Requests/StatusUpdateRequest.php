@@ -5,7 +5,7 @@ namespace App\Modules\Core\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
 
-class SettingCreateRequest extends FormRequest {
+class StatusUpdateRequest extends FormRequest {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -26,8 +26,8 @@ class SettingCreateRequest extends FormRequest {
 	public function rules()
 	{
 		return [
-			'key'					=> 'required',
-			'value'					=> 'required'
+			'name'					=> 'required',
+			'description'			=> 'required'
 		];
 	}
 

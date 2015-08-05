@@ -10,7 +10,6 @@ use Schema;
 
 class LocaleTableSeeder extends Seeder {
 
-
 	public function run()
 	{
 // Uncomment the below to wipe the table clean before populating
@@ -50,6 +49,5 @@ $id = $id + 1;
 // Uncomment the below to run the seeder
 //		DB::table('locales')->insert($seeds);
 	}
-
 
 }

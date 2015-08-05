@@ -8,9 +8,7 @@ use Laracasts\Presenter\PresentableTrait;
 
 class Setting extends Model {
 
-
 	use PresentableTrait;
-
 
 /**
  * The database table used by the model.
@@ -19,10 +17,8 @@ class Setting extends Model {
  */
 	protected $table = 'settings';
 
-
 // Presenter ---------------------------------------------------------------
 	protected $presenter = 'App\Modules\Core\Http\Presenters\Core';
-
 
 // Translation Model -------------------------------------------------------
 // Hidden ------------------------------------------------------------------
@@ -32,7 +28,6 @@ class Setting extends Model {
  * @var array
  */
 //	protected $hidden = ['password', 'remember_token'];
-
 
 // Fillable ----------------------------------------------------------------
 /*
@@ -44,8 +39,12 @@ class Setting extends Model {
 		'value'
 		];
 
-
 // Relationships -----------------------------------------------------------
+
+// hasMany
+// BelongsTo
+// BelongsToMany
+
 // Functions ---------------------------------------------------------------
 
 

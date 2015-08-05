@@ -5,9 +5,9 @@ use Illuminate\Database\Schema\Blueprint;
 
 //use Config;
 
+
 class CreateSettingsTable extends Migration
 {
-
 
 	public function __construct()
 	{
@@ -45,6 +45,5 @@ class CreateSettingsTable extends Migration
 	{
 		Schema::drop($this->prefix . 'settings');
 	}
-
 
 }

@@ -18,14 +18,12 @@ use Theme;
 
 class SettingsController extends CoreController {
 
-
 	/**
 	 * Setting Repository
 	 *
 	 * @var Setting
 	 */
 	protected $setting_repo;
-
 
 	public function __construct(
 			SettingRepository $setting_repo
@@ -160,6 +158,5 @@ class SettingsController extends CoreController {
 
 		return Redirect::route('admin.settings.index');
 	}
-
 
 }

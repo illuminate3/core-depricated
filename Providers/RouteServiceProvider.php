@@ -9,7 +9,6 @@ use Caffeinated\Modules\Providers\RouteServiceProvider as ServiceProvider;
 class RouteServiceProvider extends ServiceProvider
 {
 
-
 	/**
 	 * This namespace is applied to the controller routes in your module's routes file.
 	 *
@@ -46,6 +45,5 @@ class RouteServiceProvider extends ServiceProvider
 			require (config('modules.path').'/Core/Http/routes.php');
 		});
 	}
-
 
 }

@@ -7,7 +7,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class LocaleCreateRequest extends FormRequest {
 
-
 	/**
 	 * Determine if the user is authorized to make this request.
 	 *
@@ -31,6 +30,5 @@ class LocaleCreateRequest extends FormRequest {
 			'name'					=> 'required'
 		];
 	}
-
 
 }
