@@ -2,7 +2,9 @@
 
 namespace App\Modules\Core\Http\Repositories;
 
+
 abstract class BaseRepository {
+
 
 	/**
 	 * The Model instance.
@@ -10,6 +12,7 @@ abstract class BaseRepository {
 	 * @var Illuminate\Database\Eloquent\Model
 	 */
 	protected $model;
+
 
 	/**
 	 * Get all models.
@@ -44,5 +47,6 @@ abstract class BaseRepository {
 	{
 		return $this->model->findOrFail($id);
 	}
+
 
 }

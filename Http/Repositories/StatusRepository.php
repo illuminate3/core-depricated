@@ -12,12 +12,14 @@ use Session;
 
 class StatusRepository extends BaseRepository {
 
+
 	/**
 	 * The Module instance.
 	 *
 	 * @var App\Modules\ModuleManager\Http\Models\Module
 	 */
 	protected $status;
+
 
 	/**
 	 * Create a new ModuleRepository instance.
@@ -100,5 +102,24 @@ class StatusRepository extends BaseRepository {
 		$status = Status::find($id);
 		$status->update($input);
 	}
+
+
+	public function getStatuses($locale_id)
+	{
+		$statuses = DB::table('status_translations')
+			->where('locale_id', '=', $locale_id)
+			->orderBy('id')
+			->lists('name', 'id');
+
+		return $statuses;
+	}
+/*
+	public function getStatuses()
+	{
+		$statuses = DB::table('statuses')->lists('name', 'id');
+		return $statuses;
+	}
+*/
+
 
 }

@@ -12,12 +12,14 @@ use Session;
 
 class LocaleRepository extends BaseRepository {
 
+
 	/**
 	 * The Module instance.
 	 *
 	 * @var App\Modules\ModuleManager\Http\Models\Module
 	 */
 	protected $locale;
+
 
 	/**
 	 * Create a new ModuleRepository instance.
@@ -119,5 +121,17 @@ class LocaleRepository extends BaseRepository {
 		$locale = Locale::find($id);
 		$locale->update($input);
 	}
+
+
+	public function getLocaleID($lang)
+	{
+
+		$locale_id = DB::table('locales')
+			->where('locale', '=', $lang)
+			->pluck('id');
+
+		return $locale_id;
+	}
+
 
 }
