@@ -1,5 +1,6 @@
 @extends($theme_back)
 
+
 {{-- Web site Title --}}
 @section('title')
 {{ Lang::choice('kotoba::cms.locale', 2) }} :: @parent
@@ -83,7 +84,9 @@
 		</div>
 	</div>
 
+
 <hr>
+
 
 <div class="row">
 <div class="col-sm-12">

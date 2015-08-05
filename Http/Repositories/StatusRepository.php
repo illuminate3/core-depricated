@@ -56,8 +56,6 @@ class StatusRepository extends BaseRepository {
 	public function show($id)
 	{
 		$status = $this->model->find($id);
-//dd($module);
-
 		return compact('status');
 	}
 
@@ -71,8 +69,7 @@ class StatusRepository extends BaseRepository {
 	public function edit($id)
 	{
 		$status = $this->model->find($id);
-//dd($module);
-
+//dd($status);
 		return compact('status');
 	}
 

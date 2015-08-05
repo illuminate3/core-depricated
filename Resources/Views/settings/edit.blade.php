@@ -1,5 +1,6 @@
 @extends($theme_back)
 
+
 {{-- Web site Title --}}
 @section('title')
 {{ Lang::choice('kotoba::cms.settings', 2) }} :: @parent
@@ -82,7 +83,9 @@
 	</div><!-- tabcontent -->
 --}}
 
+
 <hr>
+
 
 <div class="row">
 <div class="col-sm-12">

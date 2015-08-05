@@ -1,25 +1,18 @@
 @extends($theme_back)
 
+
 {{-- Web site Title --}}
 @section('title')
 {{ Lang::choice('kotoba::general.status', 2) }} :: @parent
 @stop
 
 @section('styles')
-	<link href="{{ asset('assets/vendors/DataTables-1.10.5/plugins/integration/bootstrap/3/dataTables.bootstrap.css') }}" rel="stylesheet">
 @stop
 
 @section('scripts')
-	<script src="{{ asset('assets/vendors/DataTables-1.10.5/media/js/jquery.dataTables.min.js') }}"></script>
-	<script src="{{ asset('assets/vendors/DataTables-1.10.5/plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
 @stop
 
 @section('inline-scripts')
-$(document).ready(function() {
-oTable =
-	$('#table').DataTable({
-	});
-});
 @stop
 
 
@@ -28,12 +21,14 @@ oTable =
 
 <div class="row">
 <h1>
+{{--
 	<p class="pull-right">
 	<a href="/admin/statuses/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
 		<i class="fa fa-plus fa-fw"></i>
 		{{ trans('kotoba::button.new') }}
 	</a>
 	</p>
+--}}
 	<i class="fa fa-paperclip fa-lg"></i>
 		{{ Lang::choice('kotoba::general.status', 2) }}
 	<hr>
@@ -52,16 +47,16 @@ oTable =
 		</tr>
 	</thead>
 	<tbody>
-		@foreach ($statuses as $_status)
+		@foreach ($statuses as $status)
 			<tr>
 				<td>
-					{{ $_status->translate($lang)->name }}
+					{{ $status->translate($lang)->name }}
 				</td>
 				<td>
-					{{ $_status->translate($lang)->description }}
+					{{ $status->translate($lang)->description }}
 				</td>
 				<td>
-					<a href="/admin/statuses/{{ $_status->id }}/edit" class="btn btn-success" title="{{ trans('kotoba::button.edit') }}">
+					<a href="/admin/statuses/{{ $status->id }}/edit" class="btn btn-success" title="{{ trans('kotoba::button.edit') }}">
 						<i class="fa fa-pencil fa-fw"></i>
 						{{ trans('kotoba::button.edit') }}
 					</a>

@@ -1,5 +1,6 @@
 @extends($theme_back)
 
+
 {{-- Web site Title --}}
 @section('title')
 {{ Lang::choice('kotoba::general.status', 2) }} :: @parent
@@ -41,42 +42,63 @@
 	]
 ) !!}
 
-<div class="form-group">
-<div class="input-group">
-	<span class="input-group-addon"><i class="fa fa-tag fa-fw"></i></span>
-		<input type="text" id="name" name="name" value="{{ $status->name }}" placeholder="{{ trans('kotoba::account.name') }}" class="form-control" autofocus="autofocus">
-</div>
-</div>
+	<div class="tab-content">
 
-<div class="form-group">
-<div class="input-group">
-	<span class="input-group-addon"><i class="fa fa-info fa-fw"></i></span>
-		<input type="text" id="description" name="description" value="{{ $status->description }}" placeholder="{{ trans('kotoba::general.description') }}" class="form-control">
-</div>
-</div>
+	@if (count($languages))
+
+	<ul class="nav nav-tabs">
+		@foreach( $languages as $language)
+			<li class="@if ($language->locale == $lang)active @endif">
+				<a href="#{{ $language->id }}" data-target="#lang_{{ $language->id }}" data-toggle="tab">{{{ $language->name }}}</a>
+			</li>
+		@endforeach
+	</ul>
+
+	@foreach( $languages as $language)
+	<div role="tabpanel" class="tab-pane padding fade @if ($language->locale == $lang)in active @endif" id="lang_{{{ $language->id }}}">
+
+			<div class="form-group">
+				<label for="title">{{ trans('kotoba::account.name') }}</label>
+				<input type="text" class="form-control" name="{{ 'name_'. $language->id }}" id="{{ 'name_'. $language->id }}" value="{{  $status->translate($language->locale)->name }}">
+			</div>
+
+			<div class="form-group">
+				<label for="title">{{ trans('kotoba::general.description') }}</label>
+				<input type="text" class="form-control" name="{{ 'description_'. $language->id }}" id="{{ 'description_'. $language->id }}" value="{{  $status->translate($language->locale)->description }}">
+			</div>
+
+	</div><!-- ./ $lang panel -->
+	@endforeach
+
+	@endif
+
+	</div>
+
 
 <hr>
 
-<div class="form-group">
+
+<div class="row">
 <div class="col-sm-12">
 	<input class="btn btn-success btn-block" type="submit" value="{{ trans('kotoba::button.save') }}">
 </div>
 </div>
 
-{!! Form::close() !!}
+<br>
 
 <div class="row">
-<div class="col-sm-4">
+<div class="col-sm-6">
 	<a href="/admin/statuses" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
 		<i class="fa fa-times fa-fw"></i>
 		{{ trans('kotoba::button.cancel') }}
 	</a>
 </div>
 
-<div class="col-sm-4">
+<div class="col-sm-6">
 	<input class="btn btn-default btn-block" type="reset" value="{{ trans('kotoba::button.reset') }}">
 </div>
 
+{{--
 <div class="col-sm-4">
 <!-- Button trigger modal -->
 	<a data-toggle="modal" data-target="#myModal" class="btn btn-default btn-block" title="{{ trans('kotoba::button.delete') }}">
@@ -84,13 +106,19 @@
 		{{ trans('kotoba::general.command.delete') }}
 	</a>
 </div>
+--}}
+
 </div>
+
+{!! Form::close() !!}
 
 </div> <!-- ./ row -->
 
+{{--
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	@include('_partials.modal')
+	@include($activeTheme . '::' . '_partials.modal')
 </div>
+--}}
 
 @stop

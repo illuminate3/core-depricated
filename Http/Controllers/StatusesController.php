@@ -18,6 +18,7 @@ use Theme;
 
 class StatusesController extends CoreController {
 
+
 	/**
 	 * Status Repository
 	 *
@@ -26,15 +27,17 @@ class StatusesController extends CoreController {
 	protected $status;
 
 	public function __construct(
+			Status $status,
 			StatusRepository $status_repo
 		)
 	{
+		$this->status = $status;
 		$this->status_repo = $status_repo;
 // middleware
 		parent::__construct();
 // middleware
-// 		$this->middleware('auth');
-// 		$this->middleware('admin');
+		$this->middleware('auth');
+		$this->middleware('admin');
 	}
 
 
@@ -108,8 +111,9 @@ class StatusesController extends CoreController {
 	 */
 	public function edit($id)
 	{
-		$status = $this->status_repo->edit($id);
+		$status = $this->status->find($id);
 		$lang = Session::get('locale');
+//dd($lang);
 
 		$modal_title = trans('kotoba::general.command.delete');
 		$modal_body = trans('kotoba::general.ask.delete');

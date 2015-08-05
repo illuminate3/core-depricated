@@ -1,5 +1,6 @@
 @extends($theme_back)
 
+
 {{-- Web site Title --}}
 @section('title')
 {{ Lang::choice('kotoba::cms.setting', 2) }} :: @parent
@@ -52,7 +53,9 @@
 </div>
 </div>
 
+
 <hr>
+
 
 <div class="row">
 <div class="col-sm-12">
@@ -77,5 +80,8 @@
 
 {!! Form::close() !!}
 
+
 </div> <!-- ./ row -->
+
+
 @stop
