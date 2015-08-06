@@ -30,13 +30,13 @@ class StatusesSeeder extends Seeder {
 		[
 			'name'					=> 'Enabled',
 			'description'			=> 'Set to On',
-			'status_id'		=> 1,
+			'status_id'				=> 1,
 			'locale_id'				=> $locale_id
 		],
 		[
 			'name'					=> 'Disabled',
 			'description'			=> 'Set to Off',
-			'status_id'		=> 2,
+			'status_id'				=> 2,
 			'locale_id'				=> $locale_id
 		]
 		);

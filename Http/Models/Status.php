@@ -11,8 +11,10 @@ use Vinkla\Translator\Contracts\Translatable as TranslatableContract;
 
 class Status extends Model implements TranslatableContract {
 
+
 	use PresentableTrait;
 	use Translatable;
+
 
 	/**
 	 * The database table used by the model.
@@ -62,5 +64,6 @@ class Status extends Model implements TranslatableContract {
 	{
 		return $this->description;
 	}
+
 
 }
