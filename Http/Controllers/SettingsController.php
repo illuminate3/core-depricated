@@ -12,6 +12,7 @@ use App\Modules\Core\Http\Requests\SettingUpdateRequest;
 
 use Cache;
 use Flash;
+use Session;
 use Setting;
 use Theme;
 
@@ -26,9 +27,11 @@ class SettingsController extends CoreController {
 	protected $setting_repo;
 
 	public function __construct(
+//			Setting $setting,
 			SettingRepository $setting_repo
 		)
 	{
+//		$this->setting = $setting;
 		$this->setting_repo = $setting_repo;
 // middleware
 		parent::__construct();
@@ -74,6 +77,8 @@ class SettingsController extends CoreController {
 	{
 //dd($request);
 
+		Cache::forget('settings');
+
 //		$this->setting_repo->store($request);
 		Setting::set( $request->key, $request->value );
 		Setting::save();
@@ -103,6 +108,12 @@ class SettingsController extends CoreController {
 	 */
 	public function edit($key)
 	{
+		$lang = Session::get('locale');
+//dd($lang);
+
+		$setting = $this->setting_repo->getKeyValues($key);
+//dd($setting);
+
 		$modal_title = trans('kotoba::general.command.delete');
 		$modal_body = trans('kotoba::general.ask.delete');
 		$modal_route = 'admin.settings.destroy';
@@ -111,13 +122,14 @@ class SettingsController extends CoreController {
 //dd($modal_body);
 
 		return Theme::View('core::settings.edit',
-			$this->setting_repo->edit($key),
-				compact(
-					'modal_title',
-					'modal_body',
-					'modal_route',
-					'modal_id',
-					'model'
+			compact(
+				'lang',
+				'setting',
+				'modal_title',
+				'modal_body',
+				'modal_route',
+				'modal_id',
+				'model'
 			));
 	}
 
@@ -136,6 +148,8 @@ class SettingsController extends CoreController {
 //dd($request);
 
 //Setting::set('foo.bar', $value)
+
+		Cache::forget('settings');
 
 //		$this->setting_repo->update($request->all(), $id);
 		Setting::set( $request->key, $request->value );

@@ -14,6 +14,7 @@ use View;
 class ViewComposerServiceProvider extends ServiceProvider
 {
 
+
 	/**
 	 * Register the service provider.
 	 *
@@ -23,12 +24,17 @@ class ViewComposerServiceProvider extends ServiceProvider
 	{
 		$languages = $this->getLocales();
 		View::share('languages', $languages);
+
+		$settings = $this->getSettings();
+		View::share('settings', $settings);
 	}
+
 
 	public function register()
 	{
 		//
 	}
+
 
 	public function getLocales()
 	{
@@ -36,7 +42,6 @@ class ViewComposerServiceProvider extends ServiceProvider
 //dd($languages);
 
 		if ($languages == null) {
-//			$languages = Locale::all();
 			$languages = Cache::rememberForever('languages', function() {
 				return DB::table('locales')
 					->where('active', '=', 1)
@@ -48,5 +53,24 @@ class ViewComposerServiceProvider extends ServiceProvider
 	return $languages;
 
 	}
+
+
+	public function getSettings()
+	{
+		$settings = Cache::get('settings');
+//dd($languages);
+
+		if ($settings == null) {
+			$settings = Cache::rememberForever('settings', function() {
+				return DB::table('settings')
+					->get();
+			});
+		}
+//dd($settings);
+
+	return $settings;
+
+	}
+
 
 }

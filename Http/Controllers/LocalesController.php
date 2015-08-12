@@ -73,8 +73,8 @@ class LocalesController extends CoreController {
 		LocaleCreateRequest $request
 		)
 	{
-		$this->locale_repo->store($request->all());
 		Cache::forget('languages');
+		$this->locale_repo->store($request->all());
 
 		Flash::success( trans('kotoba::cms.success.locale_create') );
 		return redirect('admin/locales');
@@ -133,8 +133,7 @@ class LocalesController extends CoreController {
 		$id
 		)
 	{
-//dd("update");
-		Cache::forget('locales');
+		Cache::forget('languages');
 		$this->locale_repo->update($request->all(), $id);
 
 		Flash::success( trans('kotoba::cms.success.locale_update') );

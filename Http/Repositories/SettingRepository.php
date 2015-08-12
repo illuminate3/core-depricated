@@ -67,17 +67,9 @@ class SettingRepository extends BaseRepository {
 	 * @param  int  $id
 	 * @return Illuminate\Support\Collection
 	 */
-	public function edit($key)
+	public function edit()
 	{
-//dd($key);
-//		$setting = $this->model->find($key);
-		$lang = Session::get('locale');
-//dd($lang);
-
-		$setting = $this->getKeyValues($key);
-//dd($setting);
-
-		return compact('lang', 'setting');
+		//
 	}
 
 

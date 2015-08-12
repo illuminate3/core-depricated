@@ -51,7 +51,7 @@
 <div class="form-group">
 <div class="input-group">
 	<span class="input-group-addon"><i class="fa fa-info fa-fw"></i></span>
-		<input type="text" id="value" name="value" placeholder="{{ trans('kotoba::cms.value') }}" class="form-control">
+		<input type="text" id="value" name="value" placeholder="{{ Lang::choice('kotoba::cms.value', 1) }}" class="form-control">
 </div>
 </div>
 
