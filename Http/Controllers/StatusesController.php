@@ -52,15 +52,14 @@ class StatusesController extends CoreController {
 	 */
 	public function index()
 	{
+
 		$lang = Session::get('locale');
-//		$locales = $this->status_repo->getLocales();
-		$statuses = $this->status_repo->all();
-//dd($lang);
+		$locale_id = $this->locale_repo->getLocaleID($lang);
+//dd($locale_id);
 
 		return Theme::View('modules.core.statuses.index',
 			compact(
 				'lang',
-//				'locales',
 				'statuses'
 				));
 	}
