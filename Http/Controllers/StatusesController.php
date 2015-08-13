@@ -2,6 +2,8 @@
 
 namespace App\Modules\Core\Http\Controllers;
 
+use App\Modules\Core\Http\Repositories\LocaleRepository;
+
 use App\Modules\Core\Http\Models\Status;
 use App\Modules\Core\Http\Repositories\StatusRepository;
 
@@ -27,10 +29,12 @@ class StatusesController extends CoreController {
 	protected $status;
 
 	public function __construct(
+			LocaleRepository $locale_repo,
 			Status $status,
 			StatusRepository $status_repo
 		)
 	{
+		$this->locale_repo = $locale_repo;
 		$this->status = $status;
 		$this->status_repo = $status_repo;
 // middleware
