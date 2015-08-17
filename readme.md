@@ -63,6 +63,7 @@ https://github.com/illuminate3/rakkoII
 The Following are packages that are specific to this module:
 
 * https://github.com/anlutro/laravel-settings
+* https://github.com/amostajo/laravel-image-handler
 
 
 ## Screen Shots
