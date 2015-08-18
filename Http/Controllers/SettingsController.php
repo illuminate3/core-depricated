@@ -19,12 +19,14 @@ use Theme;
 
 class SettingsController extends CoreController {
 
+
 	/**
 	 * Setting Repository
 	 *
 	 * @var Setting
 	 */
 	protected $setting_repo;
+
 
 	public function __construct(
 //			Setting $setting,
