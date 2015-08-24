@@ -88,8 +88,6 @@ class ModuleSeeder extends Seeder {
 			DB::table('menulink_translations')->insert( $ink_name_trans );
 		}
 
-	} // run
-
 // Statuses
 		$link_names = array([
 			'menu_id'				=> 1, // admin menu
