@@ -6,6 +6,12 @@
 Beta Development
 
 
+```
+		$app->register('App\Modules\Core\Providers\ViewComposerServiceProvider');
+```
+Causes issue during Install
+
+
 ## Description
 
 Core is a module that provides basic and overall functionality to the Rakko platform system.
