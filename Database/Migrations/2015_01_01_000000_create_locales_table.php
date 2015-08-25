@@ -48,7 +48,7 @@ class CreateLocalesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('locales');
+		Schema::drop($this->prefix . 'locales');
 	}
 
 }
