@@ -16,7 +16,7 @@ Route::group(['prefix' => 'core'], function() {
 });
 
 Route::get('/', array(
-	'uses'=>'CoreController@index'
+	'uses'=>'DashboardController@index'
 	));
 
 Route::get('dashboard', array(
