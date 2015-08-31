@@ -86,7 +86,7 @@ class StatusesController extends CoreController {
 		StatusCreateRequest $request
 		)
 	{
-		$this->status->store($request->all());
+		$this->status_repo->store($request->all());
 
 		Flash::success( trans('kotoba::general.success.status_create') );
 		return redirect('admin/statuses');
@@ -150,8 +150,8 @@ class StatusesController extends CoreController {
 		$id
 		)
 	{
-//dd("update");
-		$this->status->update($request->all(), $id);
+//dd($request);
+		$this->status_repo->update($request->all(), $id);
 
 		Flash::success( trans('kotoba::general.success.status_update') );
 		return redirect('admin/statuses');

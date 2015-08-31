@@ -6,6 +6,8 @@ use App\Modules\Core\Http\Models\Status;
 use Illuminate\Support\Collection;
 
 use App;
+use Cache;
+use Config;
 use DB;
 use Session;
 
@@ -84,8 +86,31 @@ class StatusRepository extends BaseRepository {
 	public function store($input)
 	{
 //dd($input);
-		$this->model = new Status;
-		$this->model->create($input);
+// 		$this->model = new Status;
+// 		$this->model->create($input);
+
+		$status = Status::create($values);
+
+		$locales = Cache::get('languages');
+		$original_locale = Session::get('locale');
+//dd($original_locale);
+
+		foreach($locales as $locale => $properties)
+		{
+
+			App::setLocale($properties->locale);
+
+			$values = [
+				'name'				=> $input['name_'.$properties->id],
+				'description'		=> $input['description_'.$properties->id]
+			];
+
+			$status->update($values);
+
+		}
+
+		App::setLocale($original_locale, Config::get('app.fallback_locale'));
+		return;
 	}
 
 
@@ -98,9 +123,32 @@ class StatusRepository extends BaseRepository {
 	 */
 	public function update($input, $id)
 	{
-//dd($input['enabled']);
+//dd($input);
+// 		$status = Status::find($id);
+// 		$status->update($input);
+
 		$status = Status::find($id);
-		$status->update($input);
+
+		$locales = Cache::get('languages');
+		$original_locale = Session::get('locale');
+//dd($locales);
+
+		foreach($locales as $locale => $properties)
+		{
+
+			App::setLocale($properties->locale);
+
+			$values = [
+				'name'				=> $input['name_'.$properties->id],
+				'description'		=> $input['description_'.$properties->id]
+			];
+
+			$status->update($values);
+
+		}
+
+		App::setLocale($original_locale, Config::get('app.fallback_locale'));
+		return;
 	}
 
 
