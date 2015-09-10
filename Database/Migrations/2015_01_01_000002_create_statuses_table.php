@@ -79,6 +79,17 @@ class CreateStatusesTable extends Migration
 	 */
 	public function down()
 	{
+
+		if (Schema::hasTable('statuses')) {
+			$link_id = DB::table('menulink_translations')
+				->where('url', '=', '/admin/statuses')
+				->pluck('menulink_id');
+
+			if ( $link_id != null ) {
+				Menulink::find($link_id)->delete();
+			}
+		}
+
 		Schema::drop($this->prefix . 'status_translations');
 		Schema::drop($this->prefix . 'statuses');
 	}

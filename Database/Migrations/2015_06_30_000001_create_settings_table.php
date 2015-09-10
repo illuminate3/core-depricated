@@ -43,7 +43,19 @@ class CreateSettingsTable extends Migration
 	 */
 	public function down()
 	{
+
+		if (Schema::hasTable('settings')) {
+			$link_id = DB::table('menulink_translations')
+				->where('url', '=', '/admin/settings')
+				->pluck('menulink_id');
+
+			if ( $link_id != null ) {
+				Menulink::find($link_id)->delete();
+			}
+		}
+
 		Schema::drop($this->prefix . 'settings');
+
 	}
 
 }
