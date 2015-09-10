@@ -152,6 +152,24 @@ class StatusRepository extends BaseRepository {
 	}
 
 
+
+// Functions ---------------------------------------------------------------
+
+
+// lists
+
+	public function listStatuses($locale_id)
+	{
+		$statuses = DB::table('status_translations')
+			->where('locale_id', '=', $locale_id)
+			->orderBy('id')
+			->lists('name', 'id');
+
+		return $statuses;
+	}
+
+// get
+
 	public function getStatuses($locale_id)
 	{
 		$statuses = DB::table('status_translations')
