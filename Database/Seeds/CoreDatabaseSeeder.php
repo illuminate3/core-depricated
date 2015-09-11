@@ -18,11 +18,11 @@ class CoreDatabaseSeeder extends Seeder
 	{
 		Model::unguard();
 
-//		$this->call('App\Modules\Core\Database\Seeds\ModulePermissionsSeeder');
+		$this->call('App\Modules\Core\Database\Seeds\ModulePermissionsSeeder');
 		$this->call('App\Modules\Core\Database\Seeds\ModuleLinksSeeder');
-// 		$this->call('App\Modules\Core\Database\Seeds\LocaleTableSeeder');
-// 		$this->call('App\Modules\Core\Database\Seeds\SettingsTableSeeder');
-// 		$this->call('App\Modules\Core\Database\Seeds\StatusesSeeder');
+		$this->call('App\Modules\Core\Database\Seeds\LocaleTableSeeder');
+		$this->call('App\Modules\Core\Database\Seeds\SettingsTableSeeder');
+		$this->call('App\Modules\Core\Database\Seeds\StatusesSeeder');
 	}
 
 }
