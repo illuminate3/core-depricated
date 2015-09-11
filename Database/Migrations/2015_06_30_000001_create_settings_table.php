@@ -44,7 +44,7 @@ class CreateSettingsTable extends Migration
 	public function down()
 	{
 
-		if (Schema::hasTable('settings')) {
+		if (Schema::hasTable('menulink_translations')) {
 			$link_id = DB::table('menulink_translations')
 				->where('url', '=', '/admin/settings')
 				->pluck('menulink_id');

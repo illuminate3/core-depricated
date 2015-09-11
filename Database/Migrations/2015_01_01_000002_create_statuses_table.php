@@ -80,7 +80,7 @@ class CreateStatusesTable extends Migration
 	public function down()
 	{
 
-		if (Schema::hasTable('statuses')) {
+		if (Schema::hasTable('menulink_translations')) {
 			$link_id = DB::table('menulink_translations')
 				->where('url', '=', '/admin/statuses')
 				->pluck('menulink_id');
