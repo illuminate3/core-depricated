@@ -49,6 +49,8 @@ class CreateLocalesTable extends Migration {
 	public function down()
 	{
 
+		Schema::drop($this->prefix . 'locales');
+
 		if (Schema::hasTable('menulink_translations')) {
 			$link_id = DB::table('menulink_translations')
 				->where('url', '=', '/admin/locales')
@@ -58,8 +60,6 @@ class CreateLocalesTable extends Migration {
 				Menulink::find($link_id)->delete();
 			}
 		}
-
-		Schema::drop($this->prefix . 'locales');
 
 	}
 

@@ -80,6 +80,9 @@ class CreateStatusesTable extends Migration
 	public function down()
 	{
 
+		Schema::drop($this->prefix . 'status_translations');
+		Schema::drop($this->prefix . 'statuses');
+
 		if (Schema::hasTable('menulink_translations')) {
 			$link_id = DB::table('menulink_translations')
 				->where('url', '=', '/admin/statuses')
@@ -90,8 +93,6 @@ class CreateStatusesTable extends Migration
 			}
 		}
 
-		Schema::drop($this->prefix . 'status_translations');
-		Schema::drop($this->prefix . 'statuses');
 	}
 
 }
