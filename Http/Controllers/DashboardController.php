@@ -22,7 +22,7 @@ class DashboardController extends CoreController {
 // 		parent::__construct();
 // middleware
 		$this->middleware('auth');
-//		$this->middleware('admin');
+		$this->middleware('admin');
 	}
 
 

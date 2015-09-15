@@ -16,15 +16,12 @@ Route::group(['prefix' => 'core'], function() {
 });
 
 Route::get('/', array(
-	'uses'=>'DashboardController@index'
+	'uses'=>'CoreController@index'
 	));
 
-Route::get('dashboard', array(
-	'uses'=>'DashboardController@index'
-	));
-Route::get('home', array(
-	'uses'=>'DashboardController@index'
-	));
+// Route::get('home', array(
+// 	'uses'=>'DashboardController@index'
+// 	));
 
 // API DATA
 
@@ -34,6 +31,10 @@ Route::get('home', array(
 |--------------------------------------------------------------------------
 */
 Route::group(['prefix' => 'admin'], function() {
+
+	Route::get('dashboard', array(
+		'uses'=>'DashboardController@index'
+		));
 
 // Resources
 
