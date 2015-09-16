@@ -19,11 +19,6 @@ Route::get('/', array(
 	'uses'=>'CoreController@index'
 	));
 
-// Route::get('home', array(
-// 	'uses'=>'DashboardController@index'
-// 	));
-
-// API DATA
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +26,10 @@ Route::get('/', array(
 |--------------------------------------------------------------------------
 */
 Route::group(['prefix' => 'admin'], function() {
+
+	Route::get('/', array(
+		'uses'=>'DashboardController@index'
+		));
 
 	Route::get('dashboard', array(
 		'uses'=>'DashboardController@index'
