@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class CoreDatabaseSeeder extends Seeder
 {
 
+
 	/**
 	 * Run the database seeds.
 	 *
@@ -23,6 +24,8 @@ class CoreDatabaseSeeder extends Seeder
 		$this->call('App\Modules\Core\Database\Seeds\ModuleLinksSeeder');
 		$this->call('App\Modules\Core\Database\Seeds\SettingsTableSeeder');
 		$this->call('App\Modules\Core\Database\Seeds\StatusesSeeder');
+
 	}
+
 
 }

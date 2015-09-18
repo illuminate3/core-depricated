@@ -8,7 +8,9 @@ use DB;
 use Schema;
 
 
-class LocaleTableSeeder extends Seeder {
+class LocaleTableSeeder extends Seeder
+{
+
 
 	public function run()
 	{
@@ -49,5 +51,6 @@ $id = $id + 1;
 // Uncomment the below to run the seeder
 //		DB::table('locales')->insert($seeds);
 	}
+
 
 }
