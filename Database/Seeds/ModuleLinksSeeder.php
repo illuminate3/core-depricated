@@ -29,6 +29,11 @@ class ModuleLinksSeeder extends Seeder
 			$settings_id = 1;
 		}
 
+		$locale_id = DB::table('locales')
+			->where('name', '=', 'English')
+			->where('locale', '=', 'en', 'AND')
+			->pluck('id');
+
 // Links -------------------------------------------------------------------
 // Locales
 
@@ -43,10 +48,6 @@ class ModuleLinksSeeder extends Seeder
 		}
 
 		$last_insert_id = DB::getPdo()->lastInsertId();
-		$locale_id = DB::table('locales')
-			->where('name', '=', 'English')
-			->where('locale', '=', 'en', 'AND')
-			->pluck('id');
 
 		$ink_name_trans = array([
 			'status'				=> 1,
@@ -73,10 +74,6 @@ class ModuleLinksSeeder extends Seeder
 		}
 
 		$last_insert_id = DB::getPdo()->lastInsertId();
-		$locale_id = DB::table('locales')
-			->where('name', '=', 'English')
-			->where('locale', '=', 'en', 'AND')
-			->pluck('id');
 
 		$ink_name_trans = array([
 			'status'				=> 1,
@@ -103,10 +100,6 @@ class ModuleLinksSeeder extends Seeder
 		}
 
 		$last_insert_id = DB::getPdo()->lastInsertId();
-		$locale_id = DB::table('locales')
-			->where('name', '=', 'English')
-			->where('locale', '=', 'en', 'AND')
-			->pluck('id');
 
 		$ink_name_trans = array([
 			'status'				=> 1,
