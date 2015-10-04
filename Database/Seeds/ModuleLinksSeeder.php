@@ -7,17 +7,38 @@ Use DB;
 use Schema;
 
 
-class ModuleLinksSeeder extends Seeder {
+class ModuleLinksSeeder extends Seeder
+{
+
 
 	public function run()
 	{
 
+		$admin_id = DB::table('menus')
+			->where('name', '=', 'admin')
+			->pluck('id');
+
+		$settings_id = DB::table('menus')
+			->where('name', '=', 'settings')
+			->pluck('id');
+
+		if ($admin_id == null) {
+			$admin_id = 1;
+		}
+		if ($settings_id == null) {
+			$settings_id = 1;
+		}
+
+		$locale_id = DB::table('locales')
+			->where('name', '=', 'English')
+			->where('locale', '=', 'en', 'AND')
+			->pluck('id');
 
 // Links -------------------------------------------------------------------
 // Locales
 
 		$link_names = array([
-			'menu_id'				=> 1, // admin menu
+			'menu_id'				=> $settings_id,
 			'position'				=> 7,
 		]);
 
@@ -27,10 +48,6 @@ class ModuleLinksSeeder extends Seeder {
 		}
 
 		$last_insert_id = DB::getPdo()->lastInsertId();
-		$locale_id = DB::table('locales')
-			->where('name', '=', 'English')
-			->where('locale', '=', 'en', 'AND')
-			->pluck('id');
 
 		$ink_name_trans = array([
 			'status'				=> 1,
@@ -47,7 +64,7 @@ class ModuleLinksSeeder extends Seeder {
 
 // Settings
 		$link_names = array([
-			'menu_id'				=> 1, // admin menu
+			'menu_id'				=> $admin_id,
 			'position'				=> 7,
 		]);
 
@@ -57,10 +74,6 @@ class ModuleLinksSeeder extends Seeder {
 		}
 
 		$last_insert_id = DB::getPdo()->lastInsertId();
-		$locale_id = DB::table('locales')
-			->where('name', '=', 'English')
-			->where('locale', '=', 'en', 'AND')
-			->pluck('id');
 
 		$ink_name_trans = array([
 			'status'				=> 1,
@@ -77,7 +90,7 @@ class ModuleLinksSeeder extends Seeder {
 
 // Statuses
 		$link_names = array([
-			'menu_id'				=> 1, // admin menu
+			'menu_id'				=> $settings_id,
 			'position'				=> 7,
 		]);
 
@@ -87,10 +100,6 @@ class ModuleLinksSeeder extends Seeder {
 		}
 
 		$last_insert_id = DB::getPdo()->lastInsertId();
-		$locale_id = DB::table('locales')
-			->where('name', '=', 'English')
-			->where('locale', '=', 'en', 'AND')
-			->pluck('id');
 
 		$ink_name_trans = array([
 			'status'				=> 1,
@@ -106,5 +115,6 @@ class ModuleLinksSeeder extends Seeder {
 		}
 
 	} // run
+
 
 }

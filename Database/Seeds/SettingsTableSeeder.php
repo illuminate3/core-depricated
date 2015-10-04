@@ -8,7 +8,9 @@ use DB;
 use Schema;
 
 
-class SettingsTableSeeder extends Seeder {
+class SettingsTableSeeder extends Seeder
+{
+
 
 	public function run()
 	{
@@ -41,5 +43,6 @@ class SettingsTableSeeder extends Seeder {
 // Uncomment the below to run the seeder
 //		DB::table('locales')->insert($seeds);
 	}
+
 
 }
