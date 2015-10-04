@@ -3,10 +3,8 @@
 namespace App\Modules\Core\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-// use Illuminate\Foundation\Bus\DispatchesJobs;
-// use Illuminate\Foundation\Validation\ValidatesRequests;
-// use Illuminate\Routing\Controller as BaseController;
 
+use Auth;
 use Theme;
 
 
@@ -23,7 +21,7 @@ class CoreController extends Controller
 	public function __construct()
 	{
 // middleware
-//		$this->middleware('auth');
+		$this->middleware('auth');
 //		$this->middleware('admin');
 	}
 
@@ -46,7 +44,16 @@ class CoreController extends Controller
 	 */
 	public function index()
 	{
+
+		if ( Auth::user() != null) {
+			if ( Auth::user()->can('manage_admin') ) {
+				return Theme::View('modules.core.dashboard');
+			}
+			return Theme::View('modules.core.dashboard');
+		}
+
 		return Theme::View('modules.core.landing');
+
 	}
 
 }
