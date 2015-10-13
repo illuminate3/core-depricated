@@ -11,6 +11,7 @@ use Session;
 
 class Core extends Presenter {
 
+
 	/**
 	 * Present the name
 	 *
@@ -20,6 +21,7 @@ class Core extends Presenter {
 	{
 		return ucwords($this->entity->name);
 	}
+
 
 	public function status($status)
 	{
@@ -33,6 +35,7 @@ class Core extends Presenter {
 		return $return;
 	}
 
+
 	public function active($active)
 	{
 //dd($active);
@@ -44,6 +47,7 @@ class Core extends Presenter {
 
 		return $return;
 	}
+
 
 	public function checked($value)
 	{
@@ -57,5 +61,6 @@ class Core extends Presenter {
 
 		return $return;
 	}
+
 
 }
