@@ -39,6 +39,7 @@ class ModuleLinksSeeder extends Seeder
 
 		$link_names = array([
 			'menu_id'				=> $settings_id,
+			'status'				=> 1,
 			'position'				=> 7,
 		]);
 
@@ -50,7 +51,6 @@ class ModuleLinksSeeder extends Seeder
 		$last_insert_id = DB::getPdo()->lastInsertId();
 
 		$ink_name_trans = array([
-			'status'				=> 1,
 			'title'					=> 'Locales',
 			'url'					=> '/admin/locales',
 			'menulink_id'			=> $last_insert_id,
@@ -65,6 +65,7 @@ class ModuleLinksSeeder extends Seeder
 // Settings
 		$link_names = array([
 			'menu_id'				=> $admin_id,
+			'status'				=> 1,
 			'position'				=> 7,
 		]);
 
@@ -76,7 +77,6 @@ class ModuleLinksSeeder extends Seeder
 		$last_insert_id = DB::getPdo()->lastInsertId();
 
 		$ink_name_trans = array([
-			'status'				=> 1,
 			'title'					=> 'Settings',
 			'url'					=> '/admin/settings',
 			'menulink_id'			=> $last_insert_id,
@@ -91,6 +91,7 @@ class ModuleLinksSeeder extends Seeder
 // Statuses
 		$link_names = array([
 			'menu_id'				=> $settings_id,
+			'status'				=> 1,
 			'position'				=> 7,
 		]);
 
@@ -102,7 +103,6 @@ class ModuleLinksSeeder extends Seeder
 		$last_insert_id = DB::getPdo()->lastInsertId();
 
 		$ink_name_trans = array([
-			'status'				=> 1,
 			'title'					=> 'Statuses',
 			'url'					=> '/admin/statuses',
 			'menulink_id'			=> $last_insert_id,
