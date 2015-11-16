@@ -39,8 +39,8 @@ class ModuleLinksSeeder extends Seeder
 
 		$link_names = array([
 			'menu_id'				=> $settings_id,
-			'status'				=> 1,
-			'position'				=> 7,
+			'status_id'				=> 1,
+			'position'				=> 7
 		]);
 
 		if (Schema::hasTable('menulinks'))
@@ -52,6 +52,7 @@ class ModuleLinksSeeder extends Seeder
 
 		$ink_name_trans = array([
 			'title'					=> 'Locales',
+			'status'				=> 1,
 			'url'					=> '/admin/locales',
 			'menulink_id'			=> $last_insert_id,
 			'locale_id'				=> $locale_id // English ID
@@ -65,8 +66,8 @@ class ModuleLinksSeeder extends Seeder
 // Settings
 		$link_names = array([
 			'menu_id'				=> $admin_id,
-			'status'				=> 1,
-			'position'				=> 7,
+			'status_id'				=> 1,
+			'position'				=> 7
 		]);
 
 		if (Schema::hasTable('menulinks'))
@@ -78,6 +79,7 @@ class ModuleLinksSeeder extends Seeder
 
 		$ink_name_trans = array([
 			'title'					=> 'Settings',
+			'status'				=> 1,
 			'url'					=> '/admin/settings',
 			'menulink_id'			=> $last_insert_id,
 			'locale_id'				=> $locale_id // English ID
@@ -91,8 +93,8 @@ class ModuleLinksSeeder extends Seeder
 // Statuses
 		$link_names = array([
 			'menu_id'				=> $settings_id,
-			'status'				=> 1,
-			'position'				=> 7,
+			'status_id'				=> 1,
+			'position'				=> 7
 		]);
 
 		if (Schema::hasTable('menulinks'))
@@ -104,6 +106,7 @@ class ModuleLinksSeeder extends Seeder
 
 		$ink_name_trans = array([
 			'title'					=> 'Statuses',
+			'status'				=> 1,
 			'url'					=> '/admin/statuses',
 			'menulink_id'			=> $last_insert_id,
 			'locale_id'				=> $locale_id // English ID
