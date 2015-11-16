@@ -76,6 +76,10 @@ class CoreServiceProvider extends ServiceProvider
 			'anlutro\LaravelSettings\Facade'
 		);
 
+		$app = $this->app;
+
+		$app->register('App\Modules\Core\Providers\ViewComposerServiceProvider');
+
 	}
 
 
@@ -89,7 +93,6 @@ class CoreServiceProvider extends ServiceProvider
 		$app = $this->app;
 
 		$app->register('App\Modules\Core\Providers\RouteServiceProvider');
-		$app->register('App\Modules\Core\Providers\ViewComposerServiceProvider');
 		$app->register('anlutro\LaravelSettings\ServiceProvider');
 	}
 
