@@ -40,6 +40,7 @@ Route::group(['prefix' => 'admin'], function() {
 	Route::resource('locales', 'LocalesController');
 	Route::resource('settings', 'SettingsController');
 	Route::resource('statuses', 'StatusesController');
+	Route::resource('user_preferences', 'UserPreferenceController');
 /*
 	Route::get('settings/{key}', array(
 		'uses'=>'SettingsController@edit'

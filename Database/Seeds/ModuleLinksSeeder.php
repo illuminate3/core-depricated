@@ -18,12 +18,19 @@ class ModuleLinksSeeder extends Seeder
 			->where('name', '=', 'admin')
 			->pluck('id');
 
+		$preferences_id = DB::table('menus')
+			->where('name', '=', 'preferences')
+			->pluck('id');
+
 		$settings_id = DB::table('menus')
 			->where('name', '=', 'settings')
 			->pluck('id');
 
 		if ($admin_id == null) {
 			$admin_id = 1;
+		}
+		if ($preferences_id == null) {
+			$preferences_id = 1;
 		}
 		if ($settings_id == null) {
 			$settings_id = 1;
@@ -108,6 +115,33 @@ class ModuleLinksSeeder extends Seeder
 			'title'					=> 'Statuses',
 			'status'				=> 1,
 			'url'					=> '/admin/statuses',
+			'menulink_id'			=> $last_insert_id,
+			'locale_id'				=> $locale_id // English ID
+		]);
+
+		if (Schema::hasTable('menulinks'))
+		{
+			DB::table('menulink_translations')->insert( $ink_name_trans );
+		}
+
+// user preferences
+		$link_names = array([
+			'menu_id'				=> $preferences_id,
+			'status_id'				=> 1,
+			'position'				=> 7
+		]);
+
+		if (Schema::hasTable('menulinks'))
+		{
+			DB::table('menulinks')->insert( $link_names );
+		}
+
+		$last_insert_id = DB::getPdo()->lastInsertId();
+
+		$ink_name_trans = array([
+			'title'					=> 'Preferences',
+			'status'				=> 1,
+			'url'					=> '/admin/user_preferences',
 			'menulink_id'			=> $last_insert_id,
 			'locale_id'				=> $locale_id // English ID
 		]);
