@@ -2,125 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7253e85-1e95-4dae-9bc3-a4a33f788f6d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Core.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/composerJson.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Database/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Database/Migrations/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Database/Seeds/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Http/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Http/Controllers/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Http/Requests/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Providers/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/css/elfinder.full.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/css/elfinder.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/css/theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/arrows-active.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/arrows-normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/crop.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/dialogs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/icons-big.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/icons-small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/progress.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/quicklook-bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/quicklook-icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/resize.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/spinner-mini.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/toolbar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/volume_icon_dropbox.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/volume_icon_ftp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/volume_icon_local.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/volume_icon_sql.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/elfinder.full.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/elfinder.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.LANG.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.jp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.pt_BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.zh_CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.zh_TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/proxy/elFinderSupportVer1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/standalonepopup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/standalonepopup.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/Moxie.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/Moxie.xap" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/hy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/ka.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/kk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/pt_BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/th_TH.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/uk_UA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/zh_CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/zh_TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/css/jquery.plupload.queue.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/backgrounds.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/buttons-disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/buttons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/delete.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/done.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/error.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/throbber.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/transp50.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/jquery.plupload.queue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/jquery.plupload.queue.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.ui.plupload/css/jquery.ui.plupload.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.ui.plupload/img/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.ui.plupload/img/plupload.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.ui.plupload/jquery.ui.plupload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.ui.plupload/jquery.ui.plupload.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/moxie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/moxie.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/plupload.dev.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/plupload.full.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/plupload.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Views/.gitkeep" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Migrations/2015_01_01_000000_create_locales_table.php" afterPath="$PROJECT_DIR$/Database/Migrations/2015_01_01_000000_create_locales_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Migrations/2015_01_01_000002_create_statuses_table.php" afterPath="$PROJECT_DIR$/Database/Migrations/2015_01_01_000002_create_statuses_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Migrations/2015_06_30_000001_create_settings_table.php" afterPath="$PROJECT_DIR$/Database/Migrations/2015_06_30_000001_create_settings_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Migrations/2015_12_07_000001_create_user_preferences_table.php" afterPath="$PROJECT_DIR$/Database/Migrations/2015_12_07_000001_create_user_preferences_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/CoreDatabaseSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/CoreDatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/LocaleTableSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/LocaleTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/ModuleLinksSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/ModuleLinksSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/ModulePermissionsSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/ModulePermissionsSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/PreferencesTableSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/PreferencesTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/SettingsTableSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/SettingsTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/StatusesSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/StatusesSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/CoreController.php" afterPath="$PROJECT_DIR$/Http/Controllers/CoreController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/DashboardController.php" afterPath="$PROJECT_DIR$/Http/Controllers/DashboardController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/LocalesController.php" afterPath="$PROJECT_DIR$/Http/Controllers/LocalesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/SettingsController.php" afterPath="$PROJECT_DIR$/Http/Controllers/SettingsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/StatusesController.php" afterPath="$PROJECT_DIR$/Http/Controllers/StatusesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/UserPreferencesController.php" afterPath="$PROJECT_DIR$/Http/Controllers/UserPreferencesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Models/Locale.php" afterPath="$PROJECT_DIR$/Http/Models/Locale.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Models/Setting.php" afterPath="$PROJECT_DIR$/Http/Models/Setting.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Models/Status.php" afterPath="$PROJECT_DIR$/Http/Models/Status.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Models/StatusTranslation.php" afterPath="$PROJECT_DIR$/Http/Models/StatusTranslation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Models/UserPreference.php" afterPath="$PROJECT_DIR$/Http/Models/UserPreference.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Presenters/Core.php" afterPath="$PROJECT_DIR$/Http/Presenters/Core.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Repositories/BaseRepository.php" afterPath="$PROJECT_DIR$/Http/Repositories/BaseRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Repositories/LocaleRepository.php" afterPath="$PROJECT_DIR$/Http/Repositories/LocaleRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Repositories/SettingRepository.php" afterPath="$PROJECT_DIR$/Http/Repositories/SettingRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Repositories/StatusRepository.php" afterPath="$PROJECT_DIR$/Http/Repositories/StatusRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Repositories/UserPreferenceRepository.php" afterPath="$PROJECT_DIR$/Http/Repositories/UserPreferenceRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/DeleteRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/DeleteRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/LocaleCreateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/LocaleCreateRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/LocaleUpdateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/LocaleUpdateRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/SettingCreateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/SettingCreateRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/SettingUpdateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/SettingUpdateRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/StatusCreateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/StatusCreateRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/StatusUpdateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/StatusUpdateRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/UserPreferenceCreateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/UserPreferenceCreateRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/UserPreferenceUpdateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/UserPreferenceUpdateRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Providers/CoreServiceProvider.php" afterPath="$PROJECT_DIR$/Providers/CoreServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Providers/RouteServiceProvider.php" afterPath="$PROJECT_DIR$/Providers/RouteServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Providers/ViewComposerServiceProvider.php" afterPath="$PROJECT_DIR$/Providers/ViewComposerServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Images/Images.php" afterPath="$PROJECT_DIR$/uploads/Images/Images.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Images/ImagesController.php" afterPath="$PROJECT_DIR$/uploads/Images/ImagesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Images/ImagesRequest.php" afterPath="$PROJECT_DIR$/uploads/Images/ImagesRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Controller/DownloadController.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Controller/DownloadController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Controller/FileController.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Controller/FileController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Form/FileElement.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Form/FileElement.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Form/ImageElement.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Form/ImageElement.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Model/File.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Model/File.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Subscriber/EnableFormFileUploads.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Subscriber/EnableFormFileUploads.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Subscriber/SaveFileToDisk.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Subscriber/SaveFileToDisk.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/UploadsServiceProvider.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/UploadsServiceProvider.php" />
     </list>
     <ignored path="Core.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -152,11 +84,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29435813">
+            <state vertical-scroll-proportion="-15.0">
               <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoreServiceProvider.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Providers/CoreServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.48977923">
+              <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -173,6 +115,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/uploads/composer.json" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/Providers/CoreServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -656,8 +599,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29435813">
+        <state vertical-scroll-proportion="-15.0">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Providers/CoreServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48977923">
+          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
           <folding />
         </state>
       </provider>

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Modules\Core\Http\Repositories;
 
 use App\Modules\Core\Http\Models\Setting;
@@ -7,7 +6,6 @@ use App\Modules\Core\Http\Models\Setting;
 
 use DB;
 use Session;
-
 
 class SettingRepository extends BaseRepository {
 

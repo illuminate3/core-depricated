@@ -1,10 +1,8 @@
 <?php
-
 namespace App\Modules\Core\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Laracasts\Presenter\PresentableTrait;
-
 
 class Locale extends Model {
 

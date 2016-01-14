@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Modules\Core\Http\Controllers;
 
 use App\Modules\Core\Http\Models\Locale;
@@ -13,7 +12,6 @@ use App\Modules\Core\Http\Requests\LocaleUpdateRequest;
 use Cache;
 use Flash;
 use Theme;
-
 
 class LocalesController extends CoreController {
 

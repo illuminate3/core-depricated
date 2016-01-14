@@ -12,7 +12,6 @@ use Auth;
 use Request;
 use Image;
 use File;
-
 class ImagesController extends \App\Http\Controllers\Admin\AdminController {
 
 	public function index() {

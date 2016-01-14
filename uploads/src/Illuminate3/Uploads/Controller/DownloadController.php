@@ -1,10 +1,8 @@
 <?php
-
 namespace Illuminate3\Uploads\Controller;
 
 use Intervention\Image\Image;
 use Response, App;
-
 class DownloadController extends \BaseController
 {
 	/**

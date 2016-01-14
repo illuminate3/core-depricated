@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Modules\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
@@ -9,7 +8,6 @@ use App\Modules\Core\Http\Models\Locale;
 use DB;
 use Cache;
 use View;
-
 
 class ViewComposerServiceProvider extends ServiceProvider
 {

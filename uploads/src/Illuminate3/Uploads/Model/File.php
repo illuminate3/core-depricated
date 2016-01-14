@@ -1,7 +1,5 @@
 <?php
-
 namespace Illuminate3\Uploads\Model;
-
 class File extends \Eloquent
 {
     protected $table = 'files';

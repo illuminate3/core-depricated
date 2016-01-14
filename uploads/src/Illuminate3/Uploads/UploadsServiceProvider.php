@@ -2,7 +2,6 @@
 
 use Illuminate\Support\ServiceProvider;
 use Route, Config;
-
 class UploadsServiceProvider extends ServiceProvider {
 
 	/**

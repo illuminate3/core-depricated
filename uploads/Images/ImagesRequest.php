@@ -1,7 +1,6 @@
 <?php namespace App\Http\Controllers\Admin\Images;
 
 use App\Http\Requests\Request;
-
 class ImagesRequest extends Request {
 
 	/**

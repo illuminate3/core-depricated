@@ -1,9 +1,7 @@
 <?php
-
 namespace App\Modules\Core\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
 
 class StatusUpdateRequest extends FormRequest {
 

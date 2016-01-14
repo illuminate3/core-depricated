@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Modules\Core\Http\Controllers;
 
 //use App\Modules\Core\Http\Models\Setting;
@@ -15,7 +14,6 @@ use Flash;
 use Session;
 use Setting;
 use Theme;
-
 
 class SettingsController extends CoreController {
 

@@ -1,10 +1,8 @@
 <?php
-
 namespace App\Modules\Core\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 Use DB, Eloquent, Model, Schema;
-
 
 class StatusesSeeder extends Seeder
 {

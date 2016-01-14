@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Modules\Core\Http\Repositories;
 
 use App\Modules\Core\Http\Models\Locale;
@@ -8,7 +7,6 @@ use App\Modules\Core\Http\Models\Locale;
 //use App;
 use DB;
 use Session;
-
 
 class LocaleRepository extends BaseRepository {
 

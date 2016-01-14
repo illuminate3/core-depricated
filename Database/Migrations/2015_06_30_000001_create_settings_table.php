@@ -5,7 +5,6 @@ use Illuminate\Database\Schema\Blueprint;
 
 //use Config;
 
-
 class CreateSettingsTable extends Migration
 {
 

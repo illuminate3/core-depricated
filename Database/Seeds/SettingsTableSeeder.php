@@ -1,12 +1,10 @@
 <?php
-
 namespace App\Modules\Core\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 
 use DB;
 use Schema;
-
 
 class SettingsTableSeeder extends Seeder
 {

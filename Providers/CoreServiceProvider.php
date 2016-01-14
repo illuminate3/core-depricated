@@ -1,16 +1,13 @@
 <?php
-
 namespace App\Modules\Core\Providers;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
-
 use App;
 use Config;
 use Lang;
 use Theme;
 use View;
-
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -75,6 +72,10 @@ class CoreServiceProvider extends ServiceProvider
 			'Setting',
 			'anlutro\LaravelSettings\Facade'
 		);
+		AliasLoader::getInstance()->alias(
+			'Alert',
+			'UxWeb\SweetAlert\SweetAlert'
+		);
 
 		$app = $this->app;
 
@@ -94,6 +95,7 @@ class CoreServiceProvider extends ServiceProvider
 		$app = $this->app;
 
 		$app->register('App\Modules\Core\Providers\RouteServiceProvider');
+		$app->register('UxWeb\SweetAlert\SweetAlertServiceProvider');
 	}
 
 }

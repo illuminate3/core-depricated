@@ -1,12 +1,10 @@
 <?php
-
 namespace Illuminate3\Uploads\Controller;
 
 use Illuminate3\Crud\CrudController;
 use Illuminate3\Form\FormBuilder;
 use Illuminate3\Model\ModelBuilder;
 use Illuminate3\Overview\OverviewBuilder;
-
 class FileController extends CrudController
 {
 	/**

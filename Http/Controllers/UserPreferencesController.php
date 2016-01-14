@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Modules\Core\Http\Controllers;
 
 //use App\Modules\Core\Http\Models\UserPreference;
@@ -15,7 +14,6 @@ use Flash;
 use Session;
 use UserPreference;
 use Theme;
-
 
 class UserPreferencesController extends CoreController {
 

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Modules\Core\Http\Repositories;
 
 use App\Modules\Core\Http\Models\Status;
@@ -10,7 +9,6 @@ use Cache;
 use Config;
 use DB;
 use Session;
-
 
 class StatusRepository extends BaseRepository {
 

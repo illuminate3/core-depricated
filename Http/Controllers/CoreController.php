@@ -1,12 +1,10 @@
 <?php
-
 namespace App\Modules\Core\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
 use Auth;
 use Theme;
-
 
 class CoreController extends Controller
 {

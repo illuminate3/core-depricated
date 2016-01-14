@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Modules\Core\Http\Repositories;
 
 use App\Modules\Core\Http\Models\UserPreference;
@@ -7,7 +6,6 @@ use App\Modules\Core\Http\Models\UserPreference;
 
 use DB;
 use Session;
-
 
 class UserPreferenceRepository extends BaseRepository {
 
