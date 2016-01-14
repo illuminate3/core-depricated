@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c7253e85-1e95-4dae-9bc3-a4a33f788f6d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Core.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/composerJson.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Database/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Database/Migrations/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Database/Seeds/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Http/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Http/Controllers/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Http/Requests/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Providers/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/css/elfinder.full.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/css/elfinder.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/css/theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/arrows-active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/arrows-normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/crop.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/dialogs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/icons-big.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/icons-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/progress.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/quicklook-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/quicklook-icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/resize.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/spinner-mini.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/toolbar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/volume_icon_dropbox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/volume_icon_ftp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/volume_icon_local.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/img/volume_icon_sql.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/elfinder.full.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/elfinder.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.LANG.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.jp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.pt_BR.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/i18n/elfinder.zh_TW.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/proxy/elFinderSupportVer1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/standalonepopup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/barryvdh/laravel-elfinder/js/standalonepopup.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/Moxie.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/Moxie.xap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/hy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/ka.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/kk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/pt_BR.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/th_TH.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/uk_UA.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/i18n/zh_TW.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/css/jquery.plupload.queue.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/backgrounds.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/buttons-disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/buttons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/delete.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/done.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/error.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/throbber.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/img/transp50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/jquery.plupload.queue.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.plupload.queue/jquery.plupload.queue.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.ui.plupload/css/jquery.ui.plupload.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.ui.plupload/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.ui.plupload/img/plupload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.ui.plupload/jquery.ui.plupload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/jquery.ui.plupload/jquery.ui.plupload.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/moxie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/moxie.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/plupload.dev.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/plupload.full.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Assets/Vendors/jildertmiedema/laravel-plupload/assets/js/plupload.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Views/.gitkeep" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+    </list>
+    <ignored path="Core.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Core" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uploads/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.0">
+              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29435813">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/uploads/composer.json" />
+        <option value="$PROJECT_DIR$/composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2028" />
+    <option name="y" value="23" />
+    <option name="width" value="2354" />
+    <option name="height" value="1393" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ColorIdeProjectViewPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource ColorIdeProjectViewPane="true" />
+      <autoscrollFromSource ColorIdeProjectViewPane="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ColorIdeProjectViewPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="welcome" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user_preferences" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statuses" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Providers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Requests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Presenters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Middleware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Seeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Migrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7253e85-1e95-4dae-9bc3-a4a33f788f6d" name="Default" comment="" />
+      <created>1452805589181</created>
+      <option name="number" value="Default" />
+      <updated>1452805589181</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="2028" y="23" width="2354" height="1393" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25216264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12914798">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29435813">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
