@@ -2,57 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7253e85-1e95-4dae-9bc3-a4a33f788f6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Migrations/2015_01_01_000000_create_locales_table.php" afterPath="$PROJECT_DIR$/Database/Migrations/2015_01_01_000000_create_locales_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Migrations/2015_01_01_000002_create_statuses_table.php" afterPath="$PROJECT_DIR$/Database/Migrations/2015_01_01_000002_create_statuses_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Migrations/2015_06_30_000001_create_settings_table.php" afterPath="$PROJECT_DIR$/Database/Migrations/2015_06_30_000001_create_settings_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Migrations/2015_12_07_000001_create_user_preferences_table.php" afterPath="$PROJECT_DIR$/Database/Migrations/2015_12_07_000001_create_user_preferences_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/CoreDatabaseSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/CoreDatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/LocaleTableSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/LocaleTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/ModuleLinksSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/ModuleLinksSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/ModulePermissionsSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/ModulePermissionsSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/PreferencesTableSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/PreferencesTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/SettingsTableSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/SettingsTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Database/Seeds/StatusesSeeder.php" afterPath="$PROJECT_DIR$/Database/Seeds/StatusesSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/CoreController.php" afterPath="$PROJECT_DIR$/Http/Controllers/CoreController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/DashboardController.php" afterPath="$PROJECT_DIR$/Http/Controllers/DashboardController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/LocalesController.php" afterPath="$PROJECT_DIR$/Http/Controllers/LocalesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/SettingsController.php" afterPath="$PROJECT_DIR$/Http/Controllers/SettingsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/StatusesController.php" afterPath="$PROJECT_DIR$/Http/Controllers/StatusesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Controllers/UserPreferencesController.php" afterPath="$PROJECT_DIR$/Http/Controllers/UserPreferencesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Models/Locale.php" afterPath="$PROJECT_DIR$/Http/Models/Locale.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Models/Setting.php" afterPath="$PROJECT_DIR$/Http/Models/Setting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Models/Status.php" afterPath="$PROJECT_DIR$/Http/Models/Status.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Models/StatusTranslation.php" afterPath="$PROJECT_DIR$/Http/Models/StatusTranslation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Models/UserPreference.php" afterPath="$PROJECT_DIR$/Http/Models/UserPreference.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Presenters/Core.php" afterPath="$PROJECT_DIR$/Http/Presenters/Core.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Repositories/BaseRepository.php" afterPath="$PROJECT_DIR$/Http/Repositories/BaseRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Repositories/LocaleRepository.php" afterPath="$PROJECT_DIR$/Http/Repositories/LocaleRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Repositories/SettingRepository.php" afterPath="$PROJECT_DIR$/Http/Repositories/SettingRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Repositories/StatusRepository.php" afterPath="$PROJECT_DIR$/Http/Repositories/StatusRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Repositories/UserPreferenceRepository.php" afterPath="$PROJECT_DIR$/Http/Repositories/UserPreferenceRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/DeleteRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/DeleteRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/LocaleCreateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/LocaleCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/LocaleUpdateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/LocaleUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/SettingCreateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/SettingCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/SettingUpdateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/SettingUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/StatusCreateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/StatusCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/StatusUpdateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/StatusUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/UserPreferenceCreateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/UserPreferenceCreateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Http/Requests/UserPreferenceUpdateRequest.php" afterPath="$PROJECT_DIR$/Http/Requests/UserPreferenceUpdateRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Providers/CoreServiceProvider.php" afterPath="$PROJECT_DIR$/Providers/CoreServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Providers/RouteServiceProvider.php" afterPath="$PROJECT_DIR$/Providers/RouteServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Providers/ViewComposerServiceProvider.php" afterPath="$PROJECT_DIR$/Providers/ViewComposerServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Images/Images.php" afterPath="$PROJECT_DIR$/uploads/Images/Images.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Images/ImagesController.php" afterPath="$PROJECT_DIR$/uploads/Images/ImagesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Images/ImagesRequest.php" afterPath="$PROJECT_DIR$/uploads/Images/ImagesRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Controller/DownloadController.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Controller/DownloadController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Controller/FileController.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Controller/FileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Form/FileElement.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Form/FileElement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Form/ImageElement.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Form/ImageElement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Model/File.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Model/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Subscriber/EnableFormFileUploads.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Subscriber/EnableFormFileUploads.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Subscriber/SaveFileToDisk.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/Subscriber/SaveFileToDisk.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/UploadsServiceProvider.php" afterPath="$PROJECT_DIR$/uploads/src/Illuminate3/Uploads/UploadsServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Core.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,8 +47,8 @@
       <file leaf-file-name="CoreServiceProvider.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Providers/CoreServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48977923">
-              <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.17661488">
+              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -607,8 +557,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Providers/CoreServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48977923">
-          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.17661488">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
           <folding />
         </state>
       </provider>
