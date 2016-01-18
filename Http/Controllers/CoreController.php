@@ -48,10 +48,12 @@ class CoreController extends Controller
 // 			if ( Auth::user()->can('manage_admin') ) {
 // 				return Theme::View('modules.core.dashboard');
 // 			}
-// 			return Theme::View('modules.core.dashboard');
-			return Theme::View('modules.core.landing');
+ 			return Theme::View('modules.core.dashboard');
 		}
 
+		return Theme::View('modules.core.landing');
+
 	}
+
 
 }
