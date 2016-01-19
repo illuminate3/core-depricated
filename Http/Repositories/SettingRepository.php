@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Modules\Core\Http\Repositories;
 
 use App\Modules\Core\Http\Models\Setting;

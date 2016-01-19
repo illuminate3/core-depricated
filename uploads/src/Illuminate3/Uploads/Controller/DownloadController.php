@@ -1,4 +1,5 @@
 <?php
+
 namespace Illuminate3\Uploads\Controller;
 
 use Intervention\Image\Image;

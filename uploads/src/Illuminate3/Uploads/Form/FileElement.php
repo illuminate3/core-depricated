@@ -1,4 +1,5 @@
 <?php
+
 namespace Illuminate3\Uploads\Form;
 
 use Illuminate3\Form\Element\AbstractElement as Element;

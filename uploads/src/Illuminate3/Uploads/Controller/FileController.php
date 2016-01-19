@@ -1,4 +1,5 @@
 <?php
+
 namespace Illuminate3\Uploads\Controller;
 
 use Illuminate3\Crud\CrudController;

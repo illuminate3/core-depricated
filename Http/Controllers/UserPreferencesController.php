@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Modules\Core\Http\Controllers;
 
 //use App\Modules\Core\Http\Models\UserPreference;

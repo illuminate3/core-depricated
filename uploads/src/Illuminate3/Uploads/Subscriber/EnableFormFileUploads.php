@@ -1,4 +1,5 @@
 <?php
+
 namespace Illuminate3\Uploads\Subscriber;
 
 use Illuminate\Events\Dispatcher as Events;
