@@ -51,6 +51,7 @@ class CoreServiceProvider extends ServiceProvider
 
 		$this->publishes([
 			__DIR__.'/../Config/core.php' => config_path('core.php'),
+			__DIR__.'/../Config/seotools.php' => config_path('core.php'),
 			__DIR__.'/../Config/translator.php' => config_path('translator.php'),
 			__DIR__ . '/../Resources/Assets/Images' => base_path('public/assets/images/'),
 			__DIR__ . '/../Resources/Views/' => public_path('themes/') . Theme::getActive() . '/views/modules/core/',
@@ -78,6 +79,29 @@ class CoreServiceProvider extends ServiceProvider
 			'UxWeb\SweetAlert\SweetAlert'
 		);
 
+		AliasLoader::getInstance()->alias(
+			'Meta',
+			'Caffeinated\SEO\Facades\Metadata'
+		);
+
+/*
+		AliasLoader::getInstance()->alias(
+			'SEOMeta',
+			'Artesaos\SEOTools\Facades\SEOMeta'
+		);
+		AliasLoader::getInstance()->alias(
+			'OpenGraph',
+			'Artesaos\SEOTools\Facades\OpenGraph'
+		);
+		AliasLoader::getInstance()->alias(
+			'Twitter',
+			'Artesaos\SEOTools\Facades\TwitterCard'
+		);
+		AliasLoader::getInstance()->alias(
+			'SEO',
+			'Artesaos\SEOTools\Facades\SEOTools'
+		);
+*/
 		$app = $this->app;
 
 		$app->register('App\Modules\Core\Providers\ViewComposerServiceProvider');
@@ -98,6 +122,8 @@ class CoreServiceProvider extends ServiceProvider
 
 		$app->register('App\Modules\Core\Providers\RouteServiceProvider');
 		$app->register('UxWeb\SweetAlert\SweetAlertServiceProvider');
+//		$app->register('Artesaos\SEOTools\Providers\SEOToolsServiceProvider');
+		$app->register('Caffeinated\SEO\SEOServiceProvider');
 	}
 
 }
