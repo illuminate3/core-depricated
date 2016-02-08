@@ -29,6 +29,8 @@ class TenantScope implements ScopeInterface
 //dd(Auth::user());
 //dd(Session::get('siteId'));
 //dd(Cache::get('siteId'));
+//dd(session()->get('siteId'));
+
 
 		if ( Auth::user() != null) {
 			if ( Auth::user()->can('manage_newsdesk') || Auth::user()->can('manage_himawari') ) {
@@ -38,6 +40,14 @@ class TenantScope implements ScopeInterface
 			if (Session::has('siteId'))
 			{
 				$siteId = session('siteId');
+				$builder->whereHas('sites', function($query) use($siteId)
+				{
+					$query->where('sites.id', $siteId);
+				});
+			} else {
+//dd(Cache::get('siteId'));
+//dd(Session::has('siteId'));
+				$siteId = Cache::get('siteId');
 				$builder->whereHas('sites', function($query) use($siteId)
 				{
 					$query->where('sites.id', $siteId);

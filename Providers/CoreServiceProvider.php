@@ -74,6 +74,12 @@ class CoreServiceProvider extends ServiceProvider
 			'Setting',
 			'anlutro\LaravelSettings\Facade'
 		);
+
+		AliasLoader::getInstance()->alias(
+			'TenantScope',
+			'AuraIsHere\LaravelMultiTenant\Facades\TenantScopeFacade'
+		);
+
 		AliasLoader::getInstance()->alias(
 			'Alert',
 			'UxWeb\SweetAlert\SweetAlert'
@@ -121,6 +127,7 @@ class CoreServiceProvider extends ServiceProvider
 		$app = $this->app;
 
 		$app->register('App\Modules\Core\Providers\RouteServiceProvider');
+		$app->register('AuraIsHere\LaravelMultiTenant\LaravelMultiTenantServiceProvider');
 		$app->register('UxWeb\SweetAlert\SweetAlertServiceProvider');
 //		$app->register('Artesaos\SEOTools\Providers\SEOToolsServiceProvider');
 		$app->register('Caffeinated\SEO\SEOServiceProvider');

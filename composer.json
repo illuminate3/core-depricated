@@ -8,6 +8,7 @@
 		"cviebrock/eloquent-sluggable": "dev-master",
 		"lanz/laravel-commentable": "~2.0",
 		"uxweb/sweet-alert": "^1.1",
+		"aura-is-here/laravel-multi-tenant": "dev-master",
 		"caffeinated/seo": "~2.0",
 		"artesaos/seotools": "^0.8.2"
 	},
