@@ -16,7 +16,7 @@ use Session;
 use UserPreference;
 use Theme;
 
-class UserPreferencesController extends CoreController {
+class UserPreferenceController extends CoreController {
 
 
 	/**
