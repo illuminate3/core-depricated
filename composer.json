@@ -6,6 +6,7 @@
 		"laravel/framework": "5.1.*",
 		"anlutro/l4-settings": "^0.4.0",
 		"cviebrock/eloquent-sluggable": "dev-master",
+		"lanz/laravel-commentable": "~2.0",
 		"uxweb/sweet-alert": "^1.1",
 		"caffeinated/seo": "~2.0",
 		"artesaos/seotools": "^0.8.2"
