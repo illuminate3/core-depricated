@@ -44,14 +44,14 @@ class CoreController extends Controller
 	public function index()
 	{
 //dd(Auth::user());
-/*
+
 		if ( Auth::user() != null) {
 // 			if ( Auth::user()->can('manage_admin') ) {
 // 				return Theme::View('modules.core.dashboard');
 // 			}
  			return Theme::View('modules.core.dashboard');
 		}
-*/
+
 		return Theme::View('modules.core.landing');
 
 	}
