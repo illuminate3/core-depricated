@@ -10,6 +10,9 @@
 		"uxweb/sweet-alert": "^1.1",
 		"aura-is-here/laravel-multi-tenant": "dev-master",
 		"caffeinated/seo": "~2.0",
+		"willvincent/laravel-rateable": "~1.0",
+		"larablocks/pigeon": "5.1.*",
+		"shvetsgroup/laravel-email-database-log": "*",
 		"artesaos/seotools": "^0.8.2"
 	},
 	"config": {
