@@ -79,3 +79,10 @@ I used the config file for the seeds.
 * https://github.com/mcamara/laravel-localization/blob/master/src/config/config.php
 
 Originally, I intended to use the mcamara/laravel-localization package but ended up with going with my own solution.
+
+
+
+		"stevebauman/calendar-helper": "dev-master",
+		"willvincent/laravel-rateable": "~1.0",
+		"larablocks/pigeon": "5.1.*",
+		"shvetsgroup/laravel-email-database-log": "*"
