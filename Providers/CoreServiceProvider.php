@@ -114,6 +114,10 @@ class CoreServiceProvider extends ServiceProvider
 		$app->register('anlutro\LaravelSettings\ServiceProvider');
 		$app->register('Cviebrock\EloquentSluggable\SluggableServiceProvider');
 
+// Register Middleware
+		$kernel = $this->app->make('Illuminate\Contracts\Http\Kernel');
+		$kernel->pushMiddleware('App\Modules\Core\Http\Middleware\MenuAdminMiddleware');
+
 	}
 
 
