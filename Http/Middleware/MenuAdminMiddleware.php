@@ -36,7 +36,7 @@ class MenuAdminMiddleware
 
 		CMenu::make('navAdmin', function(Builder $menu) {
 //			$activeTheme = Theme::getActive();
-//Cache::forget('menu_admin');
+Cache::forget('menu_admin');
 
 			$links = Cache::get('menu_admin', null);
 			if ($links == null) {
@@ -50,7 +50,8 @@ dd('menu_admin');
 
 			foreach ($links as $link)
 			{
-				$menu->add($link->title, ['url' => $link->slug, 'class' => '']);
+$url = ltrim($link->url, '/');
+				$menu->add($link->title, ['url' => $url, 'class' => '']);
 			}
 
 // 			$menu->add('Home', '/');
