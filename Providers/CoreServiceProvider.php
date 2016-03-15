@@ -117,6 +117,7 @@ class CoreServiceProvider extends ServiceProvider
 // Register Middleware
 		$kernel = $this->app->make('Illuminate\Contracts\Http\Kernel');
 		$kernel->pushMiddleware('App\Modules\Core\Http\Middleware\MenuAdminMiddleware');
+		$kernel->pushMiddleware('App\Modules\Core\Http\Middleware\MenuSettingsMiddleware');
 
 	}
 

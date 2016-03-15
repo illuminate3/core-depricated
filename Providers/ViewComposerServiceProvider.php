@@ -41,6 +41,7 @@ class ViewComposerServiceProvider extends ServiceProvider
 //dd($languages);
 
 		if ($languages == null) {
+//dd('languages');
 			$languages = Cache::rememberForever('languages', function() {
 				return DB::table('locales')
 					->where('active', '=', 1)
@@ -57,9 +58,10 @@ class ViewComposerServiceProvider extends ServiceProvider
 	public function getSettings()
 	{
 		$settings = Cache::get('settings');
-//dd($languages);
+//dd($settings);
 
 		if ($settings == null) {
+//dd('settings');
 			$settings = Cache::rememberForever('settings', function() {
 				return DB::table('settings')
 					->get();
