@@ -96,6 +96,39 @@ class ModuleLinksSeeder extends Seeder
 			DB::table('menulink_translations')->insert( $ink_name_trans );
 		}
 
+// Sites
+		$link_names = array([
+			'menu_id'				=> $settings_id,
+			'status_id'				=> 1,
+			'position'				=> 7
+		]);
+
+		if (Schema::hasTable('menulinks'))
+		{
+			DB::table('menulinks')->insert( $link_names );
+		}
+
+		$last_insert_id = DB::getPdo()->lastInsertId();
+		$locale_id = DB::table('locales')
+			->where('name', '=', 'English')
+			->where('locale', '=', 'en', 'AND')
+			->pluck('id');
+
+		$ink_name_trans = array([
+			'title'					=> 'Sites',
+			'status'				=> 1,
+			'url'					=> '/admin/sites',
+			'menulink_id'			=> $last_insert_id,
+			'locale_id'				=> $locale_id // English ID
+		]);
+
+		if (Schema::hasTable('menulinks'))
+		{
+			DB::table('menulink_translations')->insert( $ink_name_trans );
+		}
+
+	} // run
+
 // Statuses
 		$link_names = array([
 			'menu_id'				=> $settings_id,

@@ -39,6 +39,7 @@ Route::group(['prefix' => 'admin'], function() {
 
 	Route::resource('locales', 'LocalesController');
 	Route::resource('settings', 'SettingsController');
+	Route::resource('sites', 'SitesController');
 	Route::resource('statuses', 'StatusesController');
 	Route::resource('user_preferences', 'UserPreferenceController');
 /*
@@ -49,6 +50,11 @@ Route::group(['prefix' => 'admin'], function() {
 
 // Controllers
 // API DATA
+
+	Route::get('api/sites', array(
+	//	'as'=>'api.sites',
+		'uses'=>'SitesController@data'
+		));
 
 });
 // --------------------------------------------------------------------------
