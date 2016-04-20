@@ -84,6 +84,7 @@ class CreateSitesTable extends Migration
 	public function down()
 	{
 		Schema::drop($this->prefix . 'sites');
+		Schema::drop($this->prefix . 'site_user');
 	}
 
 
