@@ -113,6 +113,7 @@ class CoreServiceProvider extends ServiceProvider
 		$app->register('App\Modules\Core\Providers\ViewComposerServiceProvider');
 		$app->register('anlutro\LaravelSettings\ServiceProvider');
 		$app->register('Cviebrock\EloquentSluggable\SluggableServiceProvider');
+		$app->register('ShvetsGroup\LaravelEmailDatabaseLog\LaravelEmailDatabaseLogServiceProvider');
 
 // Register Middleware
 		$kernel = $this->app->make('Illuminate\Contracts\Http\Kernel');
