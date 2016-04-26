@@ -18,6 +18,7 @@
 $(document).ready(function() {
 oTable =
 	$('#table').DataTable({
+		'pageLength': 25,
 		"processing": true,
 		"serverSide": true,
 		"ajax": "{{ URL::to('/admin/api/sites') }}",

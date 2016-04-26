@@ -6,12 +6,23 @@
 @stop
 
 @section('styles')
+	<link href="{{ asset('assets/vendors/DataTables-1.10.7/plugins/integration/bootstrap/3/dataTables.bootstrap.css') }}" rel="stylesheet">
 @stop
 
 @section('scripts')
+	<script src="{{ asset('assets/vendors/DataTables-1.10.7/media/js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ asset('assets/vendors/DataTables-1.10.7/plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
 @stop
 
 @section('inline-scripts')
+$(document).ready(function() {
+	$('#table_rooms').dataTable({
+		'pageLength': 25
+	});
+	$('#table_employees').dataTable({
+		'pageLength': 25
+	});
+});
 @stop
 
 
@@ -57,6 +68,12 @@
 		</a>
 	</li>
 	<li role="presentation">
+		<a href="#rooms" aria-controls="rooms" role="tab" data-toggle="tab">
+		<i class="fa fa-plug fa-lg"></i>
+		{{ Lang::choice('kotoba::general.room', 2) }}
+		</a>
+	</li>
+	<li role="presentation">
 		<a href="#assets" aria-controls="assets" role="tab" data-toggle="tab">
 		<i class="fa fa-cubes fa-lg"></i>
 		{{ Lang::choice('kotoba::shop.asset', 2) }}
@@ -78,6 +95,12 @@
 		@include('core::_partials._show.employee_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ work_info panel -->
+
+	<div role="tabpanel" class="tab-pane" id="rooms">
+	<div class="tab-content padding-md">
+		@include('core::_partials._show.room_info')
+	</div><!-- ./ tab-content -->
+	</div><!-- ./ published panel -->
 
 	<div role="tabpanel" class="tab-pane" id="assets">
 	<div class="tab-content padding-md">

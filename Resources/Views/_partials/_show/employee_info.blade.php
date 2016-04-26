@@ -1,11 +1,14 @@
-{{--
-@if ($site['employees'] != NULL)
+@if (Auth::user()->can('manage_jinji'))
+@if ( Module::exists('jinji') )
+
+
+@if (count($site->employees))
 
 <h3>
 	{{ trans('kotoba::general.staff') }}
 </h3>
 
-<table id="table" class="table table-striped table-hover">
+<table id="table_employees" class="table table-striped table-hover">
 	<thead>
 		<tr>
 			<th>{{ trans('kotoba::table.name') }}</th>
@@ -18,35 +21,46 @@
 	</thead>
 
 	<tbody>
-		@foreach ($site['employees'] as $employee)
-			<tr>
-				<td>
-					{{ $employee->present()->employeeFirstName($employee->user_id) }}
-					{{ $employee->present()->employeeMiddleInitial($employee->user_id) }}
-					{{ $employee->present()->employeeLastName($employee->user_id) }}
-				</td>
-				<td>
-					{{ $employee->user->email }}
-				</td>
-				<td>
-					{{ $employee->present()->jobtitle($employee->job_title_id) }}
-				</td>
-				<td>
-					{{ $employee->subject->name }}
-				</td>
-				<td width="25%">
-					<a href="{{ URL::to('employees/' . $employee->user_id) }}" class="btn btn-info btn-sm" >
-						<span class="glyphicon glyphicon-search"></span>  {{ trans("kotoba::button.view") }}
-					</a>
-				</td>
-			</tr>
+		@foreach ($site->employees as $employee)
+		<tr>
+			<td>
+				{{ $employee->present()->employeeName($employee->id) }}
+			</td>
+			<td>
+				{{ $employee->present()->employeeEmail($employee->id) }}
+			</td>
+			<td>
+				{{ $employee->present()->employeeJobTitle($employee->id, $locale_id) }}
+			</td>
+			<td>
+				{{ $employee->present()->employeeSubjects($employee->id, $locale_id) }}
+			</td>
+			<td>
+				<a href="{{ URL::to('/admin/employees/' . $employee->id . '/edit' ) }}" class="btn btn-success" >
+					<span class="glyphicon glyphicon-pencil"></span>  {{ trans("kotoba::button.edit") }}
+				</a>
+				<a href="{{ URL::to('/admin/employees/' . $employee->id ) }}" class="btn btn-info" >
+					<span class="glyphicon glyphicon-search"></span>  {{ trans("kotoba::button.view") }}
+				</a>
+			</td>
+		</tr>
 		@endforeach
 	</tbody>
 </table>
+
 
 @else
 	<div class="alert alert-info">
 		{{ trans('kotoba::general.no_records') }}
 	</div>
 @endif
+
+@endif
+@endif
+
+
+{{--
+<a href="{{ URL::to('employees/' . $employee->user_id) }}" class="btn btn-info btn-sm" >
+	<span class="glyphicon glyphicon-search"></span>  {{ trans("kotoba::button.view") }}
+</a>
 --}}

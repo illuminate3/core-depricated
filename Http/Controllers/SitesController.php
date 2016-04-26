@@ -121,9 +121,15 @@ class SitesController extends CoreController
 	 */
 	public function show($id)
 	{
-		$site = $this->site->find($id);
+
+		$lang = Session::get('locale');
+		$locale_id = $this->locale_repo->getLocaleID($lang);
+//dd($locale_id);
+
+//		$site = $this->site->find($id);
 //		$site = $this->model->with('employees')->find($id);
 //		$site = $this->model->with('users')->find($id);
+		$site = $this->site->with('rooms', 'employees')->find($id);
 //dd($site);
 
 //dd($site->division_id);
@@ -142,6 +148,7 @@ class SitesController extends CoreController
 
 		return Theme::View('core::sites.show',
 			compact(
+				'locale_id',
 				'contact',
 //				'division',
 				'image',

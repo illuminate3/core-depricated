@@ -79,14 +79,14 @@ class Site extends Model {
 
 // hasMany
 
-	public function employees()
-	{
-		return $this->hasMany('App\Modules\jinji\Http\Models\Employee');
-	}
+// 	public function employees()
+// 	{
+// 		return $this->hasMany('App\Modules\jinji\Http\Models\Employee');
+// 	}
 
 	public function rooms()
 	{
-		return $this->hasMany('App\Modules\Core\Http\Models\Room');
+		return $this->hasMany('App\Modules\Shisan\Http\Models\Room');
 	}
 
 	public function users()
@@ -112,6 +112,15 @@ class Site extends Model {
 // 	}
 
 // belongsToMany
+
+// 	public function employees()
+// 	{
+// 		return $this->belongsToMany('App\Modules\Core\Http\Models\Site', 'site_id', 'user_id');
+// 	}
+	public function employees()
+	{
+		return $this->belongsToMany('App\Modules\Kagi\Http\Models\User', 'site_user');
+	}
 
 // Functions ---------------------------------------------------------------
 
