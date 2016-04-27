@@ -84,6 +84,11 @@ class Site extends Model {
 // 		return $this->hasMany('App\Modules\jinji\Http\Models\Employee');
 // 	}
 
+	public function assets()
+	{
+		return $this->hasMany('App\Modules\Shisan\Http\Models\Asset');
+	}
+
 	public function rooms()
 	{
 		return $this->hasMany('App\Modules\Shisan\Http\Models\Room');

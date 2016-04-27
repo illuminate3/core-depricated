@@ -22,6 +22,9 @@ $(document).ready(function() {
 	$('#table_employees').dataTable({
 		'pageLength': 25
 	});
+	$('#table_assets').dataTable({
+		'pageLength': 25
+	});
 });
 @stop
 

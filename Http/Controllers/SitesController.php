@@ -129,7 +129,7 @@ class SitesController extends CoreController
 //		$site = $this->site->find($id);
 //		$site = $this->model->with('employees')->find($id);
 //		$site = $this->model->with('users')->find($id);
-		$site = $this->site->with('rooms', 'employees')->find($id);
+		$site = $this->site->with('rooms', 'employees', 'assets')->find($id);
 //dd($site);
 
 //dd($site->division_id);
