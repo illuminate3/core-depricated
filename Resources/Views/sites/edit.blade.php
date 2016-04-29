@@ -39,7 +39,7 @@ function setImage(select){
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/admin/sites" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
+	<a href="/admin/sites/{{ $site->id }}" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
 		<i class="fa fa-chevron-left fa-fw"></i>
 		{{ trans('kotoba::button.back') }}
 	</a>
@@ -79,12 +79,6 @@ function setImage(select){
 		<a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
 		<i class="fa fa-gears fa-lg"></i>
 		{{ Lang::choice('kotoba::general.setting', 2) }}
-		</a>
-	</li>
-	<li role="presentation">
-		<a href="#assets" aria-controls="archive" role="tab" data-toggle="tab">
-		<i class="fa fa-cubes fa-lg"></i>
-		{{ trans('kotoba::hr.building') }}&nbsp;{{ Lang::choice('kotoba::shop.asset', 2) }}
 		</a>
 	</li>
 </ul>
@@ -383,12 +377,6 @@ function setImage(select){
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ settings panel -->
 
-	<div role="tabpanel" class="tab-pane" id="assets">
-	<div class="tab-content padding-md">
-
-	</div><!-- ./ tab-content -->
-	</div><!-- ./ assets panel -->
-
 </div><!-- ./ tab panes -->
 
 
@@ -399,7 +387,7 @@ function setImage(select){
 
 <div class="row">
 <div class="col-sm-4">
-	<a href="/admin/sites" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
+	<a href="/admin/sites/{{ $site->id }}" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
 		<i class="fa fa-times fa-fw"></i>
 		{{ trans('kotoba::button.cancel') }}
 	</a>
