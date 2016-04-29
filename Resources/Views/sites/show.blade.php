@@ -56,6 +56,7 @@ $(document).ready(function() {
 </div>
 
 
+{{--
 <!-- Nav tabs -->
 <ul class="nav nav-tabs nav-justified" role="tablist">
 	<li role="presentation" class="active">
@@ -112,6 +113,68 @@ $(document).ready(function() {
 	</div><!-- ./ published panel -->
 
 </div><!-- ./ tab panes -->
+--}}
 
+
+
+<div class="row">
+
+<ul class="nav nav-pills nav-stacked col-sm-2">
+	<li role="presentation" class="active">
+		<a href="#site_info" aria-controls="site_info" role="tab" data-toggle="tab">
+		<i class="fa fa-building-o fa-lg"></i>
+		{{ Lang::choice('kotoba::cms.site', 1) }}&nbsp;{{ trans('kotoba::general.information') }}
+		</a>
+	</li>
+	<li role="presentation">
+		<a href="#employee_info" aria-controls="employee_info" role="tab" data-toggle="tab">
+		<i class="fa fa-user fa-lg"></i>
+		{{ Lang::choice('kotoba::hr.employee', 2) }}
+		</a>
+	</li>
+	<li role="presentation">
+		<a href="#rooms" aria-controls="rooms" role="tab" data-toggle="tab">
+		<i class="fa fa-plug fa-lg"></i>
+		{{ Lang::choice('kotoba::general.room', 2) }}
+		</a>
+	</li>
+	<li role="presentation">
+		<a href="#assets" aria-controls="assets" role="tab" data-toggle="tab">
+		<i class="fa fa-cubes fa-lg"></i>
+		{{ Lang::choice('kotoba::shop.asset', 2) }}
+		</a>
+	</li>
+</ul>
+
+	<div class="tab-content col-sm-10">
+
+	<div role="tabpanel" class="tab-pane active" id="site_info">
+	<div class="tab-content padding-md">
+		@include('core::_partials._show.site_info')
+	</div><!-- ./ tab-content -->
+	</div><!-- ./ user_info panel -->
+
+	<div role="tabpanel" class="tab-pane" id="employee_info">
+	<div class="tab-content padding-md">
+		@include('core::_partials._show.employee_info')
+	</div><!-- ./ tab-content -->
+	</div><!-- ./ work_info panel -->
+
+	<div role="tabpanel" class="tab-pane" id="rooms">
+	<div class="tab-content padding-md">
+		@include('core::_partials._show.room_info')
+	</div><!-- ./ tab-content -->
+	</div><!-- ./ published panel -->
+
+	<div role="tabpanel" class="tab-pane" id="assets">
+	<div class="tab-content padding-md">
+		@include('core::_partials._show.asset_info')
+	</div><!-- ./ tab-content -->
+	</div><!-- ./ published panel -->
+
+	</div>
+
+</div>
+<!-- /tabs -->
 
 @stop
