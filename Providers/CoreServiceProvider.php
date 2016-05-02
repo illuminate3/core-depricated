@@ -90,6 +90,11 @@ class CoreServiceProvider extends ServiceProvider
 			'Caffeinated\SEO\Facades\Metadata'
 		);
 
+		AliasLoader::getInstance()->alias(
+			'Breadcrumbs',
+			'DaveJamesMiller\Breadcrumbs\Facade'
+		);
+
 /*
 		AliasLoader::getInstance()->alias(
 			'SEOMeta',
@@ -114,6 +119,7 @@ class CoreServiceProvider extends ServiceProvider
 		$app->register('anlutro\LaravelSettings\ServiceProvider');
 		$app->register('Cviebrock\EloquentSluggable\SluggableServiceProvider');
 		$app->register('ShvetsGroup\LaravelEmailDatabaseLog\LaravelEmailDatabaseLogServiceProvider');
+		$app->register('DaveJamesMiller\Breadcrumbs\ServiceProvider');
 
 // Register Middleware
 		$kernel = $this->app->make('Illuminate\Contracts\Http\Kernel');
