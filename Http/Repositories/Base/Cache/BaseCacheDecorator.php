@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Modules\Core\Repositories\Base\Cache;
+namespace App\Modules\Core\Http\Repositories\Base\Cache;
 
-use App\Modules\Core\Repositories\Base\BaseRepository;
+use App\Modules\Core\Http\Repositories\Base\BaseRepository;
 
 abstract class BaseCacheDecorator implements BaseRepository
 {
     /**
-     * @var \Modules\Core\Repositories\BaseRepository
+     * @var \Modules\Core\Http\Repositories\BaseRepository
      */
     protected $repository;
     /**

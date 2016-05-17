@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Modules\Core\Repositories\Base\Eloquent;
+namespace App\Modules\Core\Http\Repositories\Base\Eloquent;
 
 use Illuminate\Database\Eloquent\Builder;
-use App\Modules\Core\Repositories\Base\BaseRepository;
+use App\Modules\Core\Http\Repositories\Base\BaseRepository;
 
 /**
  * Class EloquentCoreRepository
  *
- * @package Modules\Core\Repositories\Eloquent
+ * @package Modules\Core\Http\Repositories\Eloquent
  */
 abstract class EloquentBaseRepository implements BaseRepository
 {

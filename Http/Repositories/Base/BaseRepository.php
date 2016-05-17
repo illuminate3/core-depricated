@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Modules\Core\Repositories\Base;
+namespace App\Modules\Core\Http\Repositories\Base;
 
 
 /**
  * Interface CoreRepository
- * @package Modules\Core\Repositories
+ * @package Modules\Core\Http\Repositories
  */
 interface BaseRepository
 {
