@@ -39,7 +39,7 @@ class DashboardController extends CoreController {
 //dd(Auth::user());
 				return Theme::View('modules.core.dashboard');
 			}
-			return Theme::View('modules.core.dashboard');
+//			return Theme::View('modules.core.dashboard');
 		}
 
 		return Theme::View('modules.core.landing');
