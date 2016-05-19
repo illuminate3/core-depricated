@@ -21,7 +21,7 @@
 	</thead>
 
 	<tbody>
-		@foreach ($site->employees as $employee)
+		@foreach ($employees as $employee)
 		<tr>
 			<td>
 				{{ $employee->present()->employeeName($employee->id) }}

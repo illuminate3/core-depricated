@@ -5,6 +5,7 @@ namespace App\Modules\Core\Http\Repositories;
 use App\Modules\Core\Http\Repositories\BaseRepository;
 use App\Modules\Core\Http\Models\Site;
 
+use Illuminate\Support\Collection;
 use Config;
 use DB;
 use Image;
@@ -145,11 +146,17 @@ class SiteRepository extends BaseRepository {
 
 // Functions --------------------------------------------------
 
-	public function getSites()
+
+// list
+
+	public function getSiteList()
 	{
 		$sites = DB::table('sites')->lists('name', 'id');
 		return $sites;
 	}
+
+
+// get
 
 	public function getSite($barcode)
 	{
@@ -159,6 +166,44 @@ class SiteRepository extends BaseRepository {
 
 		return $site;
 	}
+
+
+	public function getRooms($site_id)
+	{
+		$rooms = DB::table('rooms')
+			->where('rooms.site_id', '=', $site_id)
+			->leftJoin('profiles','profiles.id','=','rooms.user_id')
+			->get();
+//dd($rooms);
+		return $rooms;
+	}
+
+
+	public function getAssets($site_id)
+	{
+		$assets = DB::table('assets')
+			->where('assets.site_id', '=', $site_id)
+			->leftJoin('items', 'items.id', '=', 'assets.item_id')
+			->leftJoin('rooms','rooms.id','=','assets.room_id')
+			->leftJoin('profiles','profiles.id','=','assets.user_id')
+			->get();
+//dd($assets);
+		return $assets;
+	}
+
+
+	public function getEmployees($site_id)
+	{
+		$employees = DB::table('employees')
+			->where('site_id', '=', $site_id)
+			->get();
+
+		return $employees;
+	}
+
+
+
+
 
 	public function getContacts()
 	{

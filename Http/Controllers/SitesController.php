@@ -9,6 +9,10 @@ use App\Modules\Core\Http\Models\Site;
 use App\Modules\Core\Http\Repositories\SiteRepository;
 use App\Modules\Filex\Http\Repositories\ImageRepository;
 
+use App\Modules\Shisan\Http\Models\Asset;
+use App\Modules\Jinji\Http\Models\Employee;
+use App\Modules\Shisan\Http\Models\Room;
+
 use Illuminate\Http\Request;
 use App\Modules\Core\Http\Requests\DeleteRequest;
 use App\Modules\Core\Http\Requests\SiteCreateRequest;
@@ -126,11 +130,17 @@ class SitesController extends CoreController
 		$locale_id = $this->locale_repo->getLocaleID($lang);
 //dd($locale_id);
 
-//		$site = $this->site->find($id);
-//		$site = $this->model->with('employees')->find($id);
-//		$site = $this->model->with('users')->find($id);
-		$site = $this->site->with('rooms', 'employees', 'assets')->find($id);
+		$site = $this->site->find($id);
+//		$site = $this->site->with('rooms', 'employees', 'assets')->find($id);
 //dd($site);
+
+// 		$assets = Asset::where('site_id', $id)->get();
+		$assets = $this->site_repo->getAssets($id);
+//		$employees = $this->site_repo->getEmployees($id);
+		$employees = Employee::where('site_id', $id)->get();
+//		$rooms = Room::where('site_id', $id)->get();
+		$rooms = $this->site_repo->getRooms($id);
+//dd($rooms);
 
 //dd($site->division_id);
 //		$division = $site->present()->divisionName($site->division_id);
@@ -150,7 +160,9 @@ class SitesController extends CoreController
 			compact(
 				'locale_id',
 				'contact',
-//				'division',
+				'assets',
+				'employees',
+				'rooms',
 				'image',
 				'site'
 			));

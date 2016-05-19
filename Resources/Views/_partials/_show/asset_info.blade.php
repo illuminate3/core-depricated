@@ -23,16 +23,26 @@
 	</thead>
 
 	<tbody>
-		@foreach ($site->assets as $asset)
+		@foreach ($assets as $asset)
 		<tr>
-			<td>{{ $asset->present()->itemName($asset->item_id) }}</td>
-			<td>{{ $asset->present()->roomName($asset->room_id) }}</td>
-			<td>{{ $asset->asset_tag }}</td>
 			<td>
-				{{ $asset->present()->employeeName($asset->user_id) }}
+				{{-- $asset->present()->itemName($asset->item_id) --}}
+				{{ $asset->make }}&nbsp;{{ $asset->model }}&nbsp;{{ $asset->model_number }}
 			</td>
 			<td>
-				{{ $asset->present()->techStatus($asset->tech_status_id, $locale_id) }}
+				{{-- $asset->present()->roomName($asset->room_id) --}}
+				{{ $asset->name }}
+			</td>
+			<td>
+				{{ $asset->asset_tag }}
+			</td>
+			<td>
+				{{-- $asset->present()->employeeName($asset->user_id) --}}
+				{{ $asset->last_name }},&nbsp;{{ $asset->first_name }}&nbsp;{{ $asset->middle_initial }}
+			</td>
+			<td>
+				{{-- $asset->present()->techStatus($asset->tech_status_id, $locale_id) --}}
+				{{ $asset->status_id == 1 ? trans('kotoba::general.enabled') : trans('kotoba::general.disabled') }}
 			</td>
 			<td>
 				<a href="{{ URL::to('/admin/assets/' . $asset->id . '/edit' ) }}" class="btn btn-success" >

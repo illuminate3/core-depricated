@@ -22,16 +22,24 @@
 	</thead>
 
 	<tbody>
-		@foreach ($site->rooms as $room)
+		@foreach ($rooms as $room)
 		<tr>
-			<td>{{ $room->name }}</td>
-			<td>{{ $room->description }}</td>
-			<td>{{ $room->barcode }}</td>
 			<td>
-				{{ $room->present()->employeeName($room->user_id) }}
+				{{ $room->name }}
 			</td>
 			<td>
-				{{ $room->present()->status($room->status_id) }}
+				{{ $room->description }}
+			</td>
+			<td>
+				{{ $room->barcode }}
+			</td>
+			<td>
+				{{-- $room->present()->employeeName($room->user_id) --}}
+				{{ $room->last_name }},&nbsp;{{ $room->first_name }}&nbsp;{{ $room->middle_initial }}
+			</td>
+			<td>
+				{{-- $room->present()->status($room->status_id) --}}
+				{{ $room->status_id == 1 ? trans('kotoba::general.enabled') : trans('kotoba::general.disabled') }}
 			</td>
 			<td>
 				<a href="{{ URL::to('/admin/rooms/' . $room->id . '/edit' ) }}" class="btn btn-success" >
