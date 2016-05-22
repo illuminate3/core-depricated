@@ -20,6 +20,13 @@ class Site extends Model {
 // Presenter ---------------------------------------------------------------
 	protected $presenter = 'App\Modules\Core\Http\Presenters\Core';
 
+
+// revisionable ------------------------------------------------------------
+	public function identifiableName()
+	{
+		return $this->name;
+	}
+
 // Translation Model -------------------------------------------------------
 // Hidden ------------------------------------------------------------------
 // Fillable ----------------------------------------------------------------
