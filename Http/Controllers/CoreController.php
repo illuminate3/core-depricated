@@ -49,7 +49,7 @@ class CoreController extends Controller
 // 			if ( Auth::user()->can('manage_own') ) {
 // 				return Theme::View('modules.core.dashboard');
 // 			}
-// 			if ( Auth::user()->can('customer') ) {
+// 			if ( Auth::user()->is('customer') ) {
 // //				return Theme::View('modules.kyaku.dashboard');
 // 				return redirect('dash');
 // 			}
