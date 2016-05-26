@@ -11,7 +11,7 @@
 		"caffeinated/seo": "~2.0",
 		"willvincent/laravel-rateable": "~1.0",
 		"shvetsgroup/laravel-email-database-log": "*",
-		"artesaos/seotools": "^0.8.2",
+		"cviebrock/eloquent-sluggable": ">=3.0.0-beta",
 		"davejamesmiller/laravel-breadcrumbs": "^3.0"
 	},
 	"config": {
