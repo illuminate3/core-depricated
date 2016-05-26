@@ -95,31 +95,12 @@ class CoreServiceProvider extends ServiceProvider
 // 			'DaveJamesMiller\Breadcrumbs\Facade'
 // 		);
 
-/*
-		AliasLoader::getInstance()->alias(
-			'SEOMeta',
-			'Artesaos\SEOTools\Facades\SEOMeta'
-		);
-		AliasLoader::getInstance()->alias(
-			'OpenGraph',
-			'Artesaos\SEOTools\Facades\OpenGraph'
-		);
-		AliasLoader::getInstance()->alias(
-			'Twitter',
-			'Artesaos\SEOTools\Facades\TwitterCard'
-		);
-		AliasLoader::getInstance()->alias(
-			'SEO',
-			'Artesaos\SEOTools\Facades\SEOTools'
-		);
-*/
 		$app = $this->app;
 
 		$app->register('App\Modules\Core\Providers\ViewComposerServiceProvider');
 		$app->register('anlutro\LaravelSettings\ServiceProvider');
 		$app->register('Cviebrock\EloquentSluggable\SluggableServiceProvider');
 		$app->register('ShvetsGroup\LaravelEmailDatabaseLog\LaravelEmailDatabaseLogServiceProvider');
-//		$app->register('DaveJamesMiller\Breadcrumbs\ServiceProvider');
 
 // Register Middleware
 		$kernel = $this->app->make('Illuminate\Contracts\Http\Kernel');
@@ -140,8 +121,6 @@ class CoreServiceProvider extends ServiceProvider
 
 		$app->register('App\Modules\Core\Providers\RouteServiceProvider');
 		$app->register('AuraIsHere\LaravelMultiTenant\LaravelMultiTenantServiceProvider');
-		$app->register('UxWeb\SweetAlert\SweetAlertServiceProvider');
-//		$app->register('Artesaos\SEOTools\Providers\SEOToolsServiceProvider');
 		$app->register('Caffeinated\SEO\SEOServiceProvider');
 	}
 
