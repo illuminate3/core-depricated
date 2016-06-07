@@ -133,11 +133,13 @@ class SitesController extends CoreController
 		$site = $this->site->find($id);
 //		$site = $this->site->with('rooms', 'employees', 'assets')->find($id);
 //dd($site);
+//dd($site->employees);
 
 // 		$assets = Asset::where('site_id', $id)->get();
 		$assets = $this->site_repo->getAssets($id);
 //		$employees = $this->site_repo->getEmployees($id);
 		$employees = Employee::where('site_id', $id)->get();
+//dd($employees);
 //		$rooms = Room::where('site_id', $id)->get();
 		$rooms = $this->site_repo->getRooms($id);
 //dd($rooms);
@@ -263,6 +265,7 @@ class SitesController extends CoreController
 //		$query = Site::select('id', 'name' 'description', 'updated_at');
 //			->orderBy('name', 'ASC');
 		$query = Site::select('id', 'name', 'phone_1', 'address', 'website');
+//			->where('staus_id', '=', 1);
 //dd($query);
 
 // 		$query = Site::select([
@@ -272,6 +275,14 @@ class SitesController extends CoreController
 // 		])
 // 		->leftJoin('profiles', 'profiles.id', '=', 'sites.user_id');
 // //		->leftJoin('divisions','divisions.id','=','sites.division_id');
+
+
+		$query = Site::select([
+				'id', 'name', 'phone_1', 'address', 'website', 'status_id'
+				])
+			->where('status_id', '=', 1);
+
+
 
 		if ( Auth::user() ) {
 			if ( (Auth::user()->can('manage_admin')) || (Auth::user()->can('manage_core')) ) {

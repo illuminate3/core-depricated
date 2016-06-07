@@ -2,7 +2,7 @@
 @if ( Module::exists('jinji') )
 
 
-@if (count($site->employees))
+@if (count($employees))
 
 <h3>
 	{{ trans('kotoba::general.staff') }}
