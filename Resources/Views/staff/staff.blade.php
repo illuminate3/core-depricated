@@ -45,18 +45,18 @@
 </div>
 <div class="col-sm-4">
 	<a href="/" class="blue blue-hover"><i class="fa fa-dashboard fa-5x"></i></a>
-	<h3><a href="/staff/dashboard/{{ Auth::user()->id }}" class="blue blue-hover">{{ trans('kotoba::cms.dashboard') }}</a></h3>
+	<h3><a href="staff/dashboard/{{ Auth::user()->id }}" class="blue blue-hover">{{ trans('kotoba::cms.dashboard') }}</a></h3>
 </div>
 </div><!-- ./row -->
 
 <div class="row center margin-top-xl">
 <div class="col-sm-4">
-	<a href="/helpdesk" class="blue blue-hover"><i class="fa fa-laptop fa-5x"></i></a>
+	<a href="helpdesk" class="blue blue-hover"><i class="fa fa-laptop fa-5x"></i></a>
 	<h3><a href="/helpdesk" class="blue blue-hover">{{ trans('kotoba::helpdesk.helpdesk') }}</a></h3>
 </div>
 <div class="col-sm-4">
-	<a href="/helpdesk/knowledgebase" class="blue blue-hover"><i class="fa fa-lightbulb-o fa-5x"></i></a>
-	<h3><a href="/helpdesk/knowledgebase" class="blue blue-hover">{{ trans('kotoba::helpdesk.knowledge_base') }}</a></h3>
+	<a href="helpdesk/knowledgebase" class="blue blue-hover"><i class="fa fa-lightbulb-o fa-5x"></i></a>
+	<h3><a href="helpdesk/knowledgebase" class="blue blue-hover">{{ trans('kotoba::helpdesk.knowledge_base') }}</a></h3>
 </div>
 <div class="col-sm-4">
 </div>

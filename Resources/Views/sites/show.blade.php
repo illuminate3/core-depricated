@@ -90,25 +90,25 @@ $(document).ready(function() {
 
 	<div role="tabpanel" class="tab-pane active" id="site_info">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.site_info')
+		@include('core::_partials._sites._show.site_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ user_info panel -->
 
 	<div role="tabpanel" class="tab-pane" id="employee_info">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.employee_info')
+		@include('core::_partials._sites._show.employee_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ work_info panel -->
 
 	<div role="tabpanel" class="tab-pane" id="rooms">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.room_info')
+		@include('core::_partials._sites._show.room_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ published panel -->
 
 	<div role="tabpanel" class="tab-pane" id="assets">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.asset_info')
+		@include('core::_partials._sites._show.asset_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ published panel -->
 
@@ -150,25 +150,25 @@ $(document).ready(function() {
 
 	<div role="tabpanel" class="tab-pane active" id="site_info">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.site_info')
+		@include('core::_partials._sites._show.site_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ user_info panel -->
 
 	<div role="tabpanel" class="tab-pane" id="employee_info">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.employee_info')
+		@include('core::_partials._sites._show.employee_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ work_info panel -->
 
 	<div role="tabpanel" class="tab-pane" id="rooms">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.room_info')
+		@include('core::_partials._sites._show.room_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ published panel -->
 
 	<div role="tabpanel" class="tab-pane" id="assets">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.asset_info')
+		@include('core::_partials._sites._show.asset_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ published panel -->
 

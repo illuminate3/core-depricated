@@ -125,49 +125,49 @@ $(document).ready(function() {
 
 	<div role="tabpanel" class="tab-pane" id="user_info">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.user_info')
+		@include('core::_partials._staff._show.user_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ user_info panel -->
 
 	<div role="tabpanel" class="tab-pane" id="work_info">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.employment_info')
+		@include('core::_partials._staff._show.employment_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ employment_info panel -->
 
 	<div role="tabpanel" class="tab-pane" id="status">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.kagi_info')
+		@include('core::_partials._staff._show.kagi_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ kagi_info panel -->
 
 	<div role="tabpanel" class="tab-pane active" id="contract">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.contract_info')
+		@include('core::_partials._staff._show.contract_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ contract_info panel -->
 
 	<div role="tabpanel" class="tab-pane" id="seminars">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.seminars')
+		@include('core::_partials._staff._show.seminars')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ seminars panel -->
 
 	<div role="tabpanel" class="tab-pane" id="assets">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.asset_info')
+		@include('core::_partials._staff._show.asset_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ asset_info panel -->
 
 	<div role="tabpanel" class="tab-pane" id="rooms">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.room_info')
+		@include('core::_partials._staff._show.room_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ room_info panel -->
 
 	<div role="tabpanel" class="tab-pane" id="supervisior">
 	<div class="tab-content padding-md">
-		@include('core::_partials._show.supervisor_info')
+		@include('core::_partials._staff._show.supervisor_info')
 	</div><!-- ./ tab-content -->
 	</div><!-- ./ room_info panel -->
 
