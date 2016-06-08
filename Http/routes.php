@@ -22,6 +22,9 @@ Route::get('/', array(
 Route::get('staff', array(
 	'uses'=>'StaffController@staff'
 	));
+Route::get('staff/dashboard/{id}', array(
+	'uses'=>'StaffController@show'
+	));
 
 /*
 |--------------------------------------------------------------------------

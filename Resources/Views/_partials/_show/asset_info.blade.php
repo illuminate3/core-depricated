@@ -1,12 +1,17 @@
-@if (Auth::user()->can('manage_shisan'))
 @if ( Module::exists('shisan') )
 
 
-@if (count($site->assets))
+@if (count($employee->assets))
 
-<h3>
-	{{ Lang::choice('kotoba::shop.asset', 2) }}
-</h3>
+
+<div class="row">
+<h2>
+	<i class="fa fa-cubes fa-lg"></i>
+	{{ Lang::choice('kotoba::account.user', 1) }}&nbsp;{{ Lang::choice('kotoba::shop.asset', 2) }}
+	<hr>
+</h2>
+</div>
+
 
 <div class="row">
 <table id="table_assets" class="table table-striped table-hover">
@@ -23,32 +28,19 @@
 	</thead>
 
 	<tbody>
-		@foreach ($assets as $asset)
+		@foreach ($employee->assets as $asset)
 		<tr>
+			<td>{{ $asset->present()->itemName($asset->item_id) }}</td>
+			<td>{{ $asset->present()->roomName($asset->room_id) }}</td>
+			<td>{{ $asset->asset_tag }}</td>
 			<td>
-				{{-- $asset->present()->itemName($asset->item_id) --}}
-				{{ $asset->make }}&nbsp;{{ $asset->model }}&nbsp;{{ $asset->model_number }}
+				{{ $asset->present()->employeeName($asset->user_id) }}
 			</td>
 			<td>
-				{{-- $asset->present()->roomName($asset->room_id) --}}
-				{{ $asset->name }}
+				{{ $asset->present()->techStatus($asset->tech_status_id, $locale_id) }}
 			</td>
 			<td>
-				{{ $asset->asset_tag }}
-			</td>
-			<td>
-				{{-- $asset->present()->employeeName($asset->user_id) --}}
-				{{ $asset->last_name }},&nbsp;{{ $asset->first_name }}&nbsp;{{ $asset->middle_initial }}
-			</td>
-			<td>
-				{{-- $asset->present()->techStatus($asset->tech_status_id, $locale_id) --}}
-				{{ $asset->status_id == 1 ? trans('kotoba::general.enabled') : trans('kotoba::general.disabled') }}
-			</td>
-			<td>
-				<a href="{{ URL::to('/admin/assets/' . $asset->id . '/edit' ) }}" class="btn btn-success" >
-					<span class="glyphicon glyphicon-pencil"></span>  {{ trans("kotoba::button.edit") }}
-				</a>
-				<a href="{{ URL::to('/admin/assets/' . $asset->id ) }}" class="btn btn-info" >
+				<a href="{{ URL::to('/admin/asset/' . $asset->id ) }}" class="btn btn-info" >
 					<span class="glyphicon glyphicon-search"></span>  {{ trans("kotoba::button.view") }}
 				</a>
 			</td>
@@ -65,5 +57,4 @@
 @endif
 
 
-@endif
 @endif

@@ -48,8 +48,8 @@ class StaffController extends CoreController
 		$this->profile_repo = $profile_repo;
 //		$this->user = $user;
 // middleware
-// 		$this->middleware('auth');
-		$this->middleware('auth', ['only' => 'staff']);
+ 		$this->middleware('auth');
+//		$this->middleware('auth', ['only' => 'staff']);
 	}
 
 
@@ -72,21 +72,7 @@ class StaffController extends CoreController
 
 	public function show($id)
 	{
-
-		$lang = Session::get('locale');
-		$locale_id = $this->locale_repo->getLocaleID($lang);
-
-		$profile = $this->profile->find($id);
-		$employee_id = $this->employee_repo->getEmployeeID($profile->id);
-		$employee_data = $this->employee->find($id);
-//dd($employee_data);
-
-		return Theme::View('modules.core.staff.show',
-				compact(
-					'employee_data',
-					'locale_id',
-					'profile'
-			));
+		return Theme::View('modules.core.staff.dashboard',  $this->employee_repo->show($id));
 	}
 
 

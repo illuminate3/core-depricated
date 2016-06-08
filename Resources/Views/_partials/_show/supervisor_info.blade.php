@@ -1,49 +1,48 @@
 @if ( Module::exists('shisan') )
 
 
-@if (count($employee->rooms))
+@if (count($supervising))
 
 
 <div class="row">
 <h2>
-	<i class="fa fa-building-o fa-lg"></i>
-	{{ Lang::choice('kotoba::account.user', 1) }}&nbsp;{{ Lang::choice('kotoba::hr.room', 2) }}
+	<i class="fa fa-users fa-lg"></i>
+	{{ Lang::choice('kotoba::hr.employee', 2) }}
 	<hr>
 </h2>
 </div>
 
 
-
-<h3>
-	{{ Lang::choice('kotoba::hr.room', 2) }}
-</h3>
-
 <div class="row">
 <table id="table_rooms" class="table table-striped table-hover">
 	<thead>
 		<tr>
-			<th>{{ trans('kotoba::table.name') }}</th>
-			<th>{{ trans('kotoba::table.description') }}</th>
-			<th>{{ trans('kotoba::table.barcode') }}</th>
+			<th>{{ trans('kotoba::table.first_name') }}</th>
+			<th>{{ trans('kotoba::table.middle_initial') }}</th>
+			<th>{{ trans('kotoba::table.last_name') }}</th>
+			<th>{{ trans('kotoba::table.email') }}</th>
 
 			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
 		</tr>
 	</thead>
 
 	<tbody>
-		@foreach ($employee->rooms as $room)
+		@foreach ($supervising as $supervised)
 		<tr>
 			<td>
-				{{ $room->name }}
+				{{ $supervised->first_name }}
 			</td>
 			<td>
-				{{ $room->description }}
+				{{ $supervised->middle_initial }}
 			</td>
 			<td>
-				{{ $room->barcode }}
+				{{ $supervised->last_name }}
 			</td>
 			<td>
-				<a href="{{ URL::to('/admin/rooms/' . $room->id ) }}" class="btn btn-info" >
+				{{ $supervised->email }}
+			</td>
+			<td>
+				<a href="{{ URL::to('/admin/employees/' . $supervised->id ) }}" class="btn btn-info" >
 					<span class="glyphicon glyphicon-search"></span>  {{ trans("kotoba::button.view") }}
 				</a>
 			</td>
