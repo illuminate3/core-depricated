@@ -48,7 +48,7 @@ class StaffController extends CoreController
 		$this->profile_repo = $profile_repo;
 //		$this->user = $user;
 // middleware
- 		$this->middleware('auth');
+// 		$this->middleware('auth');
 //		$this->middleware('auth', ['only' => 'staff']);
 	}
 

@@ -72,7 +72,7 @@ $(document).ready(function() {
 	<li role="presentation">
 		<a href="#user_info" aria-controls="user_info" role="tab" data-toggle="tab">
 		<i class="fa fa-user fa-lg"></i>
-		{{ Lang::choice('kotoba::hr.employee', 1) }}&nbsp;{{ trans('kotoba::general.information') }}
+		{{ Lang::choice('kotoba::account.user', 1) }}&nbsp;{{ trans('kotoba::general.information') }}
 		</a>
 	</li>
 	<li role="presentation">

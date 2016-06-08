@@ -4,7 +4,7 @@
 <div class="row">
 <h2>
 		<i class="fa fa-user fa-lg"></i>
-		{{ Lang::choice('kotoba::hr.employee', 1) }}&nbsp;{{ trans('kotoba::general.information') }}
+		{{ Lang::choice('kotoba::account.user', 1) }}&nbsp;{{ trans('kotoba::general.information') }}
 	<hr>
 </h2>
 </div>
@@ -109,12 +109,12 @@
 
 
 
-@if (Auth::user()->id == $profile->id)
+@if ( (Auth::user()->id == $profile->id) || (Shinobi::can('manage_profiles')) )
 <div class="row">
 
 <hr>
 
-	<div class="col-sm-6">
+	<div class="col-sm-12">
 		<a href="/profiles/{{ $profile->id }}/edit" class="btn btn-success btn-block" title="{{ trans('kotoba::button.edit') }}">
 			<i class="fa fa-pencil fa-fw"></i>
 			{{ trans('kotoba::button.edit') }}
