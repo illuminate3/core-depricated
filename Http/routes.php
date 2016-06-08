@@ -19,6 +19,9 @@ Route::get('/', array(
 	'uses'=>'CoreController@index'
 	));
 
+Route::get('staff', array(
+	'uses'=>'StaffController@staff'
+	));
 
 /*
 |--------------------------------------------------------------------------
