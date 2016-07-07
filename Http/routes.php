@@ -33,6 +33,9 @@ Route::get('staff/dashboard/{id}', array(
 */
 Route::group(['prefix' => 'admin'], function() {
 
+	Route::pattern('key', '[0-9a-z]+');
+
+
 	Route::get('/', array(
 		'uses'=>'DashboardController@index'
 		));
@@ -48,11 +51,13 @@ Route::group(['prefix' => 'admin'], function() {
 	Route::resource('sites', 'SitesController');
 	Route::resource('statuses', 'StatusesController');
 	Route::resource('user_preferences', 'UserPreferenceController');
-/*
+
 	Route::get('settings/{key}', array(
 		'uses'=>'SettingsController@edit'
 		));
-*/
+	Route::post('settings/{key}', array(
+		'uses'=>'SettingsController@update'
+		));
 
 // Controllers
 // API DATA

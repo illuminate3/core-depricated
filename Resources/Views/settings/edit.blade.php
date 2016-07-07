@@ -23,7 +23,7 @@
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/admin/locales" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
+	<a href="/admin/settings" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
 		<i class="fa fa-chevron-left fa-fw"></i>
 		{{ trans('kotoba::button.back') }}
 	</a>
@@ -38,7 +38,7 @@
 {!! Form::model(
 	$setting,
 	[
-		'route' => ['admin.settings.update', $setting->key],
+		'route' => ['admin.settings.update', $key],
 		'method' => 'PATCH',
 		'class' => 'form'
 	]
@@ -47,43 +47,16 @@
 <div class="form-group">
 <div class="input-group">
 	<span class="input-group-addon"><i class="fa fa-tag fa-fw"></i></span>
-		<input type="text" id="key" name="key" value="{{ $setting->key }}"  placeholder="{{ trans('kotoba::cms.key') }}" class="form-control" autofocus="autofocus">
+		<input type="text" id="key" name="key" value="{!! $key !!}"  placeholder="{{ trans('kotoba::cms.key') }}" class="form-control" autofocus="autofocus">
 </div>
 </div>
 
 <div class="form-group">
 <div class="input-group">
 	<span class="input-group-addon"><i class="fa fa-info fa-fw"></i></span>
-		<input type="text" id="value" name="value" value="{{ $setting->value }}"  placeholder="{{ trans('kotoba::cms.value') }}" class="form-control">
+		<input type="text" id="value" name="value" value="{{ $value }}"  placeholder="{{ Lang::choice('kotoba::cms.value', 1) }}" class="form-control">
 </div>
 </div>
-
-{{--
-	<div class="tab-content">
-	@if (count($languages))
-
-	<ul class="nav nav-tabs">
-		@foreach( $languages as $language)
-			<li class="@if ($language->locale == $lang)active @endif">
-				<a href="#{{ $language->id }}" data-target="#lang_{{ $language->id }}" data-toggle="tab">{{{ $language->name }}}</a>
-			</li>
-		@endforeach
-	</ul>
-
-	@foreach( $languages as $language)
-	<div role="tabpanel" class="tab-pane padding fade @if ($language->locale == $lang)in active @endif" id="lang_{{{ $language->id }}}">
-
-		<div class="form-group">
-			<label for="title">{{ Lang::choice('kotoba::cms.value', 1) }}</label>
-			<input type="text" class="form-control" name="{{ $language->locale }}" id="{{ $language->locale }}" value="{{ $setting->value }}">
-		</div>
-
-	</div><!-- ./ $lang panel -->
-	@endforeach
-
-	@endif
-	</div><!-- tabcontent -->
---}}
 
 
 <hr>
@@ -99,7 +72,7 @@
 
 <div class="row">
 <div class="col-sm-4">
-	<a href="/admin/menulinks" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
+	<a href="/admin/settings" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
 		<i class="fa fa-times fa-fw"></i>
 		{{ trans('kotoba::button.cancel') }}
 	</a>

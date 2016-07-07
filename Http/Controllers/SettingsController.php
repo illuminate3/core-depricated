@@ -113,7 +113,10 @@ class SettingsController extends CoreController {
 //dd($lang);
 
 		$setting = $this->setting_repo->getKeyValues($key);
-//dd($setting);
+
+		$key = $setting->key;
+		$value = $setting->value;
+//dd($key);
 
 		$modal_title = trans('kotoba::general.command.delete');
 		$modal_body = trans('kotoba::general.ask.delete');
@@ -125,7 +128,8 @@ class SettingsController extends CoreController {
 		return Theme::View('core::settings.edit',
 			compact(
 				'lang',
-				'setting',
+				'key',
+				'value',
 				'modal_title',
 				'modal_body',
 				'modal_route',
@@ -143,12 +147,10 @@ class SettingsController extends CoreController {
 	 */
 	public function update(
 		SettingUpdateRequest $request,
-		$id
+		$key
 		)
 	{
 //dd($request);
-
-//Setting::set('foo.bar', $value)
 
 		Cache::forget('settings');
 
