@@ -40,7 +40,7 @@ Route::group(['prefix' => 'admin'], function() {
 		'uses'=>'DashboardController@index'
 		));
 
-	Route::get('dashboard', array(
+	Route::get('/dashboard', array(
 		'uses'=>'DashboardController@index'
 		));
 
