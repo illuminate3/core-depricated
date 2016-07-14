@@ -74,13 +74,13 @@ class CoreController extends Controller
 //		return Theme::View('modules.core.landing');
 
 
-		if ( Auth::user() != null) {
-			if ( Auth::user()->can('manage_admin') ) {
-//dd(Auth::user());
-				return Theme::View('modules.core.dashboard');
-			}
-//			return Theme::View('modules.core.dashboard');
-		}
+// 		if ( Auth::user() != null) {
+// 			if ( Auth::user()->can('manage_admin') ) {
+// //dd(Auth::user());
+// 				return Theme::View('modules.core.dashboard');
+// 			}
+// //			return Theme::View('modules.core.dashboard');
+// 		}
 
 		return Theme::View('modules.core.landing');
 

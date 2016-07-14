@@ -19,12 +19,6 @@ Route::get('/', array(
 	'uses'=>'CoreController@index'
 	));
 
-Route::get('staff', array(
-	'uses'=>'StaffController@staff'
-	));
-Route::get('staff/dashboard/{id}', array(
-	'uses'=>'StaffController@show'
-	));
 
 /*
 |--------------------------------------------------------------------------
