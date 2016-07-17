@@ -31,16 +31,20 @@ oTable =
 
 <div class="row">
 <h1>
-	@if ( Auth::user() )
-		@if ( (Auth::user()->can('manage_admin')) || (Auth::user()->can('manage_core')) )
-			<p class="pull-right">
-			<a href="/admin/sites/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
-				<i class="fa fa-plus fa-fw"></i>
-				{{ trans('kotoba::button.new') }}
-			</a>
-			</p>
+	<p class="pull-right">
+		@if ( Auth::user() )
+			@if ( (Auth::user()->can('manage_admin')) || (Auth::user()->can('manage_core')) )
+				<a href="/admin/sites/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
+					<i class="fa fa-plus fa-fw"></i>
+					{{ trans('kotoba::button.new') }}
+				</a>
+			@endif
 		@endif
-	@endif
+		<a href="/staff" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
+			<i class="fa fa-chevron-left fa-fw"></i>
+			{{ trans('kotoba::button.back') }}
+		</a>
+	</p>
 	<i class="fa fa-angle-double-right fa-lg"></i>
 		{{ Lang::choice('kotoba::hr.site', 2) }}
 	<hr>
