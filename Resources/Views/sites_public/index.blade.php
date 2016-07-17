@@ -1,4 +1,4 @@
-@extends($theme_back)
+@extends($theme_front)
 
 {{-- Web site Title --}}
 @section('title')
@@ -27,6 +27,7 @@ oTable =
 {{-- Content --}}
 @section('content')
 
+<div class="container-fluid padding-left-xl padding-right-xl">
 
 <div class="row">
 <h1>
@@ -101,4 +102,8 @@ oTable =
 </div>
 
 </div> <!-- ./ row -->
+
+</div><!-- ./container -->
+
+
 @stop

@@ -1,4 +1,3 @@
-@if (Auth::user()->can('manage_jinji'))
 @if ( Module::exists('jinji') )
 
 
@@ -36,12 +35,18 @@
 				{{ $employee->present()->employeeSubjects($employee->id, $locale_id) }}
 			</td>
 			<td>
+@if (Auth::user()->can('manage_jinji'))
 				<a href="{{ URL::to('/admin/employees/' . $employee->id . '/edit' ) }}" class="btn btn-success" >
 					<span class="glyphicon glyphicon-pencil"></span>  {{ trans("kotoba::button.edit") }}
 				</a>
 				<a href="{{ URL::to('/admin/employees/' . $employee->id ) }}" class="btn btn-info" >
 					<span class="glyphicon glyphicon-search"></span>  {{ trans("kotoba::button.view") }}
 				</a>
+@else
+				<a href="{{ URL::to('/staff/' . $employee->id ) }}" class="btn btn-info" >
+					<span class="glyphicon glyphicon-search"></span>  {{ trans("kotoba::button.view") }}
+				</a>
+@endif
 			</td>
 		</tr>
 		@endforeach
@@ -56,11 +61,3 @@
 @endif
 
 @endif
-@endif
-
-
-{{--
-<a href="{{ URL::to('employees/' . $employee->user_id) }}" class="btn btn-info btn-sm" >
-	<span class="glyphicon glyphicon-search"></span>  {{ trans("kotoba::button.view") }}
-</a>
---}}
