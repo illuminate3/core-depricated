@@ -20,6 +20,21 @@ Route::get('/', array(
 	));
 
 
+Route::get('/sites', array(
+	'uses'=>'SitesPublicController@index'
+	));
+Route::get('sites/{id}', array(
+	'uses'=>'SitesPublicController@show'
+	));
+
+// API DATA
+
+	Route::get('api/sites_public', array(
+	//	'as'=>'api.sites',
+		'uses'=>'SitesPublicController@data'
+		));
+
+
 /*
 |--------------------------------------------------------------------------
 | Admin

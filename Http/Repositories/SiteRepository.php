@@ -158,6 +158,15 @@ class SiteRepository extends BaseRepository {
 
 // get
 
+	public function getSites()
+	{
+		$sites = DB::table('sites')
+			->where('status_id', '=', 1)
+			->get();
+
+		return $sites;
+	}
+
 	public function getSite($barcode)
 	{
 		$site = DB::table('sites')
