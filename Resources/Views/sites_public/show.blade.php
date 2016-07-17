@@ -65,6 +65,7 @@ $(document).ready(function() {
 		</a>
 	</li>
 
+@if ( Auth::user() )
 @if ( Auth::user()->can('manage_shisan') )
 	<li role="presentation">
 		<a href="#rooms" aria-controls="rooms" role="tab" data-toggle="tab">
@@ -78,6 +79,7 @@ $(document).ready(function() {
 		{{ Lang::choice('kotoba::shop.asset', 2) }}
 		</a>
 	</li>
+@endif
 @endif
 
 </ul>

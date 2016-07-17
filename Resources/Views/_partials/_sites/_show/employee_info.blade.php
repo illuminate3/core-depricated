@@ -35,6 +35,7 @@
 				{{ $employee->present()->employeeSubjects($employee->id, $locale_id) }}
 			</td>
 			<td>
+@if ( Auth::user() )
 @if (Auth::user()->can('manage_jinji'))
 				<a href="{{ URL::to('/admin/employees/' . $employee->id . '/edit' ) }}" class="btn btn-success" >
 					<span class="glyphicon glyphicon-pencil"></span>  {{ trans("kotoba::button.edit") }}
@@ -46,6 +47,7 @@
 				<a href="{{ URL::to('/staff/' . $employee->id ) }}" class="btn btn-info" >
 					<span class="glyphicon glyphicon-search"></span>  {{ trans("kotoba::button.view") }}
 				</a>
+@endif
 @endif
 			</td>
 		</tr>

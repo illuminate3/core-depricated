@@ -1,3 +1,4 @@
+@if ( Auth::user() )
 @if (Auth::user()->can('manage_shisan'))
 @if ( Module::exists('shisan') )
 
@@ -65,5 +66,6 @@
 @endif
 
 
+@endif
 @endif
 @endif
