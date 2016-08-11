@@ -313,7 +313,7 @@ function setImage(select){
 			<div class="form-group">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="fa fa-google fa-fw"></i></span>
-					<textarea id="google_analytics" name="google_analytics" value="{{ $site->google_analytics }}" placeholder="{{ trans('kotoba::cms.google_analytics') }}" class="form-control" rows="5"></textarea>
+					<textarea id="google_analytics" name="google_analytics" placeholder="{{ trans('kotoba::cms.google_analytics') }}" class="form-control" rows="11">{{{ $site->google_analytics }}}</textarea>
 			</div>
 			</div>
 
